@@ -1,194 +1,225 @@
-<?php 
- include '../model/pdo.php';
- include '../model/sanpham.php';
-
-    include 'view/header.php';
-    if (isset($_GET['act'])) {
-        switch ($_GET['act']) {
-            case 'dashboards-crm':
-                include 'view/dashboards-crm.php';
-                break;
-            case 'app-ecommerce-dashboard':
-                include 'view/app-ecommerce-dashboard.php';
-                break;
-            case 'app-logistics-dashboard':
-                include 'view/app-logistics-dashboard.php';
-                break;
-            case 'app-academy-dashboard':
-                include 'view/app-academy-dashboard.php';
-                break;
-            case 'app-ecommerce-product-list':
-                include 'view/app-ecommerce-product-list.php';
-                break;
-            case 'app-ecommerce-product-add':
-                include 'view/app-ecommerce-product-add.php';
-                break;
-            case 'app-ecommerce-category-list':
-                include 'view/app-ecommerce-category-list.php';
-                break;
-            case 'app-ecommerce-order-list':
-                include 'view/app-ecommerce-order-list.php';
-                break;
-            case 'app-ecommerce-order-details':
-                include 'view/app-ecommerce-order-details.php';
-                break;
-            case 'app-ecommerce-customer-all':
-                include 'view/app-ecommerce-customer-all.php';
-                break;
-            case 'app-ecommerce-customer-details-overview':
-                include 'view/app-ecommerce-customer-details-overview.php';
-                break;
-            case 'app-ecommerce-customer-details-security':
-                include 'view/app-ecommerce-customer-details-security.php';
-                break;
-            case 'app-ecommerce-customer-details-billing':
-                include 'view/app-ecommerce-customer-details-billing.php';
-                break;
-            case 'app-ecommerce-customer-details-notifications':
-                include 'view/app-ecommerce-customer-details-notifications.php';
-                break;
-            case 'app-email':
-                include 'view/app-email.php';
-                break;
-            case 'app-chat':
-                include 'view/app-chat.php';
-                break;
-            case 'app-calendar':
-                include 'view/app-calendar.php';
-                break;
-            case 'app-kanban':
-                include 'view/app-kanban.php';
-                break;
-            case 'app-ecommerce-manage-reviews':
-                include 'view/app-ecommerce-manage-reviews.php';
-                break;
-            case 'app-ecommerce-referral':
-                include 'view/app-ecommerce-referral.php';
-                break;
-            case 'app-ecommerce-settings-detail':
-                include 'view/app-ecommerce-settings-detail.php';
-                break;
-            case 'app-ecommerce-settings-payments':
-                include 'view/app-ecommerce-settings-payments.php';
-                break;
-            case 'app-ecommerce-settings-checkout':
-                include 'view/app-ecommerce-settings-checkout.php';
-                break;
-            case 'app-ecommerce-settings-shipping':
-                include 'view/app-ecommerce-settings-shipping.php';
-                break;
-            case 'app-ecommerce-settings-locations':
-                include 'view/app-ecommerce-settings-locations.php';
-                break;
-            case 'app-ecommerce-settings-notifications':
-                include 'view/app-ecommerce-settings-notifications.php';
-                break;
-            case 'app-academy-course':
-                include 'view/app-academy-course.php';
-                break;
-            case 'app-academy-course-details':
-                include 'view/app-academy-course-details.php';
-                break;
-            case 'app-logistics-fleet':
-                include 'view/app-logistics-fleet.php';
-                break;
-            case 'app-invoice-list':
-                include 'view/app-invoice-list.php';
-                break;
-            case 'app-invoice-preview':
-                include 'view/app-invoice-preview.php';
-                break;
-            case 'app-invoice-edit':
-                include 'view/app-invoice-edit.php';
+<?php
+include 'view/header.php';
+if (isset($_GET['act'])) {
+    switch ($_GET['act']) {
+        case 'app-analytics':
+            include 'view/app-analytics.php';
             break;
-            case 'app-invoice-add':
-                include 'view/app-invoice-add.php';
-                break;
-            case 'app-user-list':
-                include 'view/app-user-list.php';
-                break;
-            case 'app-user-view-account':
-                include 'view/app-user-view-account.php';
-                break;
-            case 'app-user-view-security':
-                include 'view/app-user-view-security.php';
-                break;
-            case 'app-user-view-billing':
-                include 'view/app-user-view-billing.php';
-                break;
-            case 'app-user-view-notifications':
-                include 'view/app-user-view-notifications.php';
-                break;
-            case 'app-user-view-connections':
-                include 'view/app-user-view-connections.php';
-                break;
-            case 'app-access-roles':
-                include 'view/app-access-roles.php';
-                break;
-            case 'app-access-permission':
-                include 'view/app-access-permission.php';
-                break;
-            case 'pages-profile-user':
-                include 'view/pages-profile-user.php';
-                break;
-            case 'pages-profile-teams':
-                include 'view/pages-profile-teams.php';
-                break;
-            
-            case 'pages-profile-projects':
-                include 'view/pages-profile-projects.php';
-                break;
-            case 'pages-profile-connections':
-                include 'view/pages-profile-connections.php';
-                break;
-            case 'pages-account-settings-account':
-                include 'view/pages-account-settings-account.php';
-                break;
-            
-            case 'pages-account-settings-security':
-                include 'view/pages-account-settings-security.php';
-                break;
-            
-            case 'pages-account-settings-billing':
-                include 'view/pages-account-settings-billing.php';
-                break;
-            
-            case 'pages-account-settings-notifications':
-                include 'view/pages-account-settings-notifications.php';
-                break;
-            
-            case 'pages-account-settings-connections':
-                include 'view/pages-account-settings-connections.php';
-                break;
-            
-            case 'pages-faq':
-                include 'view/pages-faq.php';
-                break;
-            
-            case 'pages-pricing':
-                include 'view/pages-pricing.php';
-                break;
-            
-            case '':
-                include 'view/.php';
-                break;
-            
-            case '':
-                include 'view/.php';
-                break;
-            
-            case '':
-                include 'view/.php';
-                break;
-            
-            
-            default:
-                include 'view/home.php';
-                break;
-        }
-    }else{
-        include 'view/home.php';
+        case 'app-calendar':
+            include 'view/app-calendar.php';
+            break;
+        case 'app-categories-list':
+            include 'view/app-categories-list.php';
+            break;
+        case 'app-category':
+            include 'view/app-category.php';
+            break;
+        case 'app-chat':
+            include 'view/app-chat.php';
+            break;
+        case 'app-coupon':
+            include 'view/app-coupon.php';
+            break;
+        case 'app-coupons-list':
+            include 'view/app-coupons-list.php';
+            break;
+        case 'app-customer':
+            include 'view/app-customer.php';
+            break;
+        case 'app-customers-list':
+            include 'view/app-customers-list.php';
+            break;
+        case 'app-file-manager':
+            include 'view/app-file-manager.php';
+            break;
+        case 'app-inbox-conversation':
+            include 'view/app-inbox-conversation.php';
+            break;
+        case 'app-inbox-list':
+            include 'view/app-inbox-list.php';
+            break;
+        case 'app-order':
+            include 'view/app-order.php';
+            break;
+        case 'app-orders-list':
+            include 'view/app-orders-list.php';
+            break;
+        case 'app-product':
+            include 'view/app-product.php';
+            break;
+        case 'app-products-list':
+            include 'view/app-products-list.php';
+            break;
+        case 'app-settings-form':
+            include 'view/app-settings-form.php';
+            break;
+        case 'app-settings-toc':
+            include 'view/app-settings-toc.php';
+            break;
+        case 'auth-email-confirmation':
+            include 'view/auth-email-confirmation.php';
+            break;
+        case 'auth-forgot-password':
+            include 'view/auth-forgot-password.php';
+            break;
+        case 'auth-reset-password':
+            include 'view/auth-reset-password.php';
+            break;
+        case 'auth-sign-in':
+            include 'view/auth-sign-in.php';
+            break;
+        case 'auth-sign-up':
+            include 'view/auth-sign-up.php';
+            break;
+        case 'charts':
+            include 'view/charts.php';
+            break;
+        case 'components-accordion':
+            include 'view/components-accordion.php';
+            break;
+        case 'components-alerts':
+            include 'view/components-alerts.php';
+            break;
+        case 'components-badge':
+            include 'view/components-badge.php';
+            break;
+        case 'components-breadcrumb':
+            include 'view/components-breadcrumb.php';
+            break;
+        case 'components-button-group':
+            include 'view/components-button-group.php';
+            break;
+        case 'components-buttons':
+            include 'view/components-buttons.php';
+            break;
+        case 'components-cards':
+            include 'view/components-cards.php';
+            break;
+        case 'components-carousel':
+            include 'view/components-carousel.php';
+            break;
+        case 'components-collapse':
+            include 'view/components-collapse.php';
+            break;
+        case 'components-dropdowns':
+            include 'view/components-dropdowns.php';
+            break;
+        case 'components-list-group':
+            include 'view/components-list-group.php';
+            break;
+        case 'components-modal':
+            include 'view/components-modal.php';
+            break;
+        case 'components-navs':
+            include 'view/components-navs.php';
+            break;
+        case 'components-nouislider':
+            include 'view/components-nouislider.php';
+            break;
+        case 'components-offcanvas':
+            include 'view/components-offcanvas.php';
+            break;
+        case 'components-pagination':
+            include 'view/components-pagination.php';
+            break;
+        case 'components-placeholders':
+            include 'view/components-placeholders.php';
+            break;
+        case 'components-popovers':
+            include 'view/components-popovers.php';
+            break;
+        case 'components-progress':
+            include 'view/components-progress.php';
+            break;
+        case 'components-scrollspy':
+            include 'view/components-scrollspy.php';
+            break;
+        case 'components-spinners':
+            include 'view/components-spinners.php';
+            break;
+        case 'components-symbols':
+            include 'view/components-symbols.php';
+            break;
+        case 'components-tabs':
+            include 'view/components-tabs.php';
+            break;
+        case 'components-toasts':
+            include 'view/components-toasts.php';
+            break;
+        case 'components-tooltips':
+            include 'view/components-tooltips.php';
+            break;
+        case 'forms-air-datepicker':
+            include 'view/forms-air-datepicker.php';
+            break;
+        case 'forms-checks-and-radios':
+            include 'view/forms-checks-and-radios.php';
+            break;
+        case 'forms-file':
+            include 'view/forms-file.php';
+            break;
+        case 'forms-help-text':
+            include 'view/forms-help-text.php';
+            break;
+        case 'forms-input-group':
+            include 'view/forms-input-group.php';
+            break;
+        case 'forms-layout':
+            include 'view/forms-layout.php';
+            break;
+        case 'forms-quill':
+            include 'view/forms-quill.php';
+            break;
+        case 'forms-range':
+            include 'view/forms-range.php';
+            break;
+        case 'forms-select':
+            include 'view/forms-select.php';
+            break;
+        case 'forms-select2':
+            include 'view/forms-select2.php';
+            break;
+        case 'forms-text-area':
+            include 'view/forms-text-area.php';
+            break;
+        case 'forms-text-box':
+            include 'view/forms-text-box.php';
+            break;
+        case 'forms-validation':
+            include 'view/forms-validation.php';
+            break;
+        case 'icons':
+            include 'view/icons.php';
+            break;
+        case 'page-404':
+            include 'view/page-404.php';
+            break;
+        case 'page-faq':
+            include 'view/page-faq.php';
+            break;
+        case 'page-help-center':
+            include 'view/page-help-center.php';
+            break;
+        case 'page-invoice':
+            include 'view/page-invoice.php';
+            break;
+        case 'page-pricing-table':
+            include 'view/page-pricing-table.php';
+            break;
+        case 'page-terms':
+            include 'view/page-terms.php';
+            break;
+        case 'tables-basic-tables':
+            include 'view/tables-basic-tables.php';
+            break;
+        case 'tables-datatables':
+            include 'view/tables-datatables.php';
+            break;
+        default:
+            include 'view/home.php';
+            break;
     }
-    
-
-    include 'view/footer.php';
+} else {
+    include 'view/home.php';
+}
+include 'view/footer.php';

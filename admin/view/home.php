@@ -1,737 +1,1001 @@
-<div class="container-xxl flex-grow-1 container-p-y">
-            
-            
-
-<div class="row">
-  <!-- Website Analytics -->
-  <div class="col-lg-6 mb-4">
-    <div class="swiper-container swiper-container-horizontal swiper swiper-card-advance-bg" id="swiper-with-pagination-cards">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="row">
-            <div class="col-12">
-              <h5 class="text-white mb-0 mt-2">Website Analytics</h5>
-              <small>Total 28.5% Conversion Rate</small>
-            </div>
-            <div class="row">
-              <div class="col-lg-7 col-md-9 col-12 order-2 order-md-1">
-                <h6 class="text-white mt-0 mt-md-3 mb-3">Traffic</h6>
-                <div class="row">
-                  <div class="col-6">
-                    <ul class="list-unstyled mb-0">
-                      <li class="d-flex mb-4 align-items-center">
-                        <p class="mb-0 fw-medium me-2 website-analytics-text-bg">28%</p>
-                        <p class="mb-0">Sessions</p>
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <p class="mb-0 fw-medium me-2 website-analytics-text-bg">1.2k</p>
-                        <p class="mb-0">Leads</p>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-6">
-                    <ul class="list-unstyled mb-0">
-                      <li class="d-flex mb-4 align-items-center">
-                        <p class="mb-0 fw-medium me-2 website-analytics-text-bg">3.1k</p>
-                        <p class="mb-0">Page Views</p>
-                      </li>
-                      <li class="d-flex align-items-center mb-2">
-                        <p class="mb-0 fw-medium me-2 website-analytics-text-bg">12%</p>
-                        <p class="mb-0">Conversions</p>
-                      </li>
-                    </ul>
-                  </div>
+<!-- sa-app__body -->
+<div id="top" class="sa-app__body px-2 px-lg-4">
+                <div class="container pb-6">
+                    <div class="py-5">
+                        <div class="row g-4 align-items-center">
+                            <div class="col">
+                                <h1 class="h3 m-0">Dashboard</h1>
+                            </div>
+                            <div class="col-auto d-flex">
+                                <select class="form-select me-3">
+                                    <option selected="">7 October, 2021</option>
+                                </select><a href="#" class="btn btn-primary">Export</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-4 g-xl-5">
+                        <div class="col-12 col-md-4 d-flex">
+                            <div class="card saw-indicator flex-grow-1"
+                                data-sa-container-query='{"340":"saw-indicator--size--lg"}'>
+                                <div class="sa-widget-header saw-indicator__header">
+                                    <h2 class="sa-widget-header__title">Total sells</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-1" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-1">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-indicator__body">
+                                    <div class="saw-indicator__value">$3799.00</div>
+                                    <div class="saw-indicator__delta saw-indicator__delta--rise">
+                                        <div class="saw-indicator__delta-direction">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                                viewBox="0 0 9 9" fill="currentColor">
+                                                <path d="M9,0L8,6.1L2.8,1L9,0z"></path>
+                                                <circle cx="1" cy="8" r="1"></circle>
+                                                <rect x="0" y="4.5"
+                                                    transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.864 4.0858)"
+                                                    width="7.1" height="2"></rect>
+                                            </svg>
+                                        </div>
+                                        <div class="saw-indicator__delta-value">34.7%</div>
+                                    </div>
+                                    <div class="saw-indicator__caption">
+                                        Compared to April 2021
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex">
+                            <div class="card saw-indicator flex-grow-1"
+                                data-sa-container-query='{"340":"saw-indicator--size--lg"}'>
+                                <div class="sa-widget-header saw-indicator__header">
+                                    <h2 class="sa-widget-header__title">Average order value</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-2" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-2">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-indicator__body">
+                                    <div class="saw-indicator__value">$272.98</div>
+                                    <div class="saw-indicator__delta saw-indicator__delta--fall">
+                                        <div class="saw-indicator__delta-direction">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                                viewBox="0 0 9 9" fill="currentColor">
+                                                <path d="M2.8,8L8,2.9L9,9L2.8,8z"></path>
+                                                <circle cx="1" cy="1" r="1"></circle>
+                                                <rect x="0" y="2.5"
+                                                    transform="matrix(0.7071 0.7071 -0.7071 0.7071 3.5 -1.4497)"
+                                                    width="7.1" height="2"></rect>
+                                            </svg>
+                                        </div>
+                                        <div class="saw-indicator__delta-value">12.0%</div>
+                                    </div>
+                                    <div class="saw-indicator__caption">
+                                        Compared to April 2021
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex">
+                            <div class="card saw-indicator flex-grow-1"
+                                data-sa-container-query='{"340":"saw-indicator--size--lg"}'>
+                                <div class="sa-widget-header saw-indicator__header">
+                                    <h2 class="sa-widget-header__title">Total orders</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-3" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-3">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-indicator__body">
+                                    <div class="saw-indicator__value">578</div>
+                                    <div class="saw-indicator__delta saw-indicator__delta--rise">
+                                        <div class="saw-indicator__delta-direction">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                                viewBox="0 0 9 9" fill="currentColor">
+                                                <path d="M9,0L8,6.1L2.8,1L9,0z"></path>
+                                                <circle cx="1" cy="8" r="1"></circle>
+                                                <rect x="0" y="4.5"
+                                                    transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.864 4.0858)"
+                                                    width="7.1" height="2"></rect>
+                                            </svg>
+                                        </div>
+                                        <div class="saw-indicator__delta-value">27.9%</div>
+                                    </div>
+                                    <div class="saw-indicator__caption">
+                                        Compared to April 2021
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 col-xxl-3 d-flex">
+                            <div class="card flex-grow-1 saw-pulse"
+                                data-sa-container-query='{"560":"saw-pulse--size--lg"}'>
+                                <div class="sa-widget-header saw-pulse__header">
+                                    <h2 class="sa-widget-header__title">Active users</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-4" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-4">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-pulse__counter">148</div>
+                                <div class="sa-widget-table saw-pulse__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Active pages</th>
+                                                <th class="text-end">Users</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-reset">/products/brandix-z4</a>
+                                                </td>
+                                                <td class="text-end">15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-reset">/categories/drivetrain</a>
+                                                </td>
+                                                <td class="text-end">11</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-reset">/categories/monitors</a>
+                                                </td>
+                                                <td class="text-end">7</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-reset">/account/orders</a>
+                                                </td>
+                                                <td class="text-end">4</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#" class="text-reset">/cart</a></td>
+                                                <td class="text-end">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#" class="text-reset">/checkout</a></td>
+                                                <td class="text-end">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-reset">/pages/about-us</a>
+                                                </td>
+                                                <td class="text-end">1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+                            <div class="card flex-grow-1 saw-chart"
+                                data-sa-data='[{"label":"Jan","value":50},{"label":"Feb","value":130},{"label":"Mar","value":525},{"label":"Apr","value":285},{"label":"May","value":470},{"label":"Jun","value":130},{"label":"Jul","value":285},{"label":"Aug","value":240},{"label":"Sep","value":710},{"label":"Oct","value":470},{"label":"Nov","value":640},{"label":"Dec","value":1110}]'>
+                                <div class="sa-widget-header saw-chart__header">
+                                    <h2 class="sa-widget-header__title">Income statistics</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-5" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-5">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-chart__body">
+                                    <div class="saw-chart__container"><canvas></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xxl-9 d-flex">
+                            <div class="card flex-grow-1 saw-table">
+                                <div class="sa-widget-header saw-table__header">
+                                    <h2 class="sa-widget-header__title">Recent orders</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-6" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-6">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-table__body sa-widget-table text-nowrap">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>Status</th>
+                                                <th>Co.</th>
+                                                <th>Customer</th>
+                                                <th>Date</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00745</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-primary">Pending</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/IT.png"
+                                                        class="sa-language-icon d-block" alt="" title="Italy" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">GB</div>
+                                                        </a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Giordano
+                                                                Bruno</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2020-11-02</td>
+                                                <td>$2,742.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00513</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-warning">Hold</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/DE.png"
+                                                        class="sa-language-icon d-block" alt="" title="Germany" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">HW</div>
+                                                        </a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Hans
+                                                                Weber</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2020-09-05</td>
+                                                <td>$204.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00507</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-primary">Pending</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/IT.png"
+                                                        class="sa-language-icon d-block" alt="" title="Italy" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">AR</div>
+                                                        </a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Andrea
+                                                                Rossi</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2020-08-21</td>
+                                                <td>$5,039.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00104</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-danger">Canceled</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/US.png"
+                                                        class="sa-language-icon d-block" alt="" title="USA" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">RF</div>
+                                                        </a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Richard
+                                                                Feynman</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2020-06-22</td>
+                                                <td>$79.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00097</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-success">
+                                                            Completed
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/CO.png"
+                                                        class="sa-language-icon d-block" alt="" title="Columbia" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">LG</div>
+                                                        </a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Leonardo
+                                                                Garcia</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2020-05-09</td>
+                                                <td>$826.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00082</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-success">
+                                                            Completed
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/RS.png"
+                                                        class="sa-language-icon d-block" alt="" title="Srbija" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">NT</div>
+                                                        </a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Nikola
+                                                                Tesla</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2020-04-27</td>
+                                                <td>$1,052.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00063</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-primary">Pending</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/FR.png"
+                                                        class="sa-language-icon d-block" alt="" title="France" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">MC</div>
+                                                        </a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Marie
+                                                                Curie</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2020-02-09</td>
+                                                <td>$441.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00012</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-success">
+                                                            Completed
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/RU.png"
+                                                        class="sa-language-icon d-block" alt="" title="Russia" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">KT</div>
+                                                        </a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Konstantin
+                                                                Tsiolkovsky</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2020-01-01</td>
+                                                <td>$12,961.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xxl-3 d-flex">
+                            <div class="card flex-grow-1 saw-chart-circle"
+                                data-sa-data='[{"label":"Yandex","value":2742,"color":"#ffd333","orders":12},{"label":"YouTube","value":3272,"color":"#e62e2e","orders":51},{"label":"Google","value":2303,"color":"#3377ff","orders":4},{"label":"Facebook","value":1434,"color":"#29cccc","orders":10},{"label":"Instagram","value":799,"color":"#5dc728","orders":1}]'
+                                data-sa-container-query='{"600":"saw-chart-circle--size--lg"}'>
+                                <div class="sa-widget-header saw-chart-circle__header">
+                                    <h2 class="sa-widget-header__title">
+                                        Sales by traffic source
+                                    </h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-7" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-7">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-chart-circle__body">
+                                    <div class="saw-chart-circle__container">
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="sa-widget-table saw-chart-circle__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Source</th>
+                                                <th class="text-center">Orders</th>
+                                                <th class="text-end">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="saw-chart-circle__symbol" style="
+                                  --saw-chart-circle__symbol--color: #ffd333;
+                                "></div>
+                                                        <div class="ps-2">Yandex</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">12</td>
+                                                <td class="text-end">
+                                                    <div class="sa-price">
+                                                        <span class="sa-price__symbol">$</span><span
+                                                            class="sa-price__integer">2,742</span><span
+                                                            class="sa-price__decimal">.00</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="saw-chart-circle__symbol" style="
+                                  --saw-chart-circle__symbol--color: #e62e2e;
+                                "></div>
+                                                        <div class="ps-2">YouTube</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">51</td>
+                                                <td class="text-end">
+                                                    <div class="sa-price">
+                                                        <span class="sa-price__symbol">$</span><span
+                                                            class="sa-price__integer">3,272</span><span
+                                                            class="sa-price__decimal">.00</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="saw-chart-circle__symbol" style="
+                                  --saw-chart-circle__symbol--color: #3377ff;
+                                "></div>
+                                                        <div class="ps-2">Google</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">4</td>
+                                                <td class="text-end">
+                                                    <div class="sa-price">
+                                                        <span class="sa-price__symbol">$</span><span
+                                                            class="sa-price__integer">2,303</span><span
+                                                            class="sa-price__decimal">.00</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="saw-chart-circle__symbol" style="
+                                  --saw-chart-circle__symbol--color: #29cccc;
+                                "></div>
+                                                        <div class="ps-2">Facebook</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-end">
+                                                    <div class="sa-price">
+                                                        <span class="sa-price__symbol">$</span><span
+                                                            class="sa-price__integer">1,434</span><span
+                                                            class="sa-price__decimal">.00</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="saw-chart-circle__symbol" style="
+                                  --saw-chart-circle__symbol--color: #5dc728;
+                                "></div>
+                                                        <div class="ps-2">Instagram</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-end">
+                                                    <div class="sa-price">
+                                                        <span class="sa-price__symbol">$</span><span
+                                                            class="sa-price__integer">799</span><span
+                                                            class="sa-price__decimal">.00</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex">
+                            <div class="card flex-grow-1">
+                                <div class="card-body">
+                                    <div class="sa-widget-header mb-4">
+                                        <h2 class="sa-widget-header__title">Recent activity</h2>
+                                        <div class="sa-widget-header__actions">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                    id="widget-context-menu-8" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" aria-label="More">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                        fill="currentColor">
+                                                        <path
+                                                            d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end"
+                                                    aria-labelledby="widget-context-menu-8">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">Settings</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Move</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider" />
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sa-timeline mb-n2 pt-2">
+                                        <ul class="sa-timeline__list">
+                                            <li class="sa-timeline__item">
+                                                <div class="sa-timeline__item-title">Yesterday</div>
+                                                <div class="sa-timeline__item-content">
+                                                    Phasellus id mattis nulla. Mauris velit nisi,
+                                                    imperdiet vitae sodales in, maximus ut lectus.
+                                                    Vivamus commodo scelerisque lacus, at porttitor dui
+                                                    iaculis id.
+                                                    <a href="#">Curabitur imperdiet ultrices fermentum.</a>
+                                                </div>
+                                            </li>
+                                            <li class="sa-timeline__item">
+                                                <div class="sa-timeline__item-title">5 days ago</div>
+                                                <div class="sa-timeline__item-content">
+                                                    Nulla ut ex mollis, volutpat tellus vitae, accumsan
+                                                    ligula.
+                                                    <a href="#">Curabitur imperdiet ultrices fermentum.</a>
+                                                </div>
+                                            </li>
+                                            <li class="sa-timeline__item">
+                                                <div class="sa-timeline__item-title">March 27</div>
+                                                <div class="sa-timeline__item-content">
+                                                    Donec tempor sapien et fringilla facilisis. Nam
+                                                    maximus consectetur diam.
+                                                </div>
+                                            </li>
+                                            <li class="sa-timeline__item">
+                                                <div class="sa-timeline__item-title">November 30</div>
+                                                <div class="sa-timeline__item-content">
+                                                    Many philosophical debates that began in ancient
+                                                    times are still debated today. In one general sense,
+                                                    philosophy is associated with wisdom, intellectual
+                                                    culture and a search for knowledge.
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex">
+                            <div class="card flex-grow-1">
+                                <div class="card-body">
+                                    <div class="sa-widget-header">
+                                        <h2 class="sa-widget-header__title">Recent reviews</h2>
+                                        <div class="sa-widget-header__actions">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                    id="widget-context-menu-9" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" aria-label="More">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                        fill="currentColor">
+                                                        <path
+                                                            d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end"
+                                                    aria-labelledby="widget-context-menu-9">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">Settings</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Move</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider" />
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-1-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Wiper
+                                                        Blades Brandix WL2</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Ryan Ford</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 0.6">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-7-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Electric
+                                                        Planer Brandix KL370090G 300 Watts</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Adam Taylor</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 0.8">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-10-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Water
+                                                        Tap</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Jessica Moore</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 0.4">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-5-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Brandix
+                                                        Router Power Tool 2017ERXPK</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Helena Garcia</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 0.6">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-2-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Undefined
+                                                        Tool IRadix DPS3000SY 2700 Watts</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Ryan Ford</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 1">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-16-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Brandix
+                                                        Screwdriver SCREW150</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Charlotte
+                                                            Jones</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 0.8">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-lg-5 col-md-3 col-12 order-1 order-md-2 my-4 my-md-0 text-center">
-                <img src="view/img/illustrations/card-website-analytics-1.png" alt="Website Analytics" width="170" class="card-website-analytics-img">
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="row">
-            <div class="col-12">
-              <h5 class="text-white mb-0 mt-2">Website Analytics</h5>
-              <small>Total 28.5% Conversion Rate</small>
-            </div>
-            <div class="col-lg-7 col-md-9 col-12 order-2 order-md-1">
-              <h6 class="text-white mt-0 mt-md-3 mb-3">Spending</h6>
-              <div class="row">
-                <div class="col-6">
-                  <ul class="list-unstyled mb-0">
-                    <li class="d-flex mb-4 align-items-center">
-                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">12h</p>
-                      <p class="mb-0">Spend</p>
-                    </li>
-                    <li class="d-flex align-items-center mb-2">
-                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">127</p>
-                      <p class="mb-0">Order</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <ul class="list-unstyled mb-0">
-                    <li class="d-flex mb-4 align-items-center">
-                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">18</p>
-                      <p class="mb-0">Order Size</p>
-                    </li>
-                    <li class="d-flex align-items-center mb-2">
-                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">2.3k</p>
-                      <p class="mb-0">Items</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5 col-md-3 col-12 order-1 order-md-2 my-4 my-md-0 text-center">
-              <img src="view/img/illustrations/card-website-analytics-2.png" alt="Website Analytics" width="170" class="card-website-analytics-img">
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="row">
-            <div class="col-12">
-              <h5 class="text-white mb-0 mt-2">Website Analytics</h5>
-              <small>Total 28.5% Conversion Rate</small>
-            </div>
-            <div class="col-lg-7 col-md-9 col-12 order-2 order-md-1">
-              <h6 class="text-white mt-0 mt-md-3 mb-3">Revenue Sources</h6>
-              <div class="row">
-                <div class="col-6">
-                  <ul class="list-unstyled mb-0">
-                    <li class="d-flex mb-4 align-items-center">
-                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">268</p>
-                      <p class="mb-0">Direct</p>
-                    </li>
-                    <li class="d-flex align-items-center mb-2">
-                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">62</p>
-                      <p class="mb-0">Referral</p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <ul class="list-unstyled mb-0">
-                    <li class="d-flex mb-4 align-items-center">
-                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">890</p>
-                      <p class="mb-0">Organic</p>
-                    </li>
-                    <li class="d-flex align-items-center mb-2">
-                      <p class="mb-0 fw-medium me-2 website-analytics-text-bg">1.2k</p>
-                      <p class="mb-0">Campaign</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5 col-md-3 col-12 order-1 order-md-2 my-4 my-md-0 text-center">
-              <img src="view/img/illustrations/card-website-analytics-3.png" alt="Website Analytics" width="170" class="card-website-analytics-img">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-  <!--/ Website Analytics -->
-
-  <!-- Sales Overview -->
-  <div class="col-lg-3 col-sm-6 mb-4">
-    <div class="card">
-      <div class="card-header">
-        <div class="d-flex justify-content-between">
-          <small class="d-block mb-1 text-muted">Sales Overview</small>
-          <p class="card-text text-success">+18.2%</p>
-        </div>
-        <h4 class="card-title mb-1">$42.5k</h4>
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-4">
-            <div class="d-flex gap-2 align-items-center mb-2">
-              <span class="badge bg-label-info p-1 rounded"><i class="ti ti-shopping-cart ti-xs"></i></span>
-              <p class="mb-0">Order</p>
-            </div>
-            <h5 class="mb-0 pt-1 text-nowrap">62.2%</h5>
-            <small class="text-muted">6,440</small>
-          </div>
-          <div class="col-4">
-            <div class="divider divider-vertical">
-              <div class="divider-text">
-                <span class="badge-divider-bg bg-label-secondary">VS</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-4 text-end">
-            <div class="d-flex gap-2 justify-content-end align-items-center mb-2">
-              <p class="mb-0">Visits</p>
-              <span class="badge bg-label-primary p-1 rounded"><i class="ti ti-link ti-xs"></i></span>
-            </div>
-            <h5 class="mb-0 pt-1 text-nowrap ms-lg-n3 ms-xl-0">25.5%</h5>
-            <small class="text-muted">12,749</small>
-          </div>
-        </div>
-        <div class="d-flex align-items-center mt-4">
-          <div class="progress w-100" style="height: 8px;">
-            <div class="progress-bar bg-info" style="width: 70%" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-            <div class="progress-bar bg-primary" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Sales Overview -->
-
-  <!-- Revenue Generated -->
-  <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
-    <div class="card">
-      <div class="card-body pb-0">
-        <div class="card-icon">
-          <span class="badge bg-label-success rounded-pill p-2">
-            <i class='ti ti-credit-card ti-sm'></i>
-          </span>
-        </div>
-        <h5 class="card-title mb-0 mt-2">97.5k</h5>
-        <small>Revenue Generated</small>
-      </div>
-      <div id="revenueGenerated"></div>
-    </div>
-  </div>
-  <!--/ Revenue Generated -->
-
-  <!-- Earning Reports -->
-  <div class="col-lg-6 mb-4">
-    <div class="card h-100">
-      <div class="card-header pb-0 d-flex justify-content-between mb-lg-n4">
-        <div class="card-title mb-0">
-          <h5 class="mb-0">Earning Reports</h5>
-          <small class="text-muted">Weekly Earnings Overview</small>
-        </div>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="earningReportsId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ti ti-dots-vertical ti-sm text-muted"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="earningReportsId">
-            <a class="dropdown-item" href="javascript:void(0);">View More</a>
-            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-          </div>
-        </div>
-        <!-- </div> -->
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-12 col-md-4 d-flex flex-column align-self-end">
-            <div class="d-flex gap-2 align-items-center mb-2 pb-1 flex-wrap">
-              <h1 class="mb-0">$468</h1>
-              <div class="badge rounded bg-label-success">+4.2%</div>
-            </div>
-            <small>You informed of this week compared to last week</small>
-          </div>
-          <div class="col-12 col-md-8">
-            <div id="weeklyEarningReports"></div>
-          </div>
-        </div>
-        <div class="border rounded p-3 mt-4">
-          <div class="row gap-4 gap-sm-0">
-            <div class="col-12 col-sm-4">
-              <div class="d-flex gap-2 align-items-center">
-                <div class="badge rounded bg-label-primary p-1"><i class="ti ti-currency-dollar ti-sm"></i></div>
-                <h6 class="mb-0">Earnings</h6>
-              </div>
-              <h4 class="my-2 pt-1">$545.69</h4>
-              <div class="progress w-75" style="height:4px">
-                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="d-flex gap-2 align-items-center">
-                <div class="badge rounded bg-label-info p-1"><i class="ti ti-chart-pie-2 ti-sm"></i></div>
-                <h6 class="mb-0">Profit</h6>
-              </div>
-              <h4 class="my-2 pt-1">$256.34</h4>
-              <div class="progress w-75" style="height:4px">
-                <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="d-flex gap-2 align-items-center">
-                <div class="badge rounded bg-label-danger p-1"><i class="ti ti-brand-paypal ti-sm"></i></div>
-                <h6 class="mb-0">Expense</h6>
-              </div>
-              <h4 class="my-2 pt-1">$74.19</h4>
-              <div class="progress w-75" style="height:4px">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Earning Reports -->
-
-  <!-- Support Tracker -->
-  <div class="col-md-6 mb-4">
-    <div class="card h-100">
-      <div class="card-header d-flex justify-content-between pb-0">
-        <div class="card-title mb-0">
-          <h5 class="mb-0">Support Tracker</h5>
-          <small class="text-muted">Last 7 Days</small>
-        </div>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="supportTrackerMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ti ti-dots-vertical ti-sm text-muted"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="supportTrackerMenu">
-            <a class="dropdown-item" href="javascript:void(0);">View More</a>
-            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-12 col-sm-4 col-md-12 col-lg-4">
-            <div class="mt-lg-4 mt-lg-2 mb-lg-4 mb-2 pt-1">
-              <h1 class="mb-0">164</h1>
-              <p class="mb-0">Total Tickets</p>
-            </div>
-            <ul class="p-0 m-0">
-              <li class="d-flex gap-3 align-items-center mb-lg-3 pt-2 pb-1">
-                <div class="badge rounded bg-label-primary p-1"><i class="ti ti-ticket ti-sm"></i></div>
-                <div>
-                  <h6 class="mb-0 text-nowrap">New Tickets</h6>
-                  <small class="text-muted">142</small>
-                </div>
-              </li>
-              <li class="d-flex gap-3 align-items-center mb-lg-3 pb-1">
-                <div class="badge rounded bg-label-info p-1"><i class="ti ti-circle-check ti-sm"></i></div>
-                <div>
-                  <h6 class="mb-0 text-nowrap">Open Tickets</h6>
-                  <small class="text-muted">28</small>
-                </div>
-              </li>
-              <li class="d-flex gap-3 align-items-center pb-1">
-                <div class="badge rounded bg-label-warning p-1"><i class="ti ti-clock ti-sm"></i></div>
-                <div>
-                  <h6 class="mb-0 text-nowrap">Response Time</h6>
-                  <small class="text-muted">1 Day</small>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="col-12 col-sm-8 col-md-12 col-lg-8">
-            <div id="supportTracker"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Support Tracker -->
-
-  <!-- Sales By Country -->
-  <div class="col-xl-4 col-md-6 mb-4">
-    <div class="card h-100">
-      <div class="card-header d-flex justify-content-between">
-        <div class="card-title mb-0">
-          <h5 class="m-0 me-2">Sales by Countries</h5>
-          <small class="text-muted">Monthly Sales Overview</small>
-        </div>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="salesByCountry" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ti ti-dots-vertical ti-sm text-muted"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="salesByCountry">
-            <a class="dropdown-item" href="javascript:void(0);">Download</a>
-            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Share</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <ul class="p-0 m-0">
-          <li class="d-flex align-items-center mb-4">
-            <img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/svg/flags/us.svg" alt="User" class="rounded-circle me-3" width="34">
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$8,567k</h6>
-
-                </div>
-                <small class="text-muted">United states</small>
-              </div>
-              <div class="user-progress">
-                <p class="text-success fw-medium mb-0 d-flex justify-content-center gap-1">
-                  <i class='ti ti-chevron-up'></i>
-                  25.8%
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex align-items-center mb-4">
-            <img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/svg/flags/br.svg" alt="User" class="rounded-circle me-3" width="34">
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$2,415k</h6>
-                </div>
-                <small class="text-muted">Brazil</small>
-              </div>
-              <div class="user-progress">
-                <p class="text-danger fw-medium mb-0 d-flex justify-content-center gap-1">
-                  <i class='ti ti-chevron-down'></i>
-                  6.2%
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex align-items-center mb-4">
-            <img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/svg/flags/in.svg" alt="User" class="rounded-circle me-3" width="34">
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$865k</h6>
-                </div>
-                <small class="text-muted">India</small>
-              </div>
-              <div class="user-progress">
-                <p class="text-success fw-medium mb-0 d-flex align-items-center gap-1">
-                  <i class='ti ti-chevron-up'></i>
-                  12.4%
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex align-items-center mb-4">
-            <img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/svg/flags/au.svg" alt="User" class="rounded-circle me-3" width="34">
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$745k</h6>
-                </div>
-                <small class="text-muted">Australia</small>
-              </div>
-              <div class="user-progress">
-                <p class="text-danger fw-medium mb-0 d-flex justify-content-center gap-1">
-                  <i class='ti ti-chevron-down'></i>
-                  11.9%
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex align-items-center mb-4">
-            <img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/svg/flags/fr.svg" alt="User" class="rounded-circle me-3" width="34">
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$45</h6>
-                </div>
-                <small class="text-muted">France</small>
-              </div>
-              <div class="user-progress">
-                <p class="text-success fw-medium mb-0 d-flex justify-content-center gap-1">
-                  <i class='ti ti-chevron-up'></i>
-                  16.2%
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex align-items-center">
-            <img src="https://demos.pixinvent.com/vuexy-html-admin-template/assets/svg/flags/cn.svg" alt="User" class="rounded-circle me-3" width="34">
-            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-              <div class="me-2">
-                <div class="d-flex align-items-center">
-                  <h6 class="mb-0 me-1">$12k</h6>
-                </div>
-                <small class="text-muted">China</small>
-              </div>
-              <div class="user-progress">
-                <p class="text-success fw-medium mb-0 d-flex justify-content-center gap-1">
-                  <i class='ti ti-chevron-up'></i>
-                  14.8%
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--/ Sales By Country -->
-
-  <!-- Total Earning -->
-  <div class="col-12 col-xl-4 mb-4 col-md-6">
-    <div class="card">
-      <div class="card-header d-flex justify-content-between pb-1">
-        <h5 class="mb-0 card-title">Total Earning</h5>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="totalEarning" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ti ti-dots-vertical ti-sm text-muted"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalEarning">
-            <a class="dropdown-item" href="javascript:void(0);">View More</a>
-            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="d-flex align-items-center">
-          <h1 class="mb-0 me-2">87%</h1>
-          <i class="ti ti-chevron-up text-success me-1"></i>
-          <p class="text-success mb-0">25.8%</p>
-        </div>
-        <div id="totalEarningChart"></div>
-        <div class="d-flex align-items-start my-4">
-          <div class="badge rounded bg-label-primary p-2 me-3 rounded"><i class="ti ti-currency-dollar ti-sm"></i></div>
-          <div class="d-flex justify-content-between w-100 gap-2 align-items-center">
-            <div class="me-2">
-              <h6 class="mb-0">Total Sales</h6>
-              <small class="text-muted">Refund</small>
-            </div>
-            <p class="mb-0 text-success">+$98</p>
-          </div>
-        </div>
-        <div class="d-flex align-items-start">
-          <div class="badge rounded bg-label-secondary p-2 me-3 rounded"><i class="ti ti-brand-paypal ti-sm"></i></div>
-          <div class="d-flex justify-content-between w-100 gap-2 align-items-center">
-            <div class="me-2">
-              <h6 class="mb-0">Total Revenue</h6>
-              <small class="text-muted">Client Payment</small>
-            </div>
-            <p class="mb-0 text-success">+$126</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Total Earning -->
-
-  <!-- Monthly Campaign State -->
-  <div class="col-xl-4 col-md-6 mb-4">
-    <div class="card h-100">
-      <div class="card-header d-flex justify-content-between">
-        <div class="card-title mb-0">
-          <h5 class="mb-0">Monthly Campaign State</h5>
-          <small class="text-muted">8.52k Social Visiters</small>
-        </div>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="MonthlyCampaign" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ti ti-dots-vertical ti-sm text-muted"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="MonthlyCampaign">
-            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Download</a>
-            <a class="dropdown-item" href="javascript:void(0);">View All</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <ul class="p-0 m-0">
-          <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-            <div class="badge bg-label-success rounded p-2"><i class="ti ti-mail ti-sm"></i></div>
-            <div class="d-flex justify-content-between w-100 flex-wrap">
-              <h6 class="mb-0 ms-3">Emails</h6>
-              <div class="d-flex">
-                <p class="mb-0 fw-medium">12,346</p>
-                <p class="ms-3 text-success mb-0">0.3%</p>
-              </div>
-            </div>
-          </li>
-          <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-            <div class="badge bg-label-info rounded p-2"><i class="ti ti-link ti-sm"></i></div>
-            <div class="d-flex justify-content-between w-100 flex-wrap">
-              <h6 class="mb-0 ms-3">Opened</h6>
-              <div class="d-flex">
-                <p class="mb-0 fw-medium">8,734</p>
-                <p class="ms-3 text-success mb-0">2.1%</p>
-              </div>
-            </div>
-          </li>
-          <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-            <div class="badge bg-label-warning rounded p-2"><i class="ti ti-click ti-sm"></i></div>
-            <div class="d-flex justify-content-between w-100 flex-wrap">
-              <h6 class="mb-0 ms-3">Clicked</h6>
-              <div class="d-flex">
-                <p class="mb-0 fw-medium">967</p>
-                <p class="ms-3 text-success mb-0">1.4%</p>
-              </div>
-            </div>
-          </li>
-          <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-            <div class="badge bg-label-primary rounded p-2"><i class="ti ti-users ti-sm"></i></div>
-            <div class="d-flex justify-content-between w-100 flex-wrap">
-              <h6 class="mb-0 ms-3">Subscribe</h6>
-              <div class="d-flex">
-                <p class="mb-0 fw-medium">345</p>
-                <p class="ms-3 text-success mb-0">8.5k</p>
-              </div>
-            </div>
-          </li>
-          <li class="mb-4 pb-1 d-flex justify-content-between align-items-center">
-            <div class="badge bg-label-secondary rounded p-2"><i class="ti ti-alert-triangle ti-sm text-body"></i></div>
-            <div class="d-flex justify-content-between w-100 flex-wrap">
-              <h6 class="mb-0 ms-3">Complaints</h6>
-              <div class="d-flex">
-                <p class="mb-0 fw-medium">10</p>
-                <p class="ms-3 text-success mb-0">1.5%</p>
-              </div>
-            </div>
-          </li>
-          <li class="d-flex justify-content-between align-items-center">
-            <div class="badge bg-label-danger rounded p-2"><i class="ti ti-ban ti-sm"></i></div>
-            <div class="d-flex justify-content-between w-100 flex-wrap">
-              <h6 class="mb-0 ms-3">Unsubscribe</h6>
-              <div class="d-flex">
-                <p class="mb-0 fw-medium">86</p>
-                <p class="ms-3 text-success mb-0">0.8%</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--/ Monthly Campaign State -->
-
-  <!-- Source Visit -->
-  <div class="col-xl-4 col-md-6 order-2 order-lg-1 mb-4">
-    <div class="card">
-      <div class="card-header d-flex justify-content-between">
-        <div class="card-title mb-0">
-          <h5 class="mb-0">Source Visits</h5>
-          <small class="text-muted">38.4k Visitors</small>
-        </div>
-        <div class="dropdown">
-          <button class="btn p-0" type="button" id="sourceVisits" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ti ti-dots-vertical ti-sm text-muted"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="sourceVisits">
-            <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-            <a class="dropdown-item" href="javascript:void(0);">Download</a>
-            <a class="dropdown-item" href="javascript:void(0);">View All</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <ul class="list-unstyled mb-0">
-          <li class="mb-3 pb-1">
-            <div class="d-flex align-items-start">
-              <div class="badge bg-label-secondary p-2 me-3 rounded"><i class="ti ti-shadow ti-sm"></i></div>
-              <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
-                <div class="me-2">
-                  <h6 class="mb-0">Direct Source</h6>
-                  <small class="text-muted">Direct link click</small>
-                </div>
-                <div class="d-flex align-items-center">
-                  <p class="mb-0">1.2k</p>
-                  <div class="ms-3 badge bg-label-success">+4.2%</div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="mb-3 pb-1">
-            <div class="d-flex align-items-start">
-              <div class="badge bg-label-secondary p-2 me-3 rounded"><i class="ti ti-globe ti-sm"></i></div>
-              <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
-                <div class="me-2">
-                  <h6 class="mb-0">Social Network</h6>
-                  <small class="text-muted">Social Channels</small>
-                </div>
-                <div class="d-flex align-items-center">
-                  <p class="mb-0">31.5k</p>
-                  <div class="ms-3 badge bg-label-success">+8.2%</div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="mb-3 pb-1">
-            <div class="d-flex align-items-start">
-              <div class="badge bg-label-secondary p-2 me-3 rounded"><i class="ti ti-mail ti-sm"></i></div>
-              <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
-                <div class="me-2">
-                  <h6 class="mb-0">Email Newsletter</h6>
-                  <small class="text-muted">Mail Campaigns</small>
-                </div>
-                <div class="d-flex align-items-center">
-                  <p class="mb-0">893</p>
-                  <div class="ms-3 badge bg-label-success">+2.4%</div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="mb-3 pb-1">
-            <div class="d-flex align-items-start">
-              <div class="badge bg-label-secondary p-2 me-3 rounded"><i class="ti ti-external-link ti-sm"></i></div>
-              <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
-                <div class="me-2">
-                  <h6 class="mb-0">Referrals</h6>
-                  <small class="text-muted">Impact Radius Visits</small>
-                </div>
-                <div class="d-flex align-items-center">
-                  <p class="mb-0">342</p>
-                  <div class="ms-3 badge bg-label-danger">-0.4%</div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="mb-3 pb-1">
-            <div class="d-flex align-items-start">
-              <div class="badge bg-label-secondary p-2 me-3 rounded"><i class="ti ti-discount-2 ti-sm"></i></div>
-              <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
-                <div class="me-2">
-                  <h6 class="mb-0">ADVT</h6>
-                  <small class="text-muted">Google ADVT</small>
-                </div>
-                <div class="d-flex align-items-center">
-                  <p class="mb-0">2.15k</p>
-                  <div class="ms-3 badge bg-label-success">+9.1%</div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="mb-2">
-            <div class="d-flex align-items-start">
-              <div class="badge bg-label-secondary p-2 me-3 rounded"><i class="ti ti-star ti-sm"></i></div>
-              <div class="d-flex justify-content-between w-100 flex-wrap gap-2">
-                <div class="me-2">
-                  <h6 class="mb-0">Other</h6>
-                  <small class="text-muted">Many Sources</small>
-                </div>
-                <div class="d-flex align-items-center">
-                  <p class="mb-0">12.5k</p>
-                  <div class="ms-3 badge bg-label-success">+6.2%</div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--/ Source Visit -->
-
-  <!-- Projects table -->
-  <div class="col-12 col-xl-8 col-sm-12 order-1 order-lg-2 mb-4 mb-lg-0">
-    <div class="card">
-      <div class="card-datatable table-responsive">
-        <table class="datatables-projects table border-top">
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th>Name</th>
-              <th>Leader</th>
-              <th>Team</th>
-              <th class="w-px-200">Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-    </div>
-  </div>
-  <!--/ Projects table -->
-</div>
-
-
-          </div>
-          <!-- / Content -->
+            <!-- sa-app__body / end -->

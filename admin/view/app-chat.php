@@ -1,583 +1,462 @@
-  <!-- Content -->
-        
-  <div class="container-xxl flex-grow-1 container-p-y">
-            
-            
-            <div class="app-chat card overflow-hidden">
-              <div class="row g-0">
-                <!-- Sidebar Left -->
-                <div class="col app-chat-sidebar-left app-sidebar overflow-hidden" id="app-chat-sidebar-left">
-                  <div class="chat-sidebar-left-user sidebar-header d-flex flex-column justify-content-center align-items-center flex-wrap px-4 pt-5">
-                    <div class="avatar avatar-xl avatar-online">
-                      <img src="view/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                    </div>
-                    <h5 class="mt-2 mb-0">John Doe</h5>
-                    <span>Admin</span>
-                    <i class="ti ti-x ti-sm cursor-pointer close-sidebar" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-left"></i>
-                  </div>
-                  <div class="sidebar-body px-4 pb-4">
-                    <div class="my-4">
-                      <small class="text-muted text-uppercase">About</small>
-                      <textarea id="chat-sidebar-left-user-about" class="form-control chat-sidebar-left-user-about mt-3" rows="4" maxlength="120">Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.</textarea>
-                    </div>
-                    <div class="my-4">
-                      <small class="text-muted text-uppercase">Status</small>
-                      <div class="d-grid gap-2 mt-3">
-                        <div class="form-check form-check-success">
-                          <input name="chat-user-status" class="form-check-input" type="radio" value="active" id="user-active" checked>
-                          <label class="form-check-label" for="user-active">Active</label>
+<!-- sa-app__body -->
+<div id="top" class="sa-app__body d-flex">
+                <div class="sa-chat sa-chat--open flex-grow-1">
+                    <div class="sa-chat__sidebar">
+                        <div class="sa-chat__header">
+                            <div class="sa-chat__header-avatar sa-symbol sa-symbol--shape--circle"><img src="images/customers/customer-4-64x64.jpg" width="64" height="64" alt="" /></div><input type="text" placeholder="Search over contacts" class="form-control form-control--search" />
                         </div>
-                        <div class="form-check form-check-danger">
-                          <input name="chat-user-status" class="form-check-input" type="radio" value="busy" id="user-busy">
-                          <label class="form-check-label" for="user-busy">Busy</label>
-                        </div>
-                        <div class="form-check form-check-warning">
-                          <input name="chat-user-status" class="form-check-input" type="radio" value="away" id="user-away">
-                          <label class="form-check-label" for="user-away">Away</label>
-                        </div>
-                        <div class="form-check form-check-secondary">
-                          <input name="chat-user-status" class="form-check-input" type="radio" value="offline" id="user-offline">
-                          <label class="form-check-label" for="user-offline">Offline</label>
-                        </div>
-                      </div>
+                        <ul class="sa-chat__contacts" data-simplebar="">
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--offline sa-symbol--shape--circle"><img src="images/customers/customer-1-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Jessica Moore</div>
+                                <div class="sa-chat__contact-meta">Historically, philosophy encompassed all bodies of knowledge and a practitioner was known as a philosopher.</div>
+                                <div class="sa-chat__contact-date">2 minutes</div>
+                            </li>
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--online sa-symbol--shape--circle"><img src="images/customers/customer-2-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Adam Taylor</div>
+                                <div class="sa-chat__contact-meta">In the 19th century, the growth of modern research universities led academic philosophy and other disciplines to professionalize and specialize.</div>
+                                <div class="sa-chat__contact-date">2 hours</div>
+                            </li>
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--offline sa-symbol--shape--circle"><img src="images/customers/customer-3-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Helena Garcia</div>
+                                <div class="sa-chat__contact-meta">Philosophical methods include questioning, critical discussion, rational argument, and systematic presentation.</div>
+                                <div class="sa-chat__contact-date">5 hours</div>
+                            </li>
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--away sa-symbol--shape--circle"><img src="images/customers/customer-5-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Olivia Smith</div>
+                                <div class="sa-chat__contact-meta">In this sense, philosophy is closely related to religion, mathematics, natural science, education, and politics.</div>
+                                <div class="sa-chat__contact-date">2 days</div>
+                            </li>
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--offline sa-symbol--shape--circle"><img src="images/customers/customer-6-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Kevin Smith</div>
+                                <div class="sa-chat__contact-meta">This division is not obsolete, but has changed: natural philosophy has split into the various natural sciences.</div>
+                                <div class="sa-chat__contact-date">13 hours</div>
+                            </li>
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--offline sa-symbol--shape--circle"><img src="images/customers/customer-7-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Brian Wood</div>
+                                <div class="sa-chat__contact-meta">Western philosophy is the philosophical tradition of the Western world, dating back to pre-Socratic thinkers who were active in 6th-century.</div>
+                                <div class="sa-chat__contact-date">43 minutes</div>
+                            </li>
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--offline sa-symbol--shape--circle"><img src="images/customers/customer-8-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Ethan Young</div>
+                                <div class="sa-chat__contact-meta">Early modern philosophy in the Western world begins with thinkers such as Thomas Hobbes.</div>
+                                <div class="sa-chat__contact-date">3 weeks</div>
+                            </li>
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--offline sa-symbol--shape--circle"><img src="images/customers/customer-9-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Charlotte Jones</div>
+                                <div class="sa-chat__contact-meta">Major modern philosophers include Spinoza, Leibniz, Locke, Berkeley, Hume, and Kant.</div>
+                                <div class="sa-chat__contact-date">21 hour</div>
+                            </li>
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--offline sa-symbol--shape--circle"><img src="images/customers/customer-10-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Isabel Williams</div>
+                                <div class="sa-chat__contact-meta">Islamic philosophy is the philosophical work originating in the Islamic tradition and is mostly done in Arabic.</div>
+                                <div class="sa-chat__contact-date">5 years</div>
+                            </li>
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--offline sa-symbol--shape--circle"><img src="images/customers/customer-11-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Jacob Lee</div>
+                                <div class="sa-chat__contact-meta">Babylonian astronomy also included much philosophical speculations about cosmology which may have influenced the Ancient Greeks.</div>
+                                <div class="sa-chat__contact-date">25 minutes</div>
+                            </li>
+                            <li class="sa-chat__contact">
+                                <div class="sa-chat__contact-avatar sa-symbol sa-symbol--status--offline sa-symbol--shape--circle"><img src="images/customers/customer-12-64x64.jpg" width="64" height="64" alt="" />
+                                    <div class="sa-symbol__status"></div>
+                                </div>
+                                <div class="sa-chat__contact-name">Anna Wilson</div>
+                                <div class="sa-chat__contact-meta">Philosophical questions can be grouped into various branches.</div>
+                                <div class="sa-chat__contact-date">4 hours</div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="my-4">
-                      <small class="text-muted text-uppercase">Settings</small>
-                      <ul class="list-unstyled d-grid gap-2 me-3 mt-3">
-                        <li class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <i class='ti ti-message me-1 ti-sm'></i>
-                            <span class="align-middle">Two-step Verification</span>
-                          </div>
-                          <label class="switch switch-primary me-4 switch-sm">
-                            <input type="checkbox" class="switch-input" checked="" />
-                            <span class="switch-toggle-slider">
-                              <span class="switch-on"></span>
-                              <span class="switch-off"></span>
-                            </span>
-                          </label>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <i class='ti ti-bell me-1 ti-sm'></i>
-                            <span class="align-middle">Notification</span>
-                          </div>
-                          <label class="switch switch-primary me-4 switch-sm">
-                            <input type="checkbox" class="switch-input" />
-                            <span class="switch-toggle-slider">
-                              <span class="switch-on"></span>
-                              <span class="switch-off"></span>
-                            </span>
-                          </label>
-                        </li>
-                        <li>
-                          <i class="ti ti-user-plus me-1 ti-sm"></i>
-                          <span class="align-middle">Invite Friends</span>
-                        </li>
-                        <li>
-                          <i class="ti ti-trash me-1 ti-sm"></i>
-                          <span class="align-middle">Delete Account</span>
-                        </li>
-                      </ul>
+                    <div class="sa-chat__main">
+                        <div class="sa-chat__header"><button type="button" class="btn btn-sa-muted sa-chat__header-back"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg></button>
+                            <div class="sa-chat__header-avatar sa-symbol sa-symbol--status--online sa-symbol--shape--circle"><img src="images/customers/customer-2-64x64.jpg" width="64" height="64" alt="" />
+                                <div class="sa-symbol__status"></div>
+                            </div>
+                            <div class="sa-chat__header-info">
+                                <div class="sa-chat__header-title">Adam Taylor</div>
+                                <div class="sa-chat__header-meta">Last seen 7 days ago</div>
+                            </div>
+                            <div class="sa-chat__header-actions"><button type="button" class="btn btn-sa-muted btn-sa-icon fs-exact-20" data-bs-toggle="tooltip" title="Call"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg></button><button type="button" class="btn btn-sa-muted btn-sa-icon fs-exact-20" data-bs-toggle="tooltip" title="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                        <circle cx="12" cy="12" r="1"></circle>
+                                        <circle cx="12" cy="5" r="1"></circle>
+                                        <circle cx="12" cy="19" r="1"></circle>
+                                    </svg></button></div>
+                        </div>
+                        <div class="sa-chat__messages">
+                            <div class="sa-chat__divider">7 October</div>
+                            <div class="sa-chat__message sa-chat__message--opposite">
+                                <div class="sa-chat__message-avatar">
+                                    <div class="sa-symbol sa-symbol--shape--circle"><img src="images/customers/customer-2-64x64.jpg" width="64" height="64" alt="" /></div>
+                                </div>
+                                <div class="sa-chat__message-parts">
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">Hello</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">What do you think about this?</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">In the 19th century, the growth of modern research universities led academic philosophy and other disciplines to professionalize and specialize. Since then, various areas of investigation that were traditionally part of philosophy have become separate academic disciplines, such as psychology.</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sa-chat__message-time">Adam Taylor – 18:46</div>
+                            </div>
+                            <div class="sa-chat__message">
+                                <div class="sa-chat__message-avatar">
+                                    <div class="sa-symbol sa-symbol--shape--circle"><img src="images/customers/customer-4-64x64.jpg" width="64" height="64" alt="" /></div>
+                                </div>
+                                <div class="sa-chat__message-parts">
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">Well</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">Basically this looks good</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">Can you suggest other variants?</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sa-chat__message-time">Ryan Ford – 18:46 - Delivered</div>
+                            </div>
+                            <div class="sa-chat__message sa-chat__message--opposite">
+                                <div class="sa-chat__message-avatar">
+                                    <div class="sa-symbol sa-symbol--shape--circle"><img src="images/customers/customer-2-64x64.jpg" width="64" height="64" alt="" /></div>
+                                </div>
+                                <div class="sa-chat__message-parts">
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">Yes, sure</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">These groupings allow philosophers to focus on a set of similar topics and interact with other thinkers who are interested in the same questions.</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sa-chat__message-time">Adam Taylor – 18:46</div>
+                            </div>
+                            <div class="sa-chat__message">
+                                <div class="sa-chat__message-avatar">
+                                    <div class="sa-symbol sa-symbol--shape--circle"><img src="images/customers/customer-4-64x64.jpg" width="64" height="64" alt="" /></div>
+                                </div>
+                                <div class="sa-chat__message-parts">
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">Sorry, but I need to run, let&#x27;s discuss this later</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">I&#x27;ll write when I&#x27;m done.</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sa-chat__message-time">Ryan Ford – 18:46 - Delivered</div>
+                            </div>
+                            <div class="sa-chat__message sa-chat__message--opposite">
+                                <div class="sa-chat__message-avatar">
+                                    <div class="sa-symbol sa-symbol--shape--circle"><img src="images/customers/customer-2-64x64.jpg" width="64" height="64" alt="" /></div>
+                                </div>
+                                <div class="sa-chat__message-parts">
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">Well I will wait</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sa-chat__message-time">Adam Taylor – 18:46</div>
+                            </div>
+                            <div class="sa-chat__divider">1 January</div>
+                            <div class="sa-chat__message">
+                                <div class="sa-chat__message-avatar">
+                                    <div class="sa-symbol sa-symbol--shape--circle"><img src="images/customers/customer-4-64x64.jpg" width="64" height="64" alt="" /></div>
+                                </div>
+                                <div class="sa-chat__message-parts">
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">Hi Adam</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">I am back and ready for further discussions</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sa-chat__message-time">Ryan Ford – 18:46 - Delivered</div>
+                            </div>
+                            <div class="sa-chat__message sa-chat__message--opposite">
+                                <div class="sa-chat__message-avatar">
+                                    <div class="sa-symbol sa-symbol--shape--circle"><img src="images/customers/customer-2-64x64.jpg" width="64" height="64" alt="" /></div>
+                                </div>
+                                <div class="sa-chat__message-parts">
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">Metaphysics is the study of the most general features of reality, such as existence, time, objects and their properties, wholes and their parts, events, processes and causation and the relationship between mind and body.</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">What about Metaphysics?</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sa-chat__message-time">Adam Taylor – 18:46</div>
+                            </div>
+                            <div class="sa-chat__message">
+                                <div class="sa-chat__message-avatar">
+                                    <div class="sa-symbol sa-symbol--shape--circle"><img src="images/customers/customer-4-64x64.jpg" width="64" height="64" alt="" /></div>
+                                </div>
+                                <div class="sa-chat__message-parts">
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">Hmm</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sa-chat__message-part dropdown">
+                                        <div class="sa-chat__message-text">No, Metaphysics is a bad idea</div><button class="sa-chat__message-actions" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                                <circle cx="12" cy="12" r="1"></circle>
+                                                <circle cx="12" cy="5" r="1"></circle>
+                                                <circle cx="12" cy="19" r="1"></circle>
+                                            </svg></button>
+                                        <ul class="dropdown-menu" aria-label="Chat message context menu">
+                                            <li><a class="dropdown-item" href="#">Reply</a></li>
+                                            <li><a class="dropdown-item" href="#">Copy Text</a></li>
+                                            <li><a class="dropdown-item" href="#">Forward Message</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider" />
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sa-chat__message-time">Ryan Ford – 18:46 - Delivered</div>
+                            </div>
+                        </div>
+                        <form class="sa-chat__form d-flex"><input type="text" placeholder="Hello, my name is Max" class="form-control" /><button class="btn btn-primary ms-3">Send</button></form>
                     </div>
-                    <div class="d-flex mt-4">
-                      <button class="btn btn-primary" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-left">Logout</button>
-                    </div>
-                  </div>
                 </div>
-                <!-- /Sidebar Left-->
-            
-                <!-- Chat & Contacts -->
-                <div class="col app-chat-contacts app-sidebar flex-grow-0 overflow-hidden border-end" id="app-chat-contacts">
-                  <div class="sidebar-header">
-                    <div class="d-flex align-items-center me-3 me-lg-0">
-                      <div class="flex-shrink-0 avatar avatar-online me-3" data-bs-toggle="sidebar" data-overlay="app-overlay-ex" data-target="#app-chat-sidebar-left">
-                        <img class="user-avatar rounded-circle cursor-pointer" src="view/img/avatars/1.png" alt="Avatar">
-                      </div>
-                      <div class="flex-grow-1 input-group input-group-merge rounded-pill">
-                        <span class="input-group-text" id="basic-addon-search31"><i class="ti ti-search"></i></span>
-                        <input type="text" class="form-control chat-search-input" placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon-search31">
-                      </div>
-                    </div>
-                    <i class="ti ti-x cursor-pointer d-lg-none d-block position-absolute mt-2 me-1 top-0 end-0" data-overlay data-bs-toggle="sidebar" data-target="#app-chat-contacts"></i>
-                  </div>
-                  <hr class="container-m-nx m-0">
-                  <div class="sidebar-body">
-            
-                    <div class="chat-contact-list-item-title">
-                      <h5 class="text-primary mb-0 px-4 pt-3 pb-2">Chats</h5>
-                    </div>
-                    <!-- Chats -->
-                    <ul class="list-unstyled chat-contact-list" id="chat-list">
-                      <li class="chat-contact-list-item chat-list-item-0 d-none">
-                        <h6 class="text-muted mb-0">No Chats Found</h6>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-online">
-                            <img src="view/img/avatars/13.png" alt="Avatar" class="rounded-circle">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Waldemar Mannering</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">Refer friends. Get rewards.</p>
-                          </div>
-                          <small class="text-muted mb-auto">5 Minutes</small>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item active">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-offline">
-                            <img src="view/img/avatars/2.png" alt="Avatar" class="rounded-circle">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Felecia Rower</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">I will purchase it for sure. 👍</p>
-                          </div>
-                          <small class="text-muted mb-auto">30 Minutes</small>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-busy">
-                            <span class="avatar-initial rounded-circle bg-label-success">CM</span>
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Calvin Moore</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">If it takes long you can mail inbox user</p>
-                          </div>
-                          <small class="text-muted mb-auto">1 Day</small>
-                        </a>
-                      </li>
-                    </ul>
-                    <!-- Contacts -->
-                    <ul class="list-unstyled chat-contact-list mb-0" id="contact-list">
-                      <li class="chat-contact-list-item chat-contact-list-item-title">
-                        <h5 class="text-primary mb-0">Contacts</h5>
-                      </li>
-                      <li class="chat-contact-list-item contact-list-item-0 d-none">
-                        <h6 class="text-muted mb-0">No Contacts Found</h6>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-offline">
-                            <img src="view/img/avatars/4.png" alt="Avatar" class="rounded-circle">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Natalie Maxwell</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">UI/UX Designer</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-busy">
-                            <img src="view/img/avatars/5.png" alt="Avatar" class="rounded-circle">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Jess Cook</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">Business Analyst</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="avatar d-block flex-shrink-0">
-                            <span class="avatar-initial rounded-circle bg-label-primary">LM</span>
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Louie Mason</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">Resource Manager</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-busy">
-                            <img src="view/img/avatars/7.png" alt="Avatar" class="rounded-circle">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Krystal Norton</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">Business Executive</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-offline">
-                            <img src="view/img/avatars/8.png" alt="Avatar" class="rounded-circle">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Stacy Garrison</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">Marketing Ninja</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="avatar d-block flex-shrink-0">
-                            <span class="avatar-initial rounded-circle bg-label-success">CM</span>
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Calvin Moore</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">UX Engineer</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-busy">
-                            <img src="view/img/avatars/10.png" alt="Avatar" class="rounded-circle">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Mary Giles</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">Account Department</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-offline">
-                            <img src="view/img/avatars/13.png" alt="Avatar" class="rounded-circle">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Waldemar Mannering</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">AWS Support</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="avatar d-block flex-shrink-0">
-                            <span class="avatar-initial rounded-circle bg-label-danger">AJ</span>
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Amy Johnson</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">Frontend Developer</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-offline">
-                            <img src="view/img/avatars/2.png" alt="Avatar" class="rounded-circle">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">Felecia Rower</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">Cloud Engineer</p>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="chat-contact-list-item">
-                        <a class="d-flex align-items-center">
-                          <div class="flex-shrink-0 avatar avatar-busy">
-                            <img src="view/img/avatars/11.png" alt="Avatar" class="rounded-circle">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="chat-contact-name text-truncate m-0">William Stephens</h6>
-                            <p class="chat-contact-status text-muted text-truncate mb-0">Backend Developer</p>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- /Chat contacts -->
-            
-                <!-- Chat History -->
-                <div class="col app-chat-history bg-body">
-                  <div class="chat-history-wrapper">
-                    <div class="chat-history-header border-bottom">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="d-flex overflow-hidden align-items-center">
-                          <i class="ti ti-menu-2 ti-sm cursor-pointer d-lg-none d-block me-2" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-contacts"></i>
-                          <div class="flex-shrink-0 avatar">
-                            <img src="view/img/avatars/2.png" alt="Avatar" class="rounded-circle" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-right">
-                          </div>
-                          <div class="chat-contact-info flex-grow-1 ms-2">
-                            <h6 class="m-0">Felecia Rower</h6>
-                            <small class="user-status text-muted">NextJS developer</small>
-                          </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <i class="ti ti-phone-call cursor-pointer d-sm-block d-none me-3"></i>
-                          <i class="ti ti-video cursor-pointer d-sm-block d-none me-3"></i>
-                          <i class="ti ti-search cursor-pointer d-sm-block d-none me-3"></i>
-                          <div class="dropdown d-flex align-self-center">
-                            <button class="btn p-0" type="button" id="chat-header-actions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="ti ti-dots-vertical"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="chat-header-actions">
-                              <a class="dropdown-item" href="javascript:void(0);">View Contact</a>
-                              <a class="dropdown-item" href="javascript:void(0);">Mute Notifications</a>
-                              <a class="dropdown-item" href="javascript:void(0);">Block Contact</a>
-                              <a class="dropdown-item" href="javascript:void(0);">Clear Chat</a>
-                              <a class="dropdown-item" href="javascript:void(0);">Report</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="chat-history-body bg-body">
-                      <ul class="list-unstyled chat-history">
-                        <li class="chat-message chat-message-right">
-                          <div class="d-flex overflow-hidden">
-                            <div class="chat-message-wrapper flex-grow-1">
-                              <div class="chat-message-text">
-                                <p class="mb-0">How can we help? We're here for you! 😄</p>
-                              </div>
-                              <div class="text-end text-muted mt-1">
-                                <i class='ti ti-checks ti-xs me-1 text-success'></i>
-                                <small>10:00 AM</small>
-                              </div>
-                            </div>
-                            <div class="user-avatar flex-shrink-0 ms-3">
-                              <div class="avatar avatar-sm">
-                                <img src="view/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="chat-message">
-                          <div class="d-flex overflow-hidden">
-                            <div class="user-avatar flex-shrink-0 me-3">
-                              <div class="avatar avatar-sm">
-                                <img src="view/img/avatars/2.png" alt="Avatar" class="rounded-circle">
-                              </div>
-                            </div>
-                            <div class="chat-message-wrapper flex-grow-1">
-                              <div class="chat-message-text">
-                                <p class="mb-0">Hey John, I am looking for the best admin template.</p>
-                                <p class="mb-0">Could you please help me to find it out? 🤔</p>
-                              </div>
-                              <div class="chat-message-text mt-2">
-                                <p class="mb-0">It should be Bootstrap 5 compatible.</p>
-                              </div>
-                              <div class="text-muted mt-1">
-                                <small>10:02 AM</small>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="chat-message chat-message-right">
-                          <div class="d-flex overflow-hidden">
-                            <div class="chat-message-wrapper flex-grow-1">
-                              <div class="chat-message-text">
-                                <p class="mb-0">Vuexy has all the components you'll ever need in a app.</p>
-                              </div>
-                              <div class="text-end text-muted mt-1">
-                                <i class='ti ti-checks ti-xs me-1 text-success'></i>
-                                <small>10:03 AM</small>
-                              </div>
-                            </div>
-                            <div class="user-avatar flex-shrink-0 ms-3">
-                              <div class="avatar avatar-sm">
-                                <img src="view/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="chat-message">
-                          <div class="d-flex overflow-hidden">
-                            <div class="user-avatar flex-shrink-0 me-3">
-                              <div class="avatar avatar-sm">
-                                <img src="view/img/avatars/2.png" alt="Avatar" class="rounded-circle">
-                              </div>
-                            </div>
-                            <div class="chat-message-wrapper flex-grow-1">
-                              <div class="chat-message-text">
-                                <p class="mb-0">Looks clean and fresh UI. 😃</p>
-                              </div>
-                              <div class="chat-message-text mt-2">
-                                <p class="mb-0">It's perfect for my next project.</p>
-                              </div>
-                              <div class="chat-message-text mt-2">
-                                <p class="mb-0">How can I purchase it?</p>
-                              </div>
-                              <div class="text-muted mt-1">
-                                <small>10:05 AM</small>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="chat-message chat-message-right">
-                          <div class="d-flex overflow-hidden">
-                            <div class="chat-message-wrapper flex-grow-1">
-                              <div class="chat-message-text">
-                                <p class="mb-0">Thanks, you can purchase it.</p>
-                              </div>
-                              <div class="text-end text-muted mt-1">
-                                <i class='ti ti-checks ti-xs me-1 text-success'></i>
-                                <small>10:06 AM</small>
-                              </div>
-                            </div>
-                            <div class="user-avatar flex-shrink-0 ms-3">
-                              <div class="avatar avatar-sm">
-                                <img src="view/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="chat-message">
-                          <div class="d-flex overflow-hidden">
-                            <div class="user-avatar flex-shrink-0 me-3">
-                              <div class="avatar avatar-sm">
-                                <img src="view/img/avatars/2.png" alt="Avatar" class="rounded-circle">
-                              </div>
-                            </div>
-                            <div class="chat-message-wrapper flex-grow-1">
-                              <div class="chat-message-text">
-                                <p class="mb-0">I will purchase it for sure. 👍</p>
-                              </div>
-                              <div class="chat-message-text mt-2">
-                                <p class="mb-0">Thanks.</p>
-                              </div>
-                              <div class="text-muted mt-1">
-                                <small>10:08 AM</small>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="chat-message chat-message-right">
-                          <div class="d-flex overflow-hidden">
-                            <div class="chat-message-wrapper flex-grow-1">
-                              <div class="chat-message-text">
-                                <p class="mb-0">Great, Feel free to get in touch.</p>
-                              </div>
-                              <div class="text-end text-muted mt-1">
-                                <i class='ti ti-checks ti-xs me-1 text-success'></i>
-                                <small>10:10 AM</small>
-                              </div>
-                            </div>
-                            <div class="user-avatar flex-shrink-0 ms-3">
-                              <div class="avatar avatar-sm">
-                                <img src="view/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="chat-message">
-                          <div class="d-flex overflow-hidden">
-                            <div class="user-avatar flex-shrink-0 me-3">
-                              <div class="avatar avatar-sm">
-                                <img src="view/img/avatars/2.png" alt="Avatar" class="rounded-circle">
-                              </div>
-                            </div>
-                            <div class="chat-message-wrapper flex-grow-1">
-                              <div class="chat-message-text">
-                                <p class="mb-0">Do you have design files for Vuexy?</p>
-                              </div>
-                              <div class="text-muted mt-1">
-                                <small>10:15 AM</small>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="chat-message chat-message-right">
-                          <div class="d-flex overflow-hidden">
-                            <div class="chat-message-wrapper flex-grow-1 w-50">
-                              <div class="chat-message-text">
-                                <p class="mb-0">Yes that's correct documentation file, Design files are included with the template.</p>
-                              </div>
-                              <div class="text-end text-muted mt-1">
-                                <i class='ti ti-checks ti-xs me-1'></i>
-                                <small>10:15 AM</small>
-                              </div>
-                            </div>
-                            <div class="user-avatar flex-shrink-0 ms-3">
-                              <div class="avatar avatar-sm">
-                                <img src="view/img/avatars/1.png" alt="Avatar" class="rounded-circle">
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- Chat message form -->
-                    <div class="chat-history-footer shadow-sm">
-                      <form class="form-send-message d-flex justify-content-between align-items-center ">
-                        <input class="form-control message-input border-0 me-3 shadow-none" placeholder="Type your message here">
-                        <div class="message-actions d-flex align-items-center">
-                          <i class="speech-to-text ti ti-microphone ti-sm cursor-pointer"></i>
-                          <label for="attach-doc" class="form-label mb-0">
-                            <i class="ti ti-photo ti-sm cursor-pointer mx-3"></i>
-                            <input type="file" id="attach-doc" hidden>
-                          </label>
-                          <button class="btn btn-primary d-flex send-msg-btn">
-                            <i class="ti ti-send me-md-1 me-0"></i>
-                            <span class="align-middle d-md-inline-block d-none">Send</span>
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <!-- /Chat History -->
-            
-                <!-- Sidebar Right -->
-                <div class="col app-chat-sidebar-right app-sidebar overflow-hidden" id="app-chat-sidebar-right">
-                  <div class="sidebar-header d-flex flex-column justify-content-center align-items-center flex-wrap px-4 pt-5">
-                    <div class="avatar avatar-xl avatar-online">
-                      <img src="view/img/avatars/2.png" alt="Avatar" class="rounded-circle">
-                    </div>
-                    <h6 class="mt-2 mb-0">Felecia Rower</h6>
-                    <span>NextJS Developer</span>
-                    <i class="ti ti-x ti-sm cursor-pointer close-sidebar d-block" data-bs-toggle="sidebar" data-overlay data-target="#app-chat-sidebar-right"></i>
-                  </div>
-                  <div class="sidebar-body px-4 pb-4">
-                    <div class="my-4">
-                      <small class="text-muted text-uppercase">About</small>
-                      <p class="mb-0 mt-3">A Next. js developer is a software developer who uses the Next. js framework alongside ReactJS to build web applications.</p>
-                    </div>
-                    <div class="my-4">
-                      <small class="text-muted text-uppercase">Personal Information</small>
-                      <ul class="list-unstyled d-grid gap-2 mt-3">
-                        <li class="d-flex align-items-center">
-                          <i class='ti ti-mail ti-sm'></i>
-                          <span class="align-middle ms-2">josephGreen@email.com</span>
-                        </li>
-                        <li class="d-flex align-items-center">
-                          <i class='ti ti-phone-call ti-sm'></i>
-                          <span class="align-middle ms-2">+1(123) 456 - 7890</span>
-                        </li>
-                        <li class="d-flex align-items-center">
-                          <i class='ti ti-clock ti-sm'></i>
-                          <span class="align-middle ms-2">Mon - Fri 10AM - 8PM</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="mt-4">
-                      <small class="text-muted text-uppercase">Options</small>
-                      <ul class="list-unstyled d-grid gap-2 mt-3">
-                        <li class="cursor-pointer d-flex align-items-center">
-                          <i class='ti ti-badge ti-sm'></i>
-                          <span class="align-middle ms-2">Add Tag</span>
-                        </li>
-                        <li class="cursor-pointer d-flex align-items-center">
-                          <i class='ti ti-star ti-sm'></i>
-                          <span class="align-middle ms-2">Important Contact</span>
-                        </li>
-                        <li class="cursor-pointer d-flex align-items-center">
-                          <i class='ti ti-photo ti-sm'></i>
-                          <span class="align-middle ms-2">Shared Media</span>
-                        </li>
-                        <li class="cursor-pointer d-flex align-items-center">
-                          <i class='ti ti-trash ti-sm'></i>
-                          <span class="align-middle ms-2">Delete Contact</span>
-                        </li>
-                        <li class="cursor-pointer d-flex align-items-center">
-                          <i class='ti ti-ban ti-sm'></i>
-                          <span class="align-middle ms-2">Block Contact</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- /Sidebar Right -->
-            
-                <div class="app-overlay"></div>
-              </div>
-            </div>
-            
-            
-                      </div>
-                      <!-- / Content -->
+            </div><!-- sa-app__body / end -->

@@ -1,148 +1,143 @@
-<!-- Content -->
-
-<div class="container-xxl flex-grow-1 container-p-y">
-
-
-  <div class="card app-calendar-wrapper">
-    <div class="row g-0">
-      <!-- Calendar Sidebar -->
-      <div class="col app-calendar-sidebar" id="app-calendar-sidebar">
-        <div class="border-bottom p-4 my-sm-0 mb-3">
-          <div class="d-grid">
-            <button class="btn btn-primary btn-toggle-sidebar" data-bs-toggle="offcanvas" data-bs-target="#addEventSidebar" aria-controls="addEventSidebar">
-              <i class="ti ti-plus me-1"></i>
-              <span class="align-middle">Add Event</span>
-            </button>
-          </div>
-        </div>
-        <div class="p-3">
-          <!-- inline calendar (flatpicker) -->
-          <div class="inline-calendar"></div>
-
-          <hr class="container-m-nx mb-4 mt-3">
-
-          <!-- Filter -->
-          <div class="mb-3 ms-3">
-            <small class="text-small text-muted text-uppercase align-middle">Filter</small>
-          </div>
-
-          <div class="form-check mb-2 ms-3">
-            <input class="form-check-input select-all" type="checkbox" id="selectAll" data-value="all" checked>
-            <label class="form-check-label" for="selectAll">View All</label>
-          </div>
-
-          <div class="app-calendar-events-filter ms-3">
-            <div class="form-check form-check-danger mb-2">
-              <input class="form-check-input input-filter" type="checkbox" id="select-personal" data-value="personal" checked>
-              <label class="form-check-label" for="select-personal">Personal</label>
-            </div>
-            <div class="form-check mb-2">
-              <input class="form-check-input input-filter" type="checkbox" id="select-business" data-value="business" checked>
-              <label class="form-check-label" for="select-business">Business</label>
-            </div>
-            <div class="form-check form-check-warning mb-2">
-              <input class="form-check-input input-filter" type="checkbox" id="select-family" data-value="family" checked>
-              <label class="form-check-label" for="select-family">Family</label>
-            </div>
-            <div class="form-check form-check-success mb-2">
-              <input class="form-check-input input-filter" type="checkbox" id="select-holiday" data-value="holiday" checked>
-              <label class="form-check-label" for="select-holiday">Holiday</label>
-            </div>
-            <div class="form-check form-check-info">
-              <input class="form-check-input input-filter" type="checkbox" id="select-etc" data-value="etc" checked>
-              <label class="form-check-label" for="select-etc">ETC</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /Calendar Sidebar -->
-
-      <!-- Calendar & Modal -->
-      <div class="col app-calendar-content">
-        <div class="card shadow-none border-0">
-          <div class="card-body pb-0">
-            <!-- FullCalendar -->
-            <div id="calendar"></div>
-          </div>
-        </div>
-        <div class="app-overlay"></div>
-        <!-- FullCalendar Offcanvas -->
-        <div class="offcanvas offcanvas-end event-sidebar" tabindex="-1" id="addEventSidebar" aria-labelledby="addEventSidebarLabel">
-          <div class="offcanvas-header my-1">
-            <h5 class="offcanvas-title" id="addEventSidebarLabel">Add Event</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body pt-0">
-            <form class="event-form pt-0" id="eventForm" onsubmit="return false">
-              <div class="mb-3">
-                <label class="form-label" for="eventTitle">Title</label>
-                <input type="text" class="form-control" id="eventTitle" name="eventTitle" placeholder="Event Title" />
-              </div>
-              <div class="mb-3">
-                <label class="form-label" for="eventLabel">Label</label>
-                <select class="select2 select-event-label form-select" id="eventLabel" name="eventLabel">
-                  <option data-label="primary" value="Business" selected>Business</option>
-                  <option data-label="danger" value="Personal">Personal</option>
-                  <option data-label="warning" value="Family">Family</option>
-                  <option data-label="success" value="Holiday">Holiday</option>
-                  <option data-label="info" value="ETC">ETC</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label class="form-label" for="eventStartDate">Start Date</label>
-                <input type="text" class="form-control" id="eventStartDate" name="eventStartDate" placeholder="Start Date" />
-              </div>
-              <div class="mb-3">
-                <label class="form-label" for="eventEndDate">End Date</label>
-                <input type="text" class="form-control" id="eventEndDate" name="eventEndDate" placeholder="End Date" />
-              </div>
-              <div class="mb-3">
-                <label class="switch">
-                  <input type="checkbox" class="switch-input allDay-switch" />
-                  <span class="switch-toggle-slider">
-                    <span class="switch-on"></span>
-                    <span class="switch-off"></span>
-                  </span>
-                  <span class="switch-label">All Day</span>
-                </label>
-              </div>
-              <div class="mb-3">
-                <label class="form-label" for="eventURL">Event URL</label>
-                <input type="url" class="form-control" id="eventURL" name="eventURL" placeholder="https://www.google.com/" />
-              </div>
-              <div class="mb-3 select2-primary">
-                <label class="form-label" for="eventGuests">Add Guests</label>
-                <select class="select2 select-event-guests form-select" id="eventGuests" name="eventGuests" multiple>
-                  <option data-avatar="1.png" value="Jane Foster">Jane Foster</option>
-                  <option data-avatar="3.png" value="Donna Frank">Donna Frank</option>
-                  <option data-avatar="5.png" value="Gabrielle Robertson">Gabrielle Robertson</option>
-                  <option data-avatar="7.png" value="Lori Spears">Lori Spears</option>
-                  <option data-avatar="9.png" value="Sandy Vega">Sandy Vega</option>
-                  <option data-avatar="11.png" value="Cheryl May">Cheryl May</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label class="form-label" for="eventLocation">Location</label>
-                <input type="text" class="form-control" id="eventLocation" name="eventLocation" placeholder="Enter Location" />
-              </div>
-              <div class="mb-3">
-                <label class="form-label" for="eventDescription">Description</label>
-                <textarea class="form-control" name="eventDescription" id="eventDescription"></textarea>
-              </div>
-              <div class="mb-3 d-flex justify-content-sm-between justify-content-start my-4">
-                <div>
-                  <button type="submit" class="btn btn-primary btn-add-event me-sm-3 me-1">Add</button>
-                  <button type="reset" class="btn btn-label-secondary btn-cancel me-sm-0 me-1" data-bs-dismiss="offcanvas">Cancel</button>
+<!-- sa-app__body -->
+<div id="top" class="sa-app__body d-flex flex-column">
+    <div class="mx-xxl-3 px-4 px-sm-5">
+        <div class="py-5">
+            <div class="row g-4 align-items-center">
+                <div class="col">
+                    <nav class="mb-2" aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-sa-simple">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Calendar</li>
+                        </ol>
+                    </nav>
+                    <h1 class="h3 m-0">Calendar</h1>
                 </div>
-                <div><button class="btn btn-label-danger btn-delete-event d-none">Delete</button></div>
-              </div>
-            </form>
-          </div>
+                <div class="col-auto d-flex"><a href="#" class="btn btn-secondary me-3">Import</a><a href="#" class="btn btn-primary">New Event</a></div>
+            </div>
         </div>
-      </div>
-      <!-- /Calendar & Modal -->
     </div>
-  </div>
-
-</div>
-<!-- / Content -->
+    <div class="mx-xxl-3 px-4 px-sm-5 pb-5 mb-3 flex-grow-1 d-flex flex-column">
+        <div class="sa-layout flex-grow-1">
+            <div class="sa-layout__backdrop" data-sa-layout-sidebar-close=""></div>
+            <div class="sa-layout__sidebar d-flex flex-column">
+                <div class="sa-layout__sidebar-body" data-simplebar="">
+                    <div class="sa-calendar-datepicker"></div>
+                    <div class="sa-divider"></div>
+                    <div class="sa-nav sa-nav--card sa-nav--card--sm px-3 py-4">
+                        <div class="sa-nav__section">
+                            <div class="sa-nav__section-title">Calendars</div>
+                            <ul class="sa-nav__menu">
+                                <li class="sa-nav__menu-item"><label class="sa-nav__link user-select-none">
+                                        <div class="sa-nav__icon sa-color-checkbox" style="--sa-color-checkbox--bg-color:#DB4343;--sa-color-checkbox--font-color:#fff">
+                                            <input type="checkbox" checked="" />
+                                            <div class="sa-color-checkbox__box"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="-2 -2 14 14">
+                                                    <path fill="%233d464d" d="M10,2.4L4.5,8L1,4.5l1.4-1.4l2.1,2.1L8.6,1L10,2.4z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                        <div class="sa-nav__title">Isabel Williams</div>
+                                    </label></li>
+                                <li class="sa-nav__menu-item"><label class="sa-nav__link user-select-none">
+                                        <div class="sa-nav__icon sa-color-checkbox" style="--sa-color-checkbox--bg-color:#F69A2F;--sa-color-checkbox--font-color:#fff">
+                                            <input type="checkbox" checked="" />
+                                            <div class="sa-color-checkbox__box"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="-2 -2 14 14">
+                                                    <path fill="%233d464d" d="M10,2.4L4.5,8L1,4.5l1.4-1.4l2.1,2.1L8.6,1L10,2.4z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                        <div class="sa-nav__title">Jacob Lee</div>
+                                    </label></li>
+                                <li class="sa-nav__menu-item"><label class="sa-nav__link user-select-none">
+                                        <div class="sa-nav__icon sa-color-checkbox" style="--sa-color-checkbox--bg-color:#53a700;--sa-color-checkbox--font-color:#fff">
+                                            <input type="checkbox" />
+                                            <div class="sa-color-checkbox__box"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="-2 -2 14 14">
+                                                    <path fill="%233d464d" d="M10,2.4L4.5,8L1,4.5l1.4-1.4l2.1,2.1L8.6,1L10,2.4z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                        <div class="sa-nav__title">Birthdays</div>
+                                    </label></li>
+                                <li class="sa-nav__menu-item"><label class="sa-nav__link user-select-none">
+                                        <div class="sa-nav__icon sa-color-checkbox" style="--sa-color-checkbox--bg-color:#4275C2;--sa-color-checkbox--font-color:#fff">
+                                            <input type="checkbox" checked="" />
+                                            <div class="sa-color-checkbox__box"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="-2 -2 14 14">
+                                                    <path fill="%233d464d" d="M10,2.4L4.5,8L1,4.5l1.4-1.4l2.1,2.1L8.6,1L10,2.4z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                        <div class="sa-nav__title">Reminders</div>
+                                    </label></li>
+                                <li class="sa-nav__menu-item"><label class="sa-nav__link user-select-none">
+                                        <div class="sa-nav__icon sa-color-checkbox" style="--sa-color-checkbox--bg-color:#7A42C2;--sa-color-checkbox--font-color:#fff">
+                                            <input type="checkbox" checked="" />
+                                            <div class="sa-color-checkbox__box"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="-2 -2 14 14">
+                                                    <path fill="%233d464d" d="M10,2.4L4.5,8L1,4.5l1.4-1.4l2.1,2.1L8.6,1L10,2.4z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                        <div class="sa-nav__title">Tasks</div>
+                                    </label></li>
+                                <li class="sa-nav__menu-item"><label class="sa-nav__link user-select-none">
+                                        <div class="sa-nav__icon sa-color-checkbox" style="--sa-color-checkbox--bg-color:#C33994;--sa-color-checkbox--font-color:#fff">
+                                            <input type="checkbox" />
+                                            <div class="sa-color-checkbox__box"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="-2 -2 14 14">
+                                                    <path fill="%233d464d" d="M10,2.4L4.5,8L1,4.5l1.4-1.4l2.1,2.1L8.6,1L10,2.4z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                        <div class="sa-nav__title">Family</div>
+                                    </label></li>
+                            </ul>
+                        </div>
+                        <div class="sa-nav__section">
+                            <div class="sa-nav__section-title">Today&#x27;s events</div>
+                            <ul class="sa-nav__menu">
+                                <li class="sa-nav__menu-item"><a href="#" class="sa-nav__link">
+                                        <div class="sa-nav__icon" style="color:#DB4343"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="0 0 14 14">
+                                                <circle r="6" cx="7" cy="7"></circle>
+                                            </svg></div>
+                                        <div class="sa-nav__title">Isabel Williams</div>
+                                    </a></li>
+                                <li class="sa-nav__menu-item"><a href="#" class="sa-nav__link">
+                                        <div class="sa-nav__icon" style="color:#F69A2F"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="0 0 14 14">
+                                                <circle r="6" cx="7" cy="7"></circle>
+                                            </svg></div>
+                                        <div class="sa-nav__title">Tasks</div>
+                                    </a></li>
+                                <li class="sa-nav__menu-item"><a href="#" class="sa-nav__link">
+                                        <div class="sa-nav__icon" style="color:#53a700"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="0 0 14 14">
+                                                <circle r="6" cx="7" cy="7"></circle>
+                                            </svg></div>
+                                        <div class="sa-nav__title">Jacob Lee</div>
+                                    </a></li>
+                                <li class="sa-nav__menu-item"><a href="#" class="sa-nav__link">
+                                        <div class="sa-nav__icon" style="color:#4275C2"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="0 0 14 14">
+                                                <circle r="6" cx="7" cy="7"></circle>
+                                            </svg></div>
+                                        <div class="sa-nav__title">Birthdays</div>
+                                    </a></li>
+                                <li class="sa-nav__menu-item"><a href="#" class="sa-nav__link">
+                                        <div class="sa-nav__icon" style="color:#7A42C2"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="0 0 14 14">
+                                                <circle r="6" cx="7" cy="7"></circle>
+                                            </svg></div>
+                                        <div class="sa-nav__title">Reminders</div>
+                                    </a></li>
+                                <li class="sa-nav__menu-item"><a href="#" class="sa-nav__link">
+                                        <div class="sa-nav__icon" style="color:#C33994"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="14" height="14" viewBox="0 0 14 14">
+                                                <circle r="6" cx="7" cy="7"></circle>
+                                            </svg></div>
+                                        <div class="sa-nav__title">Family</div>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sa-layout__content d-flex">
+                <div class="card flex-grow-1 mx-sm-0 mx-n4">
+                    <div id="calendar" class="flex-grow-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- sa-app__body / end -->

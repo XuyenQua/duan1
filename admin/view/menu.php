@@ -1,1150 +1,623 @@
-<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-
-  
-  <div class="app-brand demo ">
-    <a href="index.php" class="app-brand-link">
-      <span class="app-brand-logo demo">
-<svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z" fill="#7367F0" />
-  <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z" fill="#161616" />
-  <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z" fill="#161616" />
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z" fill="#7367F0" />
-</svg>
-</span>
-      <span class="app-brand-text demo menu-text fw-bold">Vuexy</span>
-    </a>
-
-    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
-      <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
-      <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
-    </a>
-  </div>
-
-  <div class="menu-inner-shadow"></div>
-
-  
-  
-  <ul class="menu-inner py-1">
-    <!-- Dashboards -->
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle" >
-        <i class="menu-icon tf-icons ti ti-smart-home"></i>
-        <div data-i18n="Dashboards">Dashboards</div>
-        <div class="badge bg-primary rounded-pill ms-auto"></div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="index.php" class="menu-link" >
-            <div data-i18n="Analytics">Analytics</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=dashboards-crm" class="menu-link" >
-            <div data-i18n="CRM">CRM</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-ecommerce-dashboard" class="menu-link">
-            <div data-i18n="eCommerce">eCommerce</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-logistics-dashboard" class="menu-link">
-            <div data-i18n="Logistics">Logistics</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-academy-dashboard" class="menu-link">
-            <div data-i18n="Academy">Academy</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-<!-- 
-    Layouts
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-layout-sidebar"></i>
-        <div data-i18n="Layouts">Layouts</div>
-      </a>
-
-      <ul class="menu-sub">
-
-        <li class="menu-item">
-          <a href="layouts-collapsed-menu" class="menu-link">
-            <div data-i18n="Collapsed menu">Collapsed menu</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="layouts-content-navbar" class="menu-link">
-            <div data-i18n="Content navbar">Content navbar</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="layouts-content-navbar-with-sidebar" class="menu-link">
-            <div data-i18n="Content nav + Sidebar">Content nav + Sidebar</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/horizontal-menu-template" class="menu-link" target="_blank">
-            <div data-i18n="Horizontal">Horizontal</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="layouts-without-menu" class="menu-link">
-            <div data-i18n="Without menu">Without menu</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="layouts-without-navbar" class="menu-link">
-            <div data-i18n="Without navbar">Without navbar</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="layouts-fluid" class="menu-link">
-            <div data-i18n="Fluid">Fluid</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="layouts-container" class="menu-link">
-            <div data-i18n="Container">Container</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="layouts-blank" class="menu-link">
-            <div data-i18n="Blank">Blank</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-
-    Front Pages
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class='menu-icon tf-icons ti ti-files'></i>
-        <div data-i18n="Front Pages">Front Pages</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/landing-page" class="menu-link" target="_blank">
-            <div data-i18n="Landing">Landing</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/pricing-page" class="menu-link" target="_blank">
-            <div data-i18n="Pricing">Pricing</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/payment-page" class="menu-link" target="_blank">
-            <div data-i18n="Payment">Payment</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/checkout-page" class="menu-link" target="_blank">
-            <div data-i18n="Checkout">Checkout</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="https://demos.pixinvent.com/vuexy-html-admin-template/html/front-pages/help-center-landing" class="menu-link" target="_blank">
-            <div data-i18n="Help Center">Help Center</div>
-          </a>
-        </li>
-      </ul>
-    </li> -->
-
-
-    <!-- Apps & Pages -->
-    <li class="menu-header small text-uppercase">
-      <span class="menu-header-text">Apps &amp; Pages</span>
-    </li>
-    <li class="menu-item">
-      <a href="index.php?act=app-email" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-mail"></i>
-        <div data-i18n="Email">Email</div>
-      </a>
-    </li>
-    <li class="menu-item">
-      <a href="index.php?act=app-chat" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-messages"></i>
-        <div data-i18n="Chat">Chat</div>
-      </a>
-    </li>
-    <li class="menu-item">
-      <a href="index.php?act=app-calendar" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-calendar"></i>
-        <div data-i18n="Calendar">Calendar</div>
-      </a>
-    </li>
-    <li class="menu-item">
-      <a href="index.php?act=app-kanban" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-layout-kanban"></i>
-        <div data-i18n="Kanban">Kanban</div>
-      </a>
-    </li>
-    <!-- e-commerce-app menu start -->
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class='menu-icon tf-icons ti ti-shopping-cart'></i>
-        <div data-i18n="eCommerce">eCommerce</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="index.php?act=app-ecommerce-dashboard" class="menu-link">
-            <div data-i18n="Dashboard">Dashboard</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Products">Products</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-product-list" class="menu-link">
-                <div data-i18n="Product list">Product list</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-product-add" class="menu-link">
-                <div data-i18n="Add Product">Add Product</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-category-list" class="menu-link">
-                <div data-i18n="Category list">Category List</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Order">Order</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-order-list" class="menu-link">
-                <div data-i18n="Order list">Order list</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-order-details" class="menu-link">
-                <div data-i18n="Order Details">Order Details</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Customer">Customer</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-customer-all" class="menu-link">
-                <div data-i18n="All Customers">All Customers</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <div data-i18n="Customer Details">Customer Details</div>
-              </a>
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="index.php?act=app-ecommerce-customer-details-overview" class="menu-link">
-                    <div data-i18n="Overview">Overview</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="index.php?act=app-ecommerce-customer-details-security" class="menu-link">
-                    <div data-i18n="Security">Security</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="index.php?act=app-ecommerce-customer-details-billing" class="menu-link">
-                    <div data-i18n="Address & Billing">Address & Billing</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="index.php?act=app-ecommerce-customer-details-notifications" class="menu-link">
-                    <div data-i18n="Notifications">Notifications</div>
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-ecommerce-manage-reviews" class="menu-link">
-            <div data-i18n="Manage reviews">Manage reviews</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-ecommerce-referral" class="menu-link">
-            <div data-i18n="Referrals">Referrals</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Settings">Settings</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-settings-detail" class="menu-link">
-                <div data-i18n="Store details">Store details</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-settings-payments" class="menu-link">
-                <div data-i18n="Payments">Payments</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-settings-checkout" class="menu-link">
-                <div data-i18n="Checkout">Checkout</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-settings-shipping" class="menu-link">
-                <div data-i18n="Shipping & delivery">Shipping & delivery</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-ecommerce-settings-locations" class="menu-link">
-                <div data-i18n="Locations">Locations</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="app-ecommerce-settings-notifications" class="menu-link">
-                <div data-i18n="Notifications">Notifications</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <!-- e-commerce-app menu end -->
-    <!-- Academy menu start -->
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class='menu-icon tf-icons ti ti-book'></i>
-        <div data-i18n="Academy">Academy</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="index.php?act=app-academy-dashboard" class="menu-link">
-            <div data-i18n="Dashboard">Dashboard</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-academy-course" class="menu-link">
-            <div data-i18n="My Course">My Course</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-academy-course-details" class="menu-link">
-            <div data-i18n="Course Details">Course Details</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <!-- Academy menu end -->
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class='menu-icon tf-icons ti ti-truck'></i>
-        <div data-i18n="Logistics">Logistics</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="index.php?act=app-logistics-dashboard" class="menu-link">
-            <div data-i18n="Dashboard">Dashboard</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-logistics-fleet" class="menu-link">
-            <div data-i18n="Fleet">Fleet</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class='menu-icon tf-icons ti ti-file-dollar'></i>
-        <div data-i18n="Invoice">Invoice</div>
-        <div class="badge bg-danger rounded-pill ms-auto">4</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="index.php?act=app-invoice-list" class="menu-link">
-            <div data-i18n="List">List</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-invoice-preview" class="menu-link">
-            <div data-i18n="Preview">Preview</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-invoice-edit" class="menu-link">
-            <div data-i18n="Edit">Edit</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-invoice-add" class="menu-link">
-            <div data-i18n="Add">Add</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-users"></i>
-        <div data-i18n="Users">Users</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="index.php?act=app-user-list" class="menu-link">
-            <div data-i18n="List">List</div>
-          </a>
-        </li>
-
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="View">View</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="index.php?act=app-user-view-account" class="menu-link">
-                <div data-i18n="Account">Account</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-user-view-security" class="menu-link">
-                <div data-i18n="Security">Security</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-user-view-billing" class="menu-link">
-                <div data-i18n="Billing & Plans">Billing & Plans</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-user-view-notifications" class="menu-link">
-                <div data-i18n="Notifications">Notifications</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="index.php?act=app-user-view-connections" class="menu-link">
-                <div data-i18n="Connections">Connections</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class='menu-icon tf-icons ti ti-settings'></i>
-        <div data-i18n="Roles & Permissions">Roles & Permissions</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="index.php?act=app-access-roles" class="menu-link">
-            <div data-i18n="Roles">Roles</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="index.php?act=app-access-permission" class="menu-link">
-            <div data-i18n="Permission">Permission</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-file"></i>
-        <div data-i18n="Pages">Pages</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="User Profile">User Profile</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="pages-profile-user" class="menu-link">
-                <div data-i18n="Profile">Profile</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="pages-profile-teams" class="menu-link">
-                <div data-i18n="Teams">Teams</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="pages-profile-projects" class="menu-link">
-                <div data-i18n="Projects">Projects</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="pages-profile-connections" class="menu-link">
-                <div data-i18n="Connections">Connections</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Account Settings">Account Settings</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="pages-account-settings-account" class="menu-link">
-                <div data-i18n="Account">Account</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="pages-account-settings-security" class="menu-link">
-                <div data-i18n="Security">Security</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="pages-account-settings-billing" class="menu-link">
-                <div data-i18n="Billing & Plans">Billing & Plans</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="pages-account-settings-notifications" class="menu-link">
-                <div data-i18n="Notifications">Notifications</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="pages-account-settings-connections" class="menu-link">
-                <div data-i18n="Connections">Connections</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="pages-faq" class="menu-link">
-            <div data-i18n="FAQ">FAQ</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="pages-pricing" class="menu-link">
-            <div data-i18n="Pricing">Pricing</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Misc">Misc</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="pages-misc-error" class="menu-link" target="_blank">
-                <div data-i18n="Error">Error</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="pages-misc-under-maintenance" class="menu-link" target="_blank">
-                <div data-i18n="Under Maintenance">Under Maintenance</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="pages-misc-comingsoon" class="menu-link" target="_blank">
-                <div data-i18n="Coming Soon">Coming Soon</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="pages-misc-not-authorized" class="menu-link" target="_blank">
-                <div data-i18n="Not Authorized">Not Authorized</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-lock"></i>
-        <div data-i18n="Authentications">Authentications</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Login">Login</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="auth-login-basic" class="menu-link" target="_blank">
-                <div data-i18n="Basic">Basic</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="auth-login-cover" class="menu-link" target="_blank">
-                <div data-i18n="Cover">Cover</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Register">Register</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="auth-register-basic" class="menu-link" target="_blank">
-                <div data-i18n="Basic">Basic</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="auth-register-cover" class="menu-link" target="_blank">
-                <div data-i18n="Cover">Cover</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="auth-register-multisteps" class="menu-link" target="_blank">
-                <div data-i18n="Multi-steps">Multi-steps</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Verify Email">Verify Email</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="auth-verify-email-basic" class="menu-link" target="_blank">
-                <div data-i18n="Basic">Basic</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="auth-verify-email-cover" class="menu-link" target="_blank">
-                <div data-i18n="Cover">Cover</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Reset Password">Reset Password</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="auth-reset-password-basic" class="menu-link" target="_blank">
-                <div data-i18n="Basic">Basic</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="auth-reset-password-cover" class="menu-link" target="_blank">
-                <div data-i18n="Cover">Cover</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Forgot Password">Forgot Password</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="auth-forgot-password-basic" class="menu-link" target="_blank">
-                <div data-i18n="Basic">Basic</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="auth-forgot-password-cover" class="menu-link" target="_blank">
-                <div data-i18n="Cover">Cover</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Two Steps">Two Steps</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="auth-two-steps-basic" class="menu-link" target="_blank">
-                <div data-i18n="Basic">Basic</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="auth-two-steps-cover" class="menu-link" target="_blank">
-                <div data-i18n="Cover">Cover</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-forms"></i>
-        <div data-i18n="Wizard Examples">Wizard Examples</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="wizard-ex-checkout" class="menu-link">
-            <div data-i18n="Checkout">Checkout</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="wizard-ex-property-listing" class="menu-link">
-            <div data-i18n="Property Listing">Property Listing</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="wizard-ex-create-deal" class="menu-link">
-            <div data-i18n="Create Deal">Create Deal</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="modal-examples" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-square"></i>
-        <div data-i18n="Modal Examples">Modal Examples</div>
-      </a>
-    </li>
-
-    <!-- Components -->
-    <li class="menu-header small text-uppercase">
-      <span class="menu-header-text">Components</span>
-    </li>
-    <!-- Cards -->
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-id"></i>
-        <div data-i18n="Cards">Cards</div>
-        <div class="badge bg-primary rounded-pill ms-auto">6</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="cards-basic" class="menu-link">
-            <div data-i18n="Basic">Basic</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="cards-advance" class="menu-link">
-            <div data-i18n="Advance">Advance</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="cards-statistics" class="menu-link">
-            <div data-i18n="Statistics">Statistics</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="cards-analytics" class="menu-link">
-            <div data-i18n="Analytics">Analytics</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="cards-actions" class="menu-link">
-            <div data-i18n="Actions">Actions</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <!-- User interface -->
-    <li class="menu-item">
-      <a href="javascript:void(0)" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-color-swatch"></i>
-        <div data-i18n="User interface">User interface</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="ui-accordion" class="menu-link">
-            <div data-i18n="Accordion">Accordion</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-alerts" class="menu-link">
-            <div data-i18n="Alerts">Alerts</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-badges" class="menu-link">
-            <div data-i18n="Badges">Badges</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-buttons" class="menu-link">
-            <div data-i18n="Buttons">Buttons</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-carousel" class="menu-link">
-            <div data-i18n="Carousel">Carousel</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-collapse" class="menu-link">
-            <div data-i18n="Collapse">Collapse</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-dropdowns" class="menu-link">
-            <div data-i18n="Dropdowns">Dropdowns</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-footer" class="menu-link">
-            <div data-i18n="Footer">Footer</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-list-groups" class="menu-link">
-            <div data-i18n="List Groups">List groups</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-modals" class="menu-link">
-            <div data-i18n="Modals">Modals</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-navbar" class="menu-link">
-            <div data-i18n="Navbar">Navbar</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-offcanvas" class="menu-link">
-            <div data-i18n="Offcanvas">Offcanvas</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-pagination-breadcrumbs" class="menu-link">
-            <div data-i18n="Pagination & Breadcrumbs">Pagination &amp; Breadcrumbs</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-progress" class="menu-link">
-            <div data-i18n="Progress">Progress</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-spinners" class="menu-link">
-            <div data-i18n="Spinners">Spinners</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-tabs-pills" class="menu-link">
-            <div data-i18n="Tabs & Pills">Tabs &amp; Pills</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-toasts" class="menu-link">
-            <div data-i18n="Toasts">Toasts</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-tooltips-popovers" class="menu-link">
-            <div data-i18n="Tooltips & Popovers">Tooltips &amp; popovers</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="ui-typography" class="menu-link">
-            <div data-i18n="Typography">Typography</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-
-    <!-- Extended components -->
-    <li class="menu-item">
-      <a href="javascript:void(0)" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-components"></i>
-        <div data-i18n="Extended UI">Extended UI</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="extended-ui-avatar" class="menu-link">
-            <div data-i18n="Avatar">Avatar</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="extended-ui-blockui" class="menu-link">
-            <div data-i18n="BlockUI">BlockUI</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="extended-ui-drag-and-drop" class="menu-link">
-            <div data-i18n="Drag & Drop">Drag &amp; Drop</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="extended-ui-media-player" class="menu-link">
-            <div data-i18n="Media Player">Media Player</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="extended-ui-perfect-scrollbar" class="menu-link">
-            <div data-i18n="Perfect Scrollbar">Perfect scrollbar</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="extended-ui-star-ratings" class="menu-link">
-            <div data-i18n="Star Ratings">Star Ratings</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="extended-ui-sweetalert2" class="menu-link">
-            <div data-i18n="SweetAlert2">SweetAlert2</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="extended-ui-text-divider" class="menu-link">
-            <div data-i18n="Text Divider">Text Divider</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <div data-i18n="Timeline">Timeline</div>
-          </a>
-          <ul class="menu-sub">
-            <li class="menu-item">
-              <a href="extended-ui-timeline-basic" class="menu-link">
-                <div data-i18n="Basic">Basic</div>
-              </a>
-            </li>
-            <li class="menu-item">
-              <a href="extended-ui-timeline-fullscreen" class="menu-link">
-                <div data-i18n="Fullscreen">Fullscreen</div>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="extended-ui-tour" class="menu-link">
-            <div data-i18n="Tour">Tour</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="extended-ui-treeview" class="menu-link">
-            <div data-i18n="Treeview">Treeview</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="extended-ui-misc" class="menu-link">
-            <div data-i18n="Miscellaneous">Miscellaneous</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-
-    <!-- Icons -->
-    <li class="menu-item">
-      <a href="javascript:void(0)" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-brand-tabler"></i>
-        <div data-i18n="Icons">Icons</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="icons-tabler" class="menu-link">
-            <div data-i18n="Tabler">Tabler</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="icons-font-awesome" class="menu-link">
-            <div data-i18n="Fontawesome">Fontawesome</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-
-    <!-- Forms & Tables -->
-    <li class="menu-header small text-uppercase">
-      <span class="menu-header-text">Forms &amp; Tables</span>
-    </li>
-    <!-- Forms -->
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-toggle-left"></i>
-        <div data-i18n="Form Elements">Form Elements</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="forms-basic-inputs" class="menu-link">
-            <div data-i18n="Basic Inputs">Basic Inputs</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="forms-input-groups" class="menu-link">
-            <div data-i18n="Input groups">Input groups</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="forms-custom-options" class="menu-link">
-            <div data-i18n="Custom Options">Custom Options</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="forms-editors" class="menu-link">
-            <div data-i18n="Editors">Editors</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="forms-file-upload" class="menu-link">
-            <div data-i18n="File Upload">File Upload</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="forms-pickers" class="menu-link">
-            <div data-i18n="Pickers">Pickers</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="forms-selects" class="menu-link">
-            <div data-i18n="Select & Tags">Select &amp; Tags</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="forms-sliders" class="menu-link">
-            <div data-i18n="Sliders">Sliders</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="forms-switches" class="menu-link">
-            <div data-i18n="Switches">Switches</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="forms-extras" class="menu-link">
-            <div data-i18n="Extras">Extras</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-layout-navbar"></i>
-        <div data-i18n="Form Layouts">Form Layouts</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="form-layouts-vertical" class="menu-link">
-            <div data-i18n="Vertical Form">Vertical Form</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="form-layouts-horizontal" class="menu-link">
-            <div data-i18n="Horizontal Form">Horizontal Form</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="form-layouts-sticky" class="menu-link">
-            <div data-i18n="Sticky Actions">Sticky Actions</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-text-wrap-disabled"></i>
-        <div data-i18n="Form Wizard">Form Wizard</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="form-wizard-numbered" class="menu-link">
-            <div data-i18n="Numbered">Numbered</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="form-wizard-icons" class="menu-link">
-            <div data-i18n="Icons">Icons</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="form-validation" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-checkbox"></i>
-        <div data-i18n="Form Validation">Form Validation</div>
-      </a>
-    </li>
-    <!-- Tables -->
-    <li class="menu-item">
-      <a href="tables-basic" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-table"></i>
-        <div data-i18n="Tables">Tables</div>
-      </a>
-    </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-layout-grid"></i>
-        <div data-i18n="Datatables">Datatables</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="tables-datatables-basic" class="menu-link">
-            <div data-i18n="Basic">Basic</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="tables-datatables-advanced" class="menu-link">
-            <div data-i18n="Advanced">Advanced</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="tables-datatables-extensions" class="menu-link">
-            <div data-i18n="Extensions">Extensions</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-
-    <!-- Charts & Maps -->
-    <li class="menu-header small text-uppercase">
-      <span class="menu-header-text">Charts &amp; Maps</span>
-    </li>
-    <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons ti ti-chart-pie"></i>
-        <div data-i18n="Charts">Charts</div>
-      </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="charts-apex" class="menu-link">
-            <div data-i18n="Apex Charts">Apex Charts</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="charts-chartjs" class="menu-link">
-            <div data-i18n="ChartJS">ChartJS</div>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="menu-item">
-      <a href="maps-leaflet" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-map"></i>
-        <div data-i18n="Leaflet Maps">Leaflet Maps</div>
-      </a>
-    </li>
-
-    <!-- Misc -->
-    <li class="menu-header small text-uppercase">
-      <span class="menu-header-text">Misc</span>
-    </li>
-    <li class="menu-item">
-      <a href="https://pixinvent.ticksy.com/" target="_blank" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-lifebuoy"></i>
-        <div data-i18n="Support">Support</div>
-      </a>
-    </li>
-    <li class="menu-item">
-      <a href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/" target="_blank" class="menu-link">
-        <i class="menu-icon tf-icons ti ti-file-description"></i>
-        <div data-i18n="Documentation">Documentation</div>
-      </a>
-    </li>
-  </ul>
-  
-  
-
-</aside>
-
-
-
+ <!-- sa-app__sidebar -->
+ <div class="sa-app__sidebar">
+            <div class="sa-sidebar">
+                <div class="sa-sidebar__header">
+                    <a class="sa-sidebar__logo" href="index.php">
+                        <!-- logo -->
+                        <div class="sa-sidebar-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="120px" height="20px">
+                                <path
+                                    d="M118.5,20h-1.1c-0.6,0-1.2-0.4-1.4-1l-1.5-4h-6.1l-1.5,4c-0.2,0.6-0.8,1-1.4,1h-1.1c-1,0-1.8-1-1.4-2l1.1-3l1.5-4l3.6-10c0.2-0.6,0.8-1,1.4-1h1.6c0.6,0,1.2,0.4,1.4,1l3.6,10l1.5,4l1.1,3C120.3,19,119.5,20,118.5,20z M111.5,6.6l-1.6,4.4h3.2L111.5,6.6z M99.5,20h-1.4c-0.4,0-0.7-0.2-0.9-0.5L94,14l-2,3.5v1c0,0.8-0.7,1.5-1.5,1.5h-1c-0.8,0-1.5-0.7-1.5-1.5v-17C88,0.7,88.7,0,89.5,0h1C91.3,0,92,0.7,92,1.5v8L94,6l3.2-5.5C97.4,0.2,97.7,0,98.1,0h1.4c1.2,0,1.9,1.3,1.3,2.3L96.3,10l4.5,7.8C101.4,18.8,100.7,20,99.5,20z M80.3,11.8L80,12.3v6.2c0,0.8-0.7,1.5-1.5,1.5h-1c-0.8,0-1.5-0.7-1.5-1.5v-6.2l-0.3-0.5l-5.5-9.5c-0.6-1,0.2-2.3,1.3-2.3h1.4c0.4,0,0.7,0.2,0.9,0.5L76,4.3l2,3.5l2-3.5l2.2-3.8C82.4,0.2,82.7,0,83.1,0h1.4c1.2,0,1.9,1.3,1.3,2.3L80.3,11.8z M60,20c-5.5,0-10-4.5-10-10S54.5,0,60,0s10,4.5,10,10S65.5,20,60,20z M60,4c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6S63.3,4,60,4z M47.8,17.8c0.6,1-0.2,2.3-1.3,2.3h-2L41,14h-4v4.5c0,0.8-0.7,1.5-1.5,1.5h-1c-0.8,0-1.5-0.7-1.5-1.5v-17C33,0.7,33.7,0,34.5,0H41c0.3,0,0.7,0,1,0.1c3.4,0.5,6,3.4,6,6.9c0,2.4-1.2,4.5-3.1,5.8L47.8,17.8z M42,4.2C41.7,4.1,41.3,4,41,4h-3c-0.6,0-1,0.4-1,1v4c0,0.6,0.4,1,1,1h3c0.3,0,0.7-0.1,1-0.2c0.3-0.1,0.6-0.3,0.9-0.5C43.6,8.8,44,7.9,44,7C44,5.7,43.2,4.6,42,4.2z M29.5,4H25v14.5c0,0.8-0.7,1.5-1.5,1.5h-1c-0.8,0-1.5-0.7-1.5-1.5V4h-4.5C15.7,4,15,3.3,15,2.5v-1C15,0.7,15.7,0,16.5,0h13C30.3,0,31,0.7,31,1.5v1C31,3.3,30.3,4,29.5,4z M6.5,20c-2.8,0-5.5-1.7-6.4-4c-0.4-1,0.3-2,1.3-2h1c0.5,0,0.9,0.3,1.2,0.7c0.2,0.3,0.4,0.6,0.8,0.8C4.9,15.8,5.8,16,6.5,16c1.5,0,2.8-0.9,2.8-2c0-0.7-0.5-1.3-1.2-1.6C7.4,12,7,11,7.4,10.3l0.4-0.9c0.4-0.7,1.2-1,1.8-0.6c0.6,0.3,1.2,0.7,1.6,1.2c1,1.1,1.7,2.5,1.7,4C13,17.3,10.1,20,6.5,20z M11.6,6h-1c-0.5,0-0.9-0.3-1.2-0.7C9.2,4.9,8.9,4.7,8.6,4.5C8.1,4.2,7.2,4,6.5,4C5,4,3.7,4.9,3.7,6c0,0.7,0.5,1.3,1.2,1.6C5.6,8,6,9,5.6,9.7l-0.4,0.9c-0.4,0.7-1.2,1-1.8,0.6c-0.6-0.3-1.2-0.7-1.6-1.2C0.6,8.9,0,7.5,0,6c0-3.3,2.9-6,6.5-6c2.8,0,5.5,1.7,6.4,4C13.3,4.9,12.6,6,11.6,6z">
+                                </path>
+                            </svg>
+                            <div class="sa-sidebar-logo__caption">Admin</div>
+                        </div>
+                        <!-- logo / end -->
+                    </a>
+                </div>
+                <div class="sa-sidebar__body" data-simplebar="">
+                    <ul class="sa-nav sa-nav--sidebar" data-sa-collapse="">
+                        <li class="sa-nav__section">
+                            <div class="sa-nav__section-title">
+                                <span>Application</span>
+                            </div>
+                            <ul class="sa-nav__menu sa-nav__menu--root">
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php" class="sa-nav__link"><span class="sa-nav__icon"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                                viewBox="0 0 16 16" fill="currentColor">
+                                                <path
+                                                    d="M8,13.1c-4.4,0-8,3.4-8-3C0,5.6,3.6,2,8,2s8,3.6,8,8.1C16,16.5,12.4,13.1,8,13.1zM8,4c-3.3,0-6,2.7-6,6c0,4,2.4,0.9,5,0.2C7,9.9,7.1,9.5,7.4,9.2l3-2.3c0.4-0.3,1-0.2,1.3,0.3c0.3,0.5,0.2,1.1-0.2,1.4l-2.2,1.7c2.5,0.9,4.8,3.6,4.8-0.2C14,6.7,11.3,4,8,4z">
+                                                </path>
+                                            </svg></span><span class="sa-nav__title">Dashboard</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                                height="1em" viewBox="0 0 16 16" fill="currentColor">
+                                                <path
+                                                    d="M8,6C4.7,6,2,4.7,2,3s2.7-3,6-3s6,1.3,6,3S11.3,6,8,6z M2,5L2,5L2,5C2,5,2,5,2,5z M8,8c3.3,0,6-1.3,6-3v3c0,1.7-2.7,3-6,3S2,9.7,2,8V5C2,6.7,4.7,8,8,8z M14,5L14,5C14,5,14,5,14,5L14,5z M2,10L2,10L2,10C2,10,2,10,2,10z M8,13c3.3,0,6-1.3,6-3v3c0,1.7-2.7,3-6,3s-6-1.3-6-3v-3C2,11.7,4.7,13,8,13z M14,10L14,10C14,10,14,10,14,10L14,10z">
+                                                </path>
+                                            </svg></span><span class="sa-nav__title">Catalog</span><span
+                                            class="sa-nav__arrow"><svg xmlns="http://www.w3.org/2000/svg" width="6"
+                                                height="9" viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-products-list" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Products List</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-product" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Product</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-categories-list" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Categories List</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-category" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Category</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                                height="1em" viewBox="0 0 16 16" fill="currentColor">
+                                                <path
+                                                    d="M8,10c-3.3,0-6,2.7-6,6H0c0-3.2,1.9-6,4.7-7.3C3.7,7.8,3,6.5,3,5c0-2.8,2.2-5,5-5s5,2.2,5,5c0,1.5-0.7,2.8-1.7,3.7c2.8,1.3,4.7,4,4.7,7.3h-2C14,12.7,11.3,10,8,10z M8,2C6.3,2,5,3.3,5,5s1.3,3,3,3s3-1.3,3-3S9.7,2,8,2z">
+                                                </path>
+                                            </svg></span><span class="sa-nav__title">Customers</span><span
+                                            class="sa-nav__arrow"><svg xmlns="http://www.w3.org/2000/svg" width="6"
+                                                height="9" viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-customers-list" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Customers List</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-customer" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Customer</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                                height="1em" viewBox="0 0 16 16" fill="currentColor">
+                                                <path
+                                                    d="M14.2,10.3c-0.1,0.4-0.5,0.7-0.9,0.7H4.8c-0.5,0-0.9-0.3-1-0.8L2.2,4C2.1,3.4,1.6,3,1,3H0.4C0.2,3,0,2.8,0,2.6V1.4C0,1.2,0.2,1,0.4,1h1.4c1,0,1.9,0.7,2.1,1.7l1.5,6.1C5.5,8.9,5.7,9,5.8,9h6.5c0.1,0,0.2-0.1,0.3-0.2l1.1-3.4C13.8,5.2,13.7,5,13.5,5H7.4C7.2,5,7,4.8,7,4.6V3.4C7,3.2,7.2,3,7.4,3H15c0.6,0,1,0.4,1,1v1L14.2,10.3z M4.5,13C5.3,13,6,13.7,6,14.5C6,15.3,5.3,16,4.5,16S3,15.3,3,14.5C3,13.7,3.7,13,4.5,13z M11.5,13c0.8,0,1.5,0.7,1.5,1.5c0,0.8-0.7,1.5-1.5,1.5S10,15.3,10,14.5C10,13.7,10.7,13,11.5,13z">
+                                                </path>
+                                            </svg></span><span class="sa-nav__title">Orders</span><span
+                                            class="sa-nav__arrow"><svg xmlns="http://www.w3.org/2000/svg" width="6"
+                                                height="9" viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-orders-list" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Orders List</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-order" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Order Details</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                                height="1em" viewBox="0 0 16 16" fill="currentColor">
+                                                <path
+                                                    d="M11.5,3C12.9,3,14,4.1,14,5.5c0,2.7-4.3,6.4-6,7.4c-1.7-1-6-4.7-6-7.4C2,4.1,3.1,3,4.5,3C5.3,3,6,3.3,6.4,3.9L8,5.3l1.6-1.4C10,3.3,10.7,3,11.5,3 M11.5,1C10.1,1,8.8,1.6,8,2.7C7.2,1.6,5.9,1,4.5,1C2,1,0,3,0,5.5C0,10,7,15,8,15s8-5,8-9.5C16,3,14,1,11.5,1L11.5,1z">
+                                                </path>
+                                            </svg></span><span class="sa-nav__title">Marketing</span><span
+                                            class="sa-nav__arrow"><svg xmlns="http://www.w3.org/2000/svg" width="6"
+                                                height="9" viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-coupons-list" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Coupons List</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-coupon" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Coupon</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><i class="fas fa-envelope"></i></span><span
+                                            class="sa-nav__title">Inbox</span><span class="sa-nav__arrow"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="6" height="9"
+                                                viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-inbox-list" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">List</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-inbox-conversation" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Conversation</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php?act=app-chat" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-comment"></i></span><span
+                                            class="sa-nav__title">Chat</span><span
+                                            class="sa-nav__menu-item-badge badge badge-sa-pill badge-sa-theme">8</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php?act=app-file-manager" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-hdd"></i></span><span class="sa-nav__title">File
+                                            Manager</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php?act=app-calendar" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-calendar-alt"></i></span><span
+                                            class="sa-nav__title">Calendar</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php?act=app-analytics" class="sa-nav__link"><span class="sa-nav__icon"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                                viewBox="0 0 16 16" fill="currentColor">
+                                                <path
+                                                    d="M14.5,15h-1c-0.8,0-1.5-0.7-1.5-1.5v-8C12,4.7,12.7,4,13.5,4h1C15.3,4,16,4.7,16,5.5v8C16,14.3,15.3,15,14.5,15z M8.5,15h-1C6.7,15,6,14.3,6,13.5v-11C6,1.7,6.7,1,7.5,1h1C9.3,1,10,1.7,10,2.5v11C10,14.3,9.3,15,8.5,15z M2.5,15h-1C0.7,15,0,14.3,0,13.5v-5C0,7.7,0.7,7,1.5,7h1C3.3,7,4,7.7,4,8.5v5C4,14.3,3.3,15,2.5,15z">
+                                                </path>
+                                            </svg></span><span class="sa-nav__title">Analytics</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                                                height="1em" viewBox="0 0 16 16" fill="currentColor">
+                                                <path
+                                                    d="M14,6.8l-0.2,0.1C14,7.3,14,7.6,14,8c0,0.4,0,0.7-0.1,1.1L14,9.2c1,0.6,1.4,1.9,0.8,3c-0.5,0.9-1.6,1.2-2.5,0.7l-0.5-0.3c-0.6,0.5-1.2,0.8-1.9,1.1v0.8c0,0.9-0.7,1.6-1.6,1.6H7.6C6.7,16,6,15.3,6,14.4v-0.8c-0.7-0.2-1.3-0.6-1.9-1.1l-0.5,0.3c-0.9,0.5-2,0.2-2.5-0.7c-0.6-1-0.3-2.4,0.8-3l0.2-0.1C2,8.7,2,8.4,2,8c0-0.4,0-0.7,0.1-1.1L2,6.8c-1.1-0.6-1.4-2-0.8-3C1.7,3,2.8,2.7,3.6,3.2l0.5,0.3C4.7,3,5.3,2.6,6,2.4V1.6C6,0.7,6.7,0,7.6,0h0.8C9.3,0,10,0.7,10,1.6v0.8c0.7,0.2,1.3,0.6,1.9,1.1l0.5-0.3c0.9-0.5,2-0.2,2.5,0.7C15.4,4.9,15.1,6.2,14,6.8z M8,5.5C6.6,5.5,5.5,6.6,5.5,8s1.1,2.5,2.5,2.5s2.5-1.1,2.5-2.5S9.4,5.5,8,5.5z">
+                                                </path>
+                                            </svg></span><span class="sa-nav__title">Settings</span><span
+                                            class="sa-nav__arrow"><svg xmlns="http://www.w3.org/2000/svg" width="6"
+                                                height="9" viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-settings-toc" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Table of Content</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=app-settings-form" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Form</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sa-nav__section">
+                            <div class="sa-nav__section-title"><span>Pages</span></div>
+                            <ul class="sa-nav__menu sa-nav__menu--root">
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><i class="fas fa-lock"></i></span><span
+                                            class="sa-nav__title">Authentication</span><span class="sa-nav__arrow"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="6" height="9"
+                                                viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=auth-sign-in" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Sign In</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=auth-sign-up" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Sign Up</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=auth-forgot-password" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Forgot Password</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=auth-reset-password" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Reset Password</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="index.php?act=auth-email-confirmation" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Verify Account</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php?act=page-invoice" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-file-alt"></i></span><span
+                                            class="sa-nav__title">Invoice</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php?act=page-pricing-table" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-dollar-sign"></i></span><span
+                                            class="sa-nav__title">Pricing Table</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php?act=page-faq" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-info-circle"></i></span><span
+                                            class="sa-nav__title">FAQ</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php?act=page-terms" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-check-square"></i></span><span class="sa-nav__title">Terms
+                                            And Conditions</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php?act=page-help-center" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-question-circle"></i></span><span
+                                            class="sa-nav__title">Help Center</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="index.php?act=page-404" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-bomb"></i></span><span class="sa-nav__title">Not
+                                            Found</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><i class="fas fa-bars"></i></span><span
+                                            class="sa-nav__title">Menu Level 0</span><span class="sa-nav__arrow"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="6" height="9"
+                                                viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item" data-sa-collapse-item="sa-nav__menu-item--open">
+                                            <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Menu Level 1</span><span
+                                                    class="sa-nav__arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="6" height="9" viewBox="0 0 6 9" fill="currentColor">
+                                                        <path
+                                                            d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                        </path>
+                                                    </svg></span></a>
+                                            <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                                <li class="sa-nav__menu-item"
+                                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                                            class="sa-nav__menu-item-padding"></span><span
+                                                            class="sa-nav__menu-item-padding"></span><span
+                                                            class="sa-nav__title">Menu Level 2</span><span
+                                                            class="sa-nav__arrow"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="6" height="9"
+                                                                viewBox="0 0 6 9" fill="currentColor">
+                                                                <path
+                                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                                </path>
+                                                            </svg></span></a>
+                                                    <ul class="sa-nav__menu sa-nav__menu--sub"
+                                                        data-sa-collapse-content="">
+                                                        <li class="sa-nav__menu-item">
+                                                            <a href="#" class="sa-nav__link"><span
+                                                                    class="sa-nav__menu-item-padding"></span><span
+                                                                    class="sa-nav__menu-item-padding"></span><span
+                                                                    class="sa-nav__menu-item-padding"></span><span
+                                                                    class="sa-nav__title">Menu Level 3</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sa-nav__section">
+                            <div class="sa-nav__section-title"><span>Framework</span></div>
+                            <ul class="sa-nav__menu sa-nav__menu--root">
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><i class="fas fa-compass"></i></span><span
+                                            class="sa-nav__title">Components</span><span class="sa-nav__arrow"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="6" height="9"
+                                                viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-accordion" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Accordion</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-alerts" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Alerts</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-badge" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Badge</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-breadcrumb" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Breadcrumb</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-buttons" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Buttons</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-button-group" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Button group</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-cards" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Cards</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-carousel" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Carousel</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-collapse" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Collapse</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-dropdowns" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Dropdowns</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-list-group" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">List group</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-modal" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Modal</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-navs" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Navs</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-nouislider" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">NoUiSlider</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-offcanvas" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Offcanvas</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-pagination" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Pagination</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-placeholders" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Placeholders</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-popovers" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Popovers</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-progress" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Progress</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-scrollspy" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Scrollspy</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-spinners" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Spinners</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-symbols" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Symbols</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-tabs" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Tabs</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-toasts" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Toasts</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="components-tooltips" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Tooltips</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><i class="fas fa-toggle-on"></i></span><span
+                                            class="sa-nav__title">Forms</span><span class="sa-nav__arrow"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="6" height="9"
+                                                viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-text-box" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Text Box</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-text-area" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Text Area</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-select" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Select</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-checks-and-radios" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Checks And Radios</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-file" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">File</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-range" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Range</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-input-group" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Input Group</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-layout" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Layout</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-help-text" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Help Text</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-validation" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Validation</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-quill" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Quill</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-air-datepicker" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Air Datepicker</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="forms-select2" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Select2</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"
+                                    data-sa-collapse-item="sa-nav__menu-item--open">
+                                    <a href="#" class="sa-nav__link" data-sa-collapse-trigger=""><span
+                                            class="sa-nav__icon"><i class="fas fa-table"></i></span><span
+                                            class="sa-nav__title">Tables</span><span class="sa-nav__arrow"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="6" height="9"
+                                                viewBox="0 0 6 9" fill="currentColor">
+                                                <path
+                                                    d="M5.605,0.213 C6.007,0.613 6.107,1.212 5.706,1.612 L2.696,4.511 L5.706,7.409 C6.107,7.809 6.107,8.509 5.605,8.808 C5.204,9.108 4.702,9.108 4.301,8.709 L-0.013,4.511 L4.401,0.313 C4.702,-0.087 5.304,-0.087 5.605,0.213 Z">
+                                                </path>
+                                            </svg></span></a>
+                                    <ul class="sa-nav__menu sa-nav__menu--sub" data-sa-collapse-content="">
+                                        <li class="sa-nav__menu-item">
+                                            <a href="tables-basic-tables" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">Basic Tables</span></a>
+                                        </li>
+                                        <li class="sa-nav__menu-item">
+                                            <a href="tables-datatables" class="sa-nav__link"><span
+                                                    class="sa-nav__menu-item-padding"></span><span
+                                                    class="sa-nav__title">DataTables</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="icons" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-tree"></i></span><span
+                                            class="sa-nav__title">Icons</span></a>
+                                </li>
+                                <li class="sa-nav__menu-item sa-nav__menu-item--has-icon">
+                                    <a href="charts" class="sa-nav__link"><span class="sa-nav__icon"><i
+                                                class="fas fa-chart-pie"></i></span><span
+                                            class="sa-nav__title">Charts</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sa-app__sidebar-shadow"></div>
+            <div class="sa-app__sidebar-backdrop" data-sa-close-sidebar=""></div>
+        </div>
+        <!-- sa-app__sidebar / end -->
