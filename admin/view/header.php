@@ -288,8 +288,8 @@
                             <span class="sa-toolbar-user__avatar sa-symbol sa-symbol--shape--rounded"><img
                                     src="view/images/customers/customer-4-64x64.jpg" width="64" height="64"
                                     alt="" /></span><span class="sa-toolbar-user__info"><span
-                                    class="sa-toolbar-user__title">Konstantin Veselovsky</span><span
-                                    class="sa-toolbar-user__subtitle">stroyka@example.com</span></span>
+                                    class="sa-toolbar-user__title"><?=$_SESSION['user']['ho_ten']?></span><span
+                                    class="sa-toolbar-user__subtitle"><?=$_SESSION['user']['email']?></span></span>
                         </button>
                         <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -303,7 +303,7 @@
                                 <hr class="dropdown-divider" />
                             </li>
                             <li>
-                                <a class="dropdown-item" href="auth-sign-in.html">Sign Out</a>
+                                <a class="dropdown-item" href="index.php?act=logout">Sign Out</a>
                             </li>
                         </ul>
                     </div>

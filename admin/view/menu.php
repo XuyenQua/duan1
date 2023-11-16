@@ -62,11 +62,11 @@
                                                     class="sa-nav__menu-item-padding"></span><span
                                                     class="sa-nav__title">Categories List</span></a>
                                         </li>
-                                        <li class="sa-nav__menu-item">
+                                        <!-- <li class="sa-nav__menu-item">
                                             <a href="index.php?act=app-category" class="sa-nav__link"><span
                                                     class="sa-nav__menu-item-padding"></span><span
                                                     class="sa-nav__title">Category</span></a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </li>
                                 <li class="sa-nav__menu-item sa-nav__menu-item--has-icon"

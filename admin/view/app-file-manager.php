@@ -103,7 +103,7 @@
                                 <div class="sa-grid__body">
                                     <div class="sa-grid__item"><a href="#" class="sa-folder">
                                             <div class="sa-folder__image"><svg width="1em" height="1em">
-                                                    <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
+                                                    <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
                                                 </svg></div>
                                             <div class="sa-folder__info">
                                                 <div class="sa-folder__name">Pictures</div>
@@ -112,7 +112,7 @@
                                         </a></div>
                                     <div class="sa-grid__item"><a href="#" class="sa-folder">
                                             <div class="sa-folder__image"><svg width="1em" height="1em">
-                                                    <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
+                                                    <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
                                                 </svg></div>
                                             <div class="sa-folder__info">
                                                 <div class="sa-folder__name">Documents</div>
@@ -121,7 +121,7 @@
                                         </a></div>
                                     <div class="sa-grid__item"><a href="#" class="sa-folder">
                                             <div class="sa-folder__image"><svg width="1em" height="1em">
-                                                    <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
+                                                    <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
                                                 </svg></div>
                                             <div class="sa-folder__info">
                                                 <div class="sa-folder__name">Programs</div>
@@ -130,7 +130,7 @@
                                         </a></div>
                                     <div class="sa-grid__item"><a href="#" class="sa-folder">
                                             <div class="sa-folder__image"><svg width="1em" height="1em">
-                                                    <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
+                                                    <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
                                                 </svg></div>
                                             <div class="sa-folder__info">
                                                 <div class="sa-folder__name">Videos</div>
@@ -139,7 +139,7 @@
                                         </a></div>
                                     <div class="sa-grid__item"><a href="#" class="sa-folder">
                                             <div class="sa-folder__image"><svg width="1em" height="1em">
-                                                    <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
+                                                    <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
                                                 </svg></div>
                                             <div class="sa-folder__info">
                                                 <div class="sa-folder__name">Downloads</div>
@@ -148,7 +148,7 @@
                                         </a></div>
                                     <div class="sa-grid__item"><a href="#" class="sa-folder">
                                             <div class="sa-folder__image"><svg width="1em" height="1em">
-                                                    <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
+                                                    <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
                                                 </svg></div>
                                             <div class="sa-folder__info">
                                                 <div class="sa-folder__name">Music</div>
@@ -157,7 +157,7 @@
                                         </a></div>
                                     <div class="sa-grid__item"><a href="#" class="sa-folder">
                                             <div class="sa-folder__image"><svg width="1em" height="1em">
-                                                    <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
+                                                    <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
                                                 </svg></div>
                                             <div class="sa-folder__info">
                                                 <div class="sa-folder__name">Favorites</div>
@@ -166,7 +166,7 @@
                                         </a></div>
                                     <div class="sa-grid__item"><a href="#" class="sa-folder">
                                             <div class="sa-folder__image"><svg width="1em" height="1em">
-                                                    <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
+                                                    <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#folder-fill"></use>
                                                 </svg></div>
                                             <div class="sa-folder__info">
                                                 <div class="sa-folder__name">Contacts</div>
@@ -253,7 +253,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-word-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-word-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">docx</div>
@@ -267,7 +267,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-excel-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-excel-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">xlsx</div>
@@ -281,7 +281,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-pdf-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-pdf-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">pdf</div>
@@ -295,7 +295,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-image-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-image-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">jpg</div>
@@ -309,7 +309,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-text-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-text-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">txt</div>
@@ -323,7 +323,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-play-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-play-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">mkv</div>
@@ -337,7 +337,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-music-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-music-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">mp3</div>
@@ -351,7 +351,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-zip-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-zip-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">zip</div>
@@ -365,7 +365,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-zip-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-zip-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">zip</div>
@@ -379,7 +379,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-zip-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-zip-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">zip</div>
@@ -393,7 +393,7 @@
                                             <div class="sa-file__thumbnail sa-box">
                                                 <div class="sa-box__body">
                                                     <div class="sa-box__container sa-file__icon"><svg width="1em" height="1em">
-                                                            <use xlink:href="vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-zip-fill"></use>
+                                                            <use xlink:href="view/vendor/bootstrap-icons/bootstrap-icons.svg#file-earmark-zip-fill"></use>
                                                         </svg></div>
                                                 </div>
                                                 <div class="sa-file__badge badge badge-sa-dark text-uppercase">zip</div>
