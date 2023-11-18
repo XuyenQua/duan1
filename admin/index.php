@@ -4,7 +4,9 @@ include 'model/pdo.php';
 include 'model/danhmuc.php';
 include 'model/sanpham.php';
 include 'model/taikhoan.php';
+include 'model/donhang.php';
 include 'global.php';
+
 if ($_SESSION['user']['vai_tro'] == 3) {
     include 'view/header.php';
     if (isset($_GET['act'])) {
@@ -51,7 +53,8 @@ if ($_SESSION['user']['vai_tro'] == 3) {
                 include 'view/app-order.php';
                 break;
             case 'app-orders-list':
-                include 'view/app-orders-list.php';
+                $ds_dh = get_hoadon_all();
+                include 'view/order/app-order-list.php';
                 break;
             case 'app-product':
                 include 'view/product/app-product.php';
@@ -224,9 +227,6 @@ if ($_SESSION['user']['vai_tro'] == 3) {
             case 'tables-datatables':
                 include 'view/tables-datatables.php';
                 break;
-            case 'tables-datatables':
-                include 'view/tables-datatables.php';
-                break;
             case 'app-add-category':
                 if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                     $tenfile = $_FILES["image"]["name"];
@@ -266,9 +266,9 @@ if ($_SESSION['user']['vai_tro'] == 3) {
                 include 'view/category/app-categories-list.php';
                 break;
             case 'app-add-product':
-                if(isset($_POST['themmoi'])&& $_POST['themmoi']){
-                    
-                }else{
+                if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+
+                } else {
 
                 }
                 $ds_dm = get_ds_dm_all();
@@ -280,8 +280,32 @@ if ($_SESSION['user']['vai_tro'] == 3) {
                     echo '<script> location.replace("index.php"); </script>';
                 }
                 break;
-            case '':
-                include 'view/';
+                case 'app-edit-order':
+                    if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                        $id = $_GET['id'];
+                        $dh = get_dh_one($id);
+                    }
+                    include 'view/order/app-edit-order.php';
+                    break;
+                case 'app-update-order':
+                    if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                        $id = $_POST['id'];
+                        $so_don_hang = $_POST['so_don_hang'];
+                        $address = $_POST["address"];
+                        $mat_hang = $_POST["mat_hang"];
+                        $tong_tien = $_POST["tong_tien"];
+                        update_dh($id,$_POST['so_don_hang'] ,$_POST['address'], $_POST['mat_hang'], $_POST['tong_tien']);
+                    }
+                    $ds_dh = get_hoadon_all();
+                    include 'view/order/app-order-list.php';
+                    break;
+            case 'app-delete-bill':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+                    delete_dh($id);
+                }
+                $ds_dh = get_hoadon_all();
+                include 'view/order/app-order-list.php';
                 break;
 
             default:
