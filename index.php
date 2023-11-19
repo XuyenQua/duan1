@@ -1,4 +1,5 @@
 <?php 
+    include 'model/taikhoan.php';
     include 'model/pdo.php';
     include 'model/sanpham.php';
 
@@ -101,6 +102,28 @@
             case 'value':
                 include '';
                 break;
+            case 'app-customers-list' :
+                include 'view/customer-list.php';
+                $ds_khachhang = get_all_taikhoan();
+                $timkiem_khachhang = get_one_taikhoan();
+                $update_taikhoan = update_taikhoan();
+                $delete_taikhoan = delete_taikhoan();
+                $check_taikhoan = quanly_taikhoan();
+                
+                break ;
+            
+            
+            case 'dangky' :
+                if(isset($_POST['dang_ky'])&& ($_POST['dang_ky'])){
+                    $ten_dang_nhap = $_POST['ten_dang_nhap'];
+                    $mat_khau = $_POST['mat_khau'];
+                    $email = $_POST['email'];
+                    $date = date("Y-m-d") ;
+
+                    dangky_taikhoan($ten_dang_nhap,$mat_khau,$email,$date);
+                }
+                break;
+
             
             
             default:
