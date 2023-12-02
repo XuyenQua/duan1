@@ -1,1039 +1,1001 @@
-<?php
-include 'slider.php';
-// var_dump($ds_10_san_pham_moi);
-?>
-<!-- Banner Section Start -->
-<div class="section section-margin">
-    <div class="container">
-
-        <!-- Banners Start -->
-        <div class="row mb-n6">
-            <!-- Banner Start -->
-            <div class="col-lg-4 col-md-6 col-12 mb-6">
-                <div class="banner" data-aos="fade-up" data-aos-delay="300">
-                    <div class="banner-image">
-                        <a href="#"><img src="view/images/banner/banner-1.jpg" alt=""></a>
-                    </div>
-                    <div class="info">
-                        <div class="small-banner-content">
-                            <h4 class="sub-title">Sun Hat</h4>
-                            <h3 class="title">Get Offer <br />For Summer</h3>
-                            <a href="index.php?act=shop-left-sidebar" class="btn btn-dark btn-sm">Mua ngay</a>
+<!-- sa-app__body -->
+<div id="top" class="sa-app__body px-2 px-lg-4">
+                <div class="container pb-6">
+                    <div class="py-5">
+                        <div class="row g-4 align-items-center">
+                            <div class="col">
+                                <h1 class="h3 m-0">Dashboard</h1>
+                            </div>
+                            <div class="col-auto d-flex">
+                                <select class="form-select me-3">
+                                    <option selected="">7 October, 2021</option>
+                                </select><a href="#" class="btn btn-primary">Export</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- Banner End -->
-
-            <!-- Banner Start -->
-            <div class="col-lg-4 col-md-6 col-12 mb-6">
-                <div class="banner" data-aos="fade-up" data-aos-delay="500">
-                    <div class="banner-image">
-                        <a href="#"><img src="view/images/banner/banner-2.jpg" alt=""></a>
-                    </div>
-                    <div class="info">
-                        <div class="small-banner-content">
-                            <h4 class="sub-title">Ladies Bag</h4>
-                            <h3 class="title">Buy One <br />Get One Free</h3>
-                            <a href="index.php?act=shop-left-sidebar" class="btn btn-dark btn-sm">Mua ngay</a>
+                    <div class="row g-4 g-xl-5">
+                        <div class="col-12 col-md-4 d-flex">
+                            <div class="card saw-indicator flex-grow-1"
+                                data-sa-container-query='{"340":"saw-indicator--size--lg"}'>
+                                <div class="sa-widget-header saw-indicator__header">
+                                    <h2 class="sa-widget-header__title">Total sells</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-1" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-1">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-indicator__body">
+                                    <div class="saw-indicator__value">$3799.00</div>
+                                    <div class="saw-indicator__delta saw-indicator__delta--rise">
+                                        <div class="saw-indicator__delta-direction">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                                viewBox="0 0 9 9" fill="currentColor">
+                                                <path d="M9,0L8,6.1L2.8,1L9,0z"></path>
+                                                <circle cx="1" cy="8" r="1"></circle>
+                                                <rect x="0" y="4.5"
+                                                    transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.864 4.0858)"
+                                                    width="7.1" height="2"></rect>
+                                            </svg>
+                                        </div>
+                                        <div class="saw-indicator__delta-value">34.7%</div>
+                                    </div>
+                                    <div class="saw-indicator__caption">
+                                        Compared to April 2021
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Banner End -->
-
-            <!-- Banner Start -->
-            <div class="col-lg-4 col-md-6 col-12 mb-6">
-                <div class="banner" data-aos="fade-up" data-aos-delay="700">
-                    <div class="banner-image">
-                        <a href="#"><img src="view/images/banner/banner-3.jpg" alt=""></a>
-                    </div>
-                    <div class="info">
-                        <div class="small-banner-content">
-                            <h4 class="sub-title">Smart Watch</h4>
-                            <h3 class="title">20% Off <br />Smart Watch</h3>
-                            <a href="index.php?act=shop-left-sidebar" class="btn btn-dark btn-sm">Mua ngay</a>
+                        <div class="col-12 col-md-4 d-flex">
+                            <div class="card saw-indicator flex-grow-1"
+                                data-sa-container-query='{"340":"saw-indicator--size--lg"}'>
+                                <div class="sa-widget-header saw-indicator__header">
+                                    <h2 class="sa-widget-header__title">Average order value</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-2" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-2">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-indicator__body">
+                                    <div class="saw-indicator__value">$272.98</div>
+                                    <div class="saw-indicator__delta saw-indicator__delta--fall">
+                                        <div class="saw-indicator__delta-direction">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                                viewBox="0 0 9 9" fill="currentColor">
+                                                <path d="M2.8,8L8,2.9L9,9L2.8,8z"></path>
+                                                <circle cx="1" cy="1" r="1"></circle>
+                                                <rect x="0" y="2.5"
+                                                    transform="matrix(0.7071 0.7071 -0.7071 0.7071 3.5 -1.4497)"
+                                                    width="7.1" height="2"></rect>
+                                            </svg>
+                                        </div>
+                                        <div class="saw-indicator__delta-value">12.0%</div>
+                                    </div>
+                                    <div class="saw-indicator__caption">
+                                        Compared to April 2021
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Banner End -->
-
-        </div>
-        <!-- Banners End -->
-    </div>
-</div>
-<!-- Banner Section End -->
-<!-- Feature Section Start -->
-<div class="section">
-    <div class="container">
-        <div class="feature-wrap">
-            <div class="row row-cols-lg-4 row-cols-xl-auto row-cols-sm-2 row-cols-1 justify-content-between mb-n5">
-                <!-- Feature Start -->
-                <div class="col mb-5" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature">
-                        <div class="icon text-primary align-self-center">
-                            <img src="view/images/icons/feature-icon-2.png" alt="Feature Icon">
+                        <div class="col-12 col-md-4 d-flex">
+                            <div class="card saw-indicator flex-grow-1"
+                                data-sa-container-query='{"340":"saw-indicator--size--lg"}'>
+                                <div class="sa-widget-header saw-indicator__header">
+                                    <h2 class="sa-widget-header__title">Total orders</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-3" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-3">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-indicator__body">
+                                    <div class="saw-indicator__value">578</div>
+                                    <div class="saw-indicator__delta saw-indicator__delta--rise">
+                                        <div class="saw-indicator__delta-direction">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                                viewBox="0 0 9 9" fill="currentColor">
+                                                <path d="M9,0L8,6.1L2.8,1L9,0z"></path>
+                                                <circle cx="1" cy="8" r="1"></circle>
+                                                <rect x="0" y="4.5"
+                                                    transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.864 4.0858)"
+                                                    width="7.1" height="2"></rect>
+                                            </svg>
+                                        </div>
+                                        <div class="saw-indicator__delta-value">27.9%</div>
+                                    </div>
+                                    <div class="saw-indicator__caption">
+                                        Compared to April 2021
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h5 class="title">Miễn phí vận chuyển</h5>
-                            <p>Miễn phí vận chuyển cho đơn hàng từ 500000 VNĐ</p>
+                        <div class="col-12 col-lg-4 col-xxl-3 d-flex">
+                            <div class="card flex-grow-1 saw-pulse"
+                                data-sa-container-query='{"560":"saw-pulse--size--lg"}'>
+                                <div class="sa-widget-header saw-pulse__header">
+                                    <h2 class="sa-widget-header__title">Active users</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-4" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-4">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-pulse__counter">148</div>
+                                <div class="sa-widget-table saw-pulse__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Active pages</th>
+                                                <th class="text-end">Users</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-reset">/products/brandix-z4</a>
+                                                </td>
+                                                <td class="text-end">15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-reset">/categories/drivetrain</a>
+                                                </td>
+                                                <td class="text-end">11</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-reset">/categories/monitors</a>
+                                                </td>
+                                                <td class="text-end">7</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-reset">/account/orders</a>
+                                                </td>
+                                                <td class="text-end">4</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#" class="text-reset">/cart</a></td>
+                                                <td class="text-end">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#" class="text-reset">/checkout</a></td>
+                                                <td class="text-end">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-reset">/pages/about-us</a>
+                                                </td>
+                                                <td class="text-end">1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <!-- Feature End -->
-
-                <!-- Feature Start -->
-                <div class="col mb-5" data-aos="fade-up" data-aos-delay="500">
-                    <div class="feature">
-                        <div class="icon text-primary align-self-center">
-                            <img src="view/images/icons/feature-icon-3.png" alt="Feature Icon">
+                        <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+                            <div class="card flex-grow-1 saw-chart"
+                                data-sa-data='[{"label":"Jan","value":50},{"label":"Feb","value":130},{"label":"Mar","value":525},{"label":"Apr","value":285},{"label":"May","value":470},{"label":"Jun","value":130},{"label":"Jul","value":285},{"label":"Aug","value":240},{"label":"Sep","value":710},{"label":"Oct","value":470},{"label":"Nov","value":640},{"label":"Dec","value":1110}]'>
+                                <div class="sa-widget-header saw-chart__header">
+                                    <h2 class="sa-widget-header__title">Income statistics</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-5" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-5">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-chart__body">
+                                    <div class="saw-chart__container"><canvas></canvas></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <h5 class="title">Hỗ trợ 24/7</h5>
-                            <p>Hỗ trợ 24 giờ một ngày</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Feature End -->
-                <!-- Feature Start -->
-                <div class="col mb-5" data-aos="fade-up" data-aos-delay="700">
-                    <div class="feature">
-                        <div class="icon text-primary align-self-center">
-                            <img src="view/images/icons/feature-icon-4.png" alt="Feature Icon">
-                        </div>
-                        <div class="content">
-                            <h5 class="title">Hoàn tiền</h5>
-                            <p>Nếu sản phẩm lỗi do nhà sản xuất</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Feature End -->
-
-                <!-- Feature Start -->
-                <div class="col mb-5" data-aos="fade-up" data-aos-delay="900">
-                    <div class="feature">
-                        <div class="icon text-primary align-self-center">
-                            <img src="view/images/icons/feature-icon-1.png" alt="Feature Icon">
-                        </div>
-                        <div class="content">
-                            <h5 class="title">Giảm giá đơn hàng</h5>
-                            <p>Mỗi đơn hàng trên 2 triệu VNĐ</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Feature End -->
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Feature Section End -->
-
-<!-- Product Section Start -->
-<div class="section section-padding mt-0">
-    <div class="container">
-        <!-- Section Title & Tab Start -->
-        <div class="row">
-            <!-- Tab Start -->
-            <div class="col-12">
-                <ul class="product-tab-nav nav justify-content-center mb-10 title-border-bottom mt-n3">
-                    <li class="nav-item" data-aos="fade-up" data-aos-delay="300"><a class="nav-link active mt-3" data-bs-toggle="tab" href="#tab-product-all">Hàng mới</a></li>
-                    <li class="nav-item" data-aos="fade-up" data-aos-delay="400"><a class="nav-link mt-3" data-bs-toggle="tab" href="#tab-product-clothings">Bán chạy</a></li>
-                    <li class="nav-item" data-aos="fade-up" data-aos-delay="500"><a class="nav-link mt-3" data-bs-toggle="tab" href="#tab-product-sale">Yêu thích</a></li>
-                </ul>
-            </div>
-            <!-- Tab End -->
-        </div>
-        <!-- Section Title & Tab End -->
-
-        <!-- Products Tab Start -->
-        <div class="row">
-            <div class="col">
-                <div class="tab-content position-relative">
-                    <div class="tab-pane fade show active" id="tab-product-all">
-                        <div class="product-carousel">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper mb-n10">
-                                    <?php
-                                    $sp_10_moi = array();
-
-                                    for ($i = 0; $i < (count($ds_10_san_pham_moi)); $i++) {
-                                        if ($i % 2 == 0) {
-                                            $mot_cap_sp = [];
-                                            array_push($mot_cap_sp, $ds_10_san_pham_moi[$i]);
-                                            array_push($mot_cap_sp, $ds_10_san_pham_moi[$i + 1]);
-
-                                            array_push($sp_10_moi, $mot_cap_sp);
-                                        }
-                                    }
-
-                                    for ($i = 0; $i < count($sp_10_moi); $i++) :
-
-                                    ?>
-                                        <!-- Product Start -->
-                                        <div class="swiper-slide product-wrapper">
-                                            <?php
-                                            for ($l = 0; $l < 2; $l++) :
-                                            ?>
-                                                <!-- Single Product Start -->
-                                                <div class="product product-border-left mb-10" data-aos="fade-up" data-aos-delay="300">
-                                                    <div class="thumb">
-                                                        <a href="index.php?act=single-product&id=<?= $sp_10_moi[$i][$l]['id'] ?>" class="image">
-                                                            <?php
-                                                            $anh_sp = get_san_pham_anh($sp_10_moi[$i][$l]['id']);
-                                                            ?>
-                                                            <img class="first-image" src="<?= $img_path . $anh_sp[0]['anh_sp'] ?>" height="269" alt="Product" />
-                                                            <img class="second-image" src="<?= $img_path . $anh_sp[1]['anh_sp'] ?>" height="269" alt="Product" />
+                        <div class="col-12 col-xxl-9 d-flex">
+                            <div class="card flex-grow-1 saw-table">
+                                <div class="sa-widget-header saw-table__header">
+                                    <h2 class="sa-widget-header__title">Recent orders</h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-6" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-6">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-table__body sa-widget-table text-nowrap">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>Status</th>
+                                                <th>Co.</th>
+                                                <th>Customer</th>
+                                                <th>Date</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00745</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-primary">Pending</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/IT.png"
+                                                        class="sa-language-icon d-block" alt="" title="Italy" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">GB</div>
                                                         </a>
-                                                        <div class="actions">
-                                                            <a href="#" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                                            <!-- <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="pe-7s-search"></i></a> -->
-                                                            <a href="#" class="action compare"><i class="pe-7s-shuffle"></i></a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Giordano
+                                                                Bruno</a>
                                                         </div>
                                                     </div>
-                                                    <div class="content">
-                                                        <h4 class="sub-title"><a href="index.php?act=single-product&id=<?= $sp_10_moi[$i][$l]['id'] ?>"><?= $sp_10_moi[$i][$l]['thuong_hieu_sp'] ?></a></h4>
-                                                        <h5 class="title"><a href="index.php?act=single-product&id=<?= $sp_10_moi[$i][$l]['id'] ?>"><?= $sp_10_moi[$i][$l]['ten_sp'] ?></a></h5>
-                                                        <!-- <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num">(4)</span>
-                                                        </span> -->
-                                                        <span class="price">
-                                                            <span class="new"><?= $sp_10_moi[$i][$l]['gia_sp'] ?> VNĐ</span>
-                                                            <?php
-                                                            if ($sp_10_moi[$i][$l]['gia_cu_sp'] != "") {
-                                                                echo '<span class="old">' . $sp_10_moi[$i][$l]['gia_cu_sp'] . ' VNĐ</span>';
-                                                            }
-                                                            ?>
-
-                                                        </span>
-                                                        <form action="index.php?act=add-cart" method="post">
-                                                            <input type="hidden" name="idsp" value="<?= $sp_10_moi[$i][$l]['id'] ?>">
-                                                            <input type="hidden" name="ten_sp" value="<?= $sp_10_moi[$i][$l]['ten_sp'] ?>">
-                                                            <input type="hidden" name="gia_sp" value="<?= $sp_10_moi[$i][$l]['gia_sp'] ?>">
-                                                            <input type="hidden" name="anh_sp" value="<?= $img_path . $anh_sp[0]['anh_sp'] ?>">
-                                                            <!-- <button class="btn btn-sm btn-outline-dark btn-hover-primary">Thêm vào giỏ hàng</button> -->
-                                                            <input type="submit" class="btn btn-sm btn-outline-dark btn-hover-primary" name="them_vao_gio_hang" value="Thêm vào giỏ hàng">
-                                                        </form>
+                                                </td>
+                                                <td>2020-11-02</td>
+                                                <td>$2,742.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00513</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-warning">Hold</div>
                                                     </div>
-                                                </div>
-                                                <!-- Single Product End -->
-                                            <?php endfor; ?>
-                                        </div>
-                                        <!-- Product End -->
-                                    <?php endfor; ?>
-
-
-                                </div>
-
-
-                                <!-- Swiper Pagination Start -->
-                                <div class="swiper-pagination d-md-none"></div>
-                                <!-- Swiper Pagination End -->
-
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-product-button-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-product-button-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab-product-clothings">
-                        <div class="product-carousel">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper mb-n10">
-                                    <?php
-                                    $sp_10_ban_chay = array();
-
-                                    for ($i = 0; $i < (count($ds_10_san_pham_ban_chay)); $i++) {
-                                        if ($i % 2 == 0) {
-                                            $mot_cap_sp = [];
-                                            array_push($mot_cap_sp, $ds_10_san_pham_ban_chay[$i]);
-                                            array_push($mot_cap_sp, $ds_10_san_pham_ban_chay[$i + 1]);
-
-                                            array_push($sp_10_ban_chay, $mot_cap_sp);
-                                        }
-                                    }
-
-                                    for ($i = 0; $i < count($sp_10_ban_chay); $i++) :
-
-                                    ?>
-                                        <!-- Product Start -->
-                                        <div class="swiper-slide product-wrapper">
-                                            <?php
-                                            for ($l = 0; $l < 2; $l++) :
-                                            ?>
-                                                <!-- Single Product Start -->
-                                                <div class="product product-border-left mb-10" data-aos="fade-up" data-aos-delay="300">
-                                                    <div class="thumb">
-                                                        <a href="index.php?act=single-product&id=<?= $sp_10_ban_chay[$i][$l]['id'] ?>" class="image">
-                                                            <?php
-                                                            $anh_sp = get_san_pham_anh($sp_10_ban_chay[$i][$l]['id']);
-                                                            ?>
-                                                            <img class="first-image" src="<?= $img_path . $anh_sp[0]['anh_sp'] ?>" height="269" alt="Product" />
-                                                            <img class="second-image" src="<?= $img_path . $anh_sp[1]['anh_sp'] ?>" height="269" alt="Product" />
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/DE.png"
+                                                        class="sa-language-icon d-block" alt="" title="Germany" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">HW</div>
                                                         </a>
-                                                        <div class="actions">
-                                                            <a href="#" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                                            <!-- <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="pe-7s-search"></i></a> -->
-                                                            <a href="#" class="action compare"><i class="pe-7s-shuffle"></i></a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Hans
+                                                                Weber</a>
                                                         </div>
                                                     </div>
-                                                    <div class="content">
-                                                        <h4 class="sub-title"><a href="index.php?act=single-product&id=<?= $sp_10_ban_chay[$i][$l]['id'] ?>"><?= $sp_10_ban_chay[$i][$l]['thuong_hieu_sp'] ?></a></h4>
-                                                        <h5 class="title"><a href="index.php?act=single-product&id=<?= $sp_10_ban_chay[$i][$l]['id'] ?>"><?= $sp_10_ban_chay[$i][$l]['ten_sp'] ?></a></h5>
-                                                        <!-- <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num">(4)</span>
-                                                        </span> -->
-                                                        <span class="price">
-                                                            <span class="new"><?= $sp_10_ban_chay[$i][$l]['gia_sp'] ?> VNĐ</span>
-                                                            <?php
-                                                            if ($sp_10_ban_chay[$i][$l]['gia_cu_sp'] != "") {
-                                                                echo '<span class="old">' . $sp_10_ban_chay[$i][$l]['gia_cu_sp'] . ' VNĐ</span>';
-                                                            }
-                                                            ?>
-
-                                                        </span>
-                                                        <form action="index.php?act=add-cart" method="post">
-                                                            <input type="hidden" name="idsp" value="<?= $sp_10_ban_chay[$i][$l]['id'] ?>">
-                                                            <input type="hidden" name="ten_sp" value="<?= $sp_10_ban_chay[$i][$l]['ten_sp'] ?>">
-                                                            <input type="hidden" name="gia_sp" value="<?= $sp_10_ban_chay[$i][$l]['gia_sp'] ?>">
-                                                            <input type="hidden" name="anh_sp" value="<?= $img_path . $anh_sp[0]['anh_sp'] ?>">
-                                                            <!-- <button class="btn btn-sm btn-outline-dark btn-hover-primary">Thêm vào giỏ hàng</button> -->
-                                                            <input type="submit" class="btn btn-sm btn-outline-dark btn-hover-primary" name="them_vao_gio_hang" value="Thêm vào giỏ hàng">
-                                                        </form>
+                                                </td>
+                                                <td>2020-09-05</td>
+                                                <td>$204.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00507</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-primary">Pending</div>
                                                     </div>
-                                                </div>
-                                                <!-- Single Product End -->
-                                            <?php endfor; ?>
-                                        </div>
-                                        <!-- Product End -->
-                                    <?php endfor; ?>
-
-
-                                </div>
-
-
-                                <!-- Swiper Pagination Start -->
-                                <div class="swiper-pagination d-md-none"></div>
-                                <!-- Swiper Pagination End -->
-
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-product-button-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-product-button-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab-product-sale">
-                        <div class="product-carousel">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper mb-n10">
-                                    <?php
-                                    $sp_10_yeu_thich = array();
-
-                                    for ($i = 0; $i < (count($ds_10_san_pham_yeu_thich)); $i++) {
-                                        if ($i % 2 == 0) {
-                                            $mot_cap_sp = [];
-                                            array_push($mot_cap_sp, $ds_10_san_pham_yeu_thich[$i]);
-                                            array_push($mot_cap_sp, $ds_10_san_pham_yeu_thich[$i + 1]);
-
-                                            array_push($sp_10_yeu_thich, $mot_cap_sp);
-                                        }
-                                    }
-
-                                    for ($i = 0; $i < count($sp_10_yeu_thich); $i++) :
-
-                                    ?>
-                                        <!-- Product Start -->
-                                        <div class="swiper-slide product-wrapper">
-                                            <?php
-                                            for ($l = 0; $l < 2; $l++) :
-                                            ?>
-                                                <!-- Single Product Start -->
-                                                <div class="product product-border-left mb-10" data-aos="fade-up" data-aos-delay="300">
-                                                    <div class="thumb">
-                                                        <a href="index.php?act=single-product&id=<?= $sp_10_yeu_thich[$i][$l]['id'] ?>" class="image">
-                                                            <?php
-                                                            $anh_sp = get_san_pham_anh($sp_10_yeu_thich[$i][$l]['id']);
-                                                            ?>
-                                                            <img class="first-image" src="<?= $img_path . $anh_sp[0]['anh_sp'] ?>" height="269" alt="Product" />
-                                                            <img class="second-image" src="<?= $img_path . $anh_sp[1]['anh_sp'] ?>" height="269" alt="Product" />
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/IT.png"
+                                                        class="sa-language-icon d-block" alt="" title="Italy" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">AR</div>
                                                         </a>
-                                                        <div class="actions">
-                                                            <a href="#" class="action wishlist"><i class="pe-7s-like"></i></a>
-                                                            <!-- <a href="#" class="action quickview" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="pe-7s-search"></i></a> -->
-                                                            <a href="#" class="action compare"><i class="pe-7s-shuffle"></i></a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Andrea
+                                                                Rossi</a>
                                                         </div>
                                                     </div>
-                                                    <div class="content">
-                                                        <h4 class="sub-title"><a href="index.php?act=single-product&id=<?= $sp_10_yeu_thich[$i][$l]['id'] ?>"><?= $sp_10_yeu_thich[$i][$l]['thuong_hieu_sp'] ?></a></h4>
-                                                        <h5 class="title"><a href="index.php?act=single-product&id=<?= $sp_10_yeu_thich[$i][$l]['id'] ?>"><?= $sp_10_yeu_thich[$i][$l]['ten_sp'] ?></a></h5>
-                                                        <!-- <span class="ratings">
-                                                            <span class="rating-wrap">
-                                                                <span class="star" style="width: 100%"></span>
-                                                            </span>
-                                                            <span class="rating-num">(4)</span>
-                                                        </span> -->
-                                                        <span class="price">
-                                                            <span class="new"><?= $sp_10_yeu_thich[$i][$l]['gia_sp'] ?> VNĐ</span>
-                                                            <?php
-                                                            if ($sp_10_yeu_thich[$i][$l]['gia_cu_sp'] != "") {
-                                                                echo '<span class="old">' . $sp_10_yeu_thich[$i][$l]['gia_cu_sp'] . ' VNĐ</span>';
-                                                            }
-                                                            ?>
-
-                                                        </span>
-                                                        <form action="index.php?act=add-cart" method="post">
-                                                            <input type="hidden" name="idsp" value="<?= $sp_10_yeu_thich[$i][$l]['id'] ?>">
-                                                            <input type="hidden" name="ten_sp" value="<?= $sp_10_yeu_thich[$i][$l]['ten_sp'] ?>">
-                                                            <input type="hidden" name="gia_sp" value="<?= $sp_10_yeu_thich[$i][$l]['gia_sp'] ?>">
-                                                            <input type="hidden" name="anh_sp" value="<?= $img_path . $anh_sp[0]['anh_sp'] ?>">
-                                                            <!-- <button class="btn btn-sm btn-outline-dark btn-hover-primary">Thêm vào giỏ hàng</button> -->
-                                                            <input type="submit" class="btn btn-sm btn-outline-dark btn-hover-primary" name="them_vao_gio_hang" value="Thêm vào giỏ hàng">
-                                                        </form>
+                                                </td>
+                                                <td>2020-08-21</td>
+                                                <td>$5,039.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00104</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-danger">Canceled</div>
                                                     </div>
-                                                </div>
-                                                <!-- Single Product End -->
-                                            <?php endfor; ?>
-                                        </div>
-                                        <!-- Product End -->
-                                    <?php endfor; ?>
-
-
-                                </div>
-
-
-                                <!-- Swiper Pagination Start -->
-                                <div class="swiper-pagination d-md-none"></div>
-                                <!-- Swiper Pagination End -->
-
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-product-button-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-product-button-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Products Tab End -->
-    </div>
-</div>
-<!-- Product Section End -->
-
-<!-- Banner Fullwidth Start -->
-<div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
-                <div class="banner">
-                    <div class="banner-image">
-                        <a href="index.php?act=shop-left-sidebar"><img src="view/images/banner/big-banner.jpg" alt="Banner"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Banner Fullwidth End -->
-
-<!-- Product Deal Section Start -->
-<div class="section section-padding mt-0 overflow-hidden">
-    <div class="container">
-        <!-- Section Title & Tab Start -->
-        <div class="row">
-            <!-- Tab Start -->
-            <div class="col-12">
-                <div class="section-title-produt-tab-wrapper">
-                    <div class="section-title m-0" data-aos="fade-right" data-aos-delay="300">
-                        <h1 class="title">Ưu đãi hôm nay</h1>
-                    </div>
-                    <ul class="product-tab-nav nav mt-n3" data-aos="fade-left" data-aos-delay="300">
-                        <li class="nav-item"><a class="nav-link active mt-3" data-bs-toggle="tab" href="#product-deal-all">Hàng mới</a></li>
-                        <li class="nav-item"><a class="nav-link mt-3" data-bs-toggle="tab" href="#product-deal-clothings">Bán chạy</a></li>
-                        <li class="nav-item"><a class="nav-link mt-3" data-bs-toggle="tab" href="#product-deal-sale">Yêu thích</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Tab End -->
-        </div>
-        <!-- Section Title & Tab End -->
-
-        <!-- Products Tab Start -->
-        <div class="row">
-            <div class="col">
-                <div class="tab-content position-relative">
-                    <div class="tab-pane fade show active" id="product-deal-all">
-                        <div class="product-deal-carousel">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <?php
-                                    foreach ($ds_10_san_pham_moi as $sanpham) :
-                                        extract($sanpham);
-                                        //var_dump($sanpham);
-                                        if ($gia_cu_sp != "") :
-                                    ?>
-                                            <!-- Product Start -->
-                                            <div class="swiper-slide product-wrapper" data-aos="fade-right" data-aos-delay="600">
-
-                                                <!-- Single Product Deal Start -->
-                                                <div class="product single-deal-product product-border-left">
-                                                    <div class="thumb">
-                                                        <?php
-                                                        $anh_sp = get_san_pham_anh($id);
-                                                        ?>
-                                                        <a href="index.php?act=single-product&id=<?= $id ?>" class="image">
-                                                            <img src="<?= $img_path . $anh_sp[0]['anh_sp'] ?>" height="269" alt="Product" />
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/US.png"
+                                                        class="sa-language-icon d-block" alt="" title="USA" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">RF</div>
                                                         </a>
-                                                        <span class="badges">
-                                                            <span class="sale">Giá ưu đã</span>
-                                                        </span>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Richard
+                                                                Feynman</a>
+                                                        </div>
                                                     </div>
-                                                    <div class="content">
-                                                        <!-- <p class="inner-desc">Hurry Up! Offer Ends In:</p>
-                                                <div class="countdown-area">
-                                                    <div class="countdown-wrapper d-flex" data-countdown="2023/12/24"></div>
-                                                </div> -->
-                                                        <h4 class="sub-title"><a href="index.php?act=single-product&id=<?= $id ?>"><?= $thuong_hieu_sp ?></a></h4>
-                                                        <h5 class="title"><a href="index.php?act=single-product&id=<?= $id ?>"><?= $ten_sp ?></a></h5>
-                                                        <!-- <span class="ratings">
-                                                    <span class="rating-wrap">
-                                                        <span class="star" style="width: 100%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(4)</span>
-                                                </span> -->
-                                                        <span class="price">
-                                                            <span class="new"><?= $gia_sp ?> VNĐ</span>
-                                                            <span class="old"><?= $gia_cu_sp ?> VNĐ</span>
-                                                        </span>
-                                                        <form action="index.php?act=add-cart" method="post">
-                                                            <input type="hidden" name="idsp" value="<?= $id?>">
-                                                            <input type="hidden" name="ten_sp" value="<?= $ten_sp ?>">
-                                                            <input type="hidden" name="gia_sp" value="<?=$gia_sp ?>">
-                                                            <input type="hidden" name="anh_sp" value="<?= $img_path . $anh_sp[0]['anh_sp'] ?>">
-                                                            <!-- <button class="btn btn-sm btn-outline-dark btn-hover-primary">Thêm vào giỏ hàng</button> -->
-                                                            <input type="submit" class="btn btn-sm btn-outline-dark btn-hover-primary" name="them_vao_gio_hang" value="Thêm vào giỏ hàng">
-                                                        </form>
+                                                </td>
+                                                <td>2020-06-22</td>
+                                                <td>$79.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00097</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-success">
+                                                            Completed
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <!-- Single Product Deal End -->
-
-                                            </div>
-                                        <?php endif; ?>
-                                        <!-- Product End -->
-                                    <?php endforeach; ?>
-
-
-                                </div>
-
-                                <!-- Swiper Pagination Start -->
-                                <div class="swiper-pagination d-md-none"></div>
-                                <!-- Swiper Pagination End -->
-
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-product-deal-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-product-deal-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="product-deal-clothings">
-                        <div class="product-deal-carousel">
-                            <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                    <?php
-                                    foreach ($ds_10_san_pham_ban_chay as $sanpham) :
-                                        extract($sanpham);
-                                        //var_dump($sanpham);
-                                        if ($gia_cu_sp != "") :
-                                    ?>
-                                            <!-- Product Start -->
-                                            <div class="swiper-slide product-wrapper" data-aos="fade-right" data-aos-delay="600">
-
-                                                <!-- Single Product Deal Start -->
-                                                <div class="product single-deal-product product-border-left">
-                                                    <div class="thumb">
-                                                        <?php
-                                                        $anh_sp = get_san_pham_anh($id);
-                                                        ?>
-                                                        <a href="index.php?act=single-product&id=<?= $id ?>" class="image">
-                                                            <img src="<?= $img_path . $anh_sp[0]['anh_sp'] ?>" height="269" alt="Product" />
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/CO.png"
+                                                        class="sa-language-icon d-block" alt="" title="Columbia" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">LG</div>
                                                         </a>
-                                                        <span class="badges">
-                                                            <span class="sale">Bán chạy</span>
-                                                        </span>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Leonardo
+                                                                Garcia</a>
+                                                        </div>
                                                     </div>
-                                                    <div class="content">
-                                                        <!-- <p class="inner-desc">Hurry Up! Offer Ends In:</p>
-                                                <div class="countdown-area">
-                                                    <div class="countdown-wrapper d-flex" data-countdown="2023/12/24"></div>
-                                                </div> -->
-                                                        <h4 class="sub-title"><a href="index.php?act=single-product&id=<?= $id ?>"><?= $thuong_hieu_sp ?></a></h4>
-                                                        <h5 class="title"><a href="index.php?act=single-product&id=<?= $id ?>"><?= $ten_sp ?></a></h5>
-                                                        <!-- <span class="ratings">
-                                                    <span class="rating-wrap">
-                                                        <span class="star" style="width: 100%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(4)</span>
-                                                </span> -->
-                                                        <span class="price">
-                                                            <span class="new"><?= $gia_sp ?> VNĐ</span>
-                                                            <span class="old"><?= $gia_cu_sp ?> VNĐ</span>
-                                                        </span>
-                                                        <form action="index.php?act=add-cart" method="post">
-                                                            <input type="hidden" name="idsp" value="<?= $id?>">
-                                                            <input type="hidden" name="ten_sp" value="<?= $ten_sp ?>">
-                                                            <input type="hidden" name="gia_sp" value="<?=$gia_sp ?>">
-                                                            <input type="hidden" name="anh_sp" value="<?= $img_path . $anh_sp[0]['anh_sp'] ?>">
-                                                            <!-- <button class="btn btn-sm btn-outline-dark btn-hover-primary">Thêm vào giỏ hàng</button> -->
-                                                            <input type="submit" class="btn btn-sm btn-outline-dark btn-hover-primary" name="them_vao_gio_hang" value="Thêm vào giỏ hàng">
-                                                        </form>
+                                                </td>
+                                                <td>2020-05-09</td>
+                                                <td>$826.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00082</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-success">
+                                                            Completed
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <!-- Single Product Deal End -->
-
-                                            </div>
-                                        <?php endif; ?>
-                                        <!-- Product End -->
-                                    <?php endforeach; ?>
-
-
-                                </div>
-                                <!-- Swiper Pagination Start -->
-                                <div class="swiper-pagination d-md-none"></div>
-                                <!-- Swiper Pagination End -->
-
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-product-deal-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-product-deal-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="product-deal-sale">
-                        <div class="product-deal-carousel">
-                            <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                    <?php
-                                    foreach ($ds_10_san_pham_yeu_thich as $sanpham) :
-                                        extract($sanpham);
-                                        //var_dump($sanpham);
-                                        if ($gia_cu_sp != "") :
-                                    ?>
-                                            <!-- Product Start -->
-                                            <div class="swiper-slide product-wrapper" data-aos="fade-right" data-aos-delay="600">
-
-                                                <!-- Single Product Deal Start -->
-                                                <div class="product single-deal-product product-border-left">
-                                                    <div class="thumb">
-                                                        <?php
-                                                        $anh_sp = get_san_pham_anh($id);
-                                                        ?>
-                                                        <a href="index.php?act=single-product&id=<?= $id ?>" class="image">
-                                                            <img src="<?= $img_path . $anh_sp[0]['anh_sp'] ?>" height="269" alt="Product" />
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/RS.png"
+                                                        class="sa-language-icon d-block" alt="" title="Srbija" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">NT</div>
                                                         </a>
-                                                        <span class="badges">
-                                                            <span class="sale">Top yêu thích</span>
-                                                        </span>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Nikola
+                                                                Tesla</a>
+                                                        </div>
                                                     </div>
-                                                    <div class="content">
-                                                        <!-- <p class="inner-desc">Hurry Up! Offer Ends In:</p>
-                                                <div class="countdown-area">
-                                                    <div class="countdown-wrapper d-flex" data-countdown="2023/12/24"></div>
-                                                </div> -->
-                                                        <h4 class="sub-title"><a href="index.php?act=single-product&id=<?= $id ?>"><?= $thuong_hieu_sp ?></a></h4>
-                                                        <h5 class="title"><a href="index.php?act=single-product&id=<?= $id ?>"><?= $ten_sp ?></a></h5>
-                                                        <!-- <span class="ratings">
-                                                    <span class="rating-wrap">
-                                                        <span class="star" style="width: 100%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(4)</span>
-                                                </span> -->
-                                                        <span class="price">
-                                                            <span class="new"><?= $gia_sp ?> VNĐ</span>
-                                                            <span class="old"><?= $gia_cu_sp ?> VNĐ</span>
-                                                        </span>
-                                                        <form action="index.php?act=add-cart" method="post">
-                                                            <input type="hidden" name="idsp" value="<?= $id?>">
-                                                            <input type="hidden" name="ten_sp" value="<?= $ten_sp ?>">
-                                                            <input type="hidden" name="gia_sp" value="<?=$gia_sp ?>">
-                                                            <input type="hidden" name="anh_sp" value="<?= $img_path . $anh_sp[0]['anh_sp'] ?>">
-                                                            <!-- <button class="btn btn-sm btn-outline-dark btn-hover-primary">Thêm vào giỏ hàng</button> -->
-                                                            <input type="submit" class="btn btn-sm btn-outline-dark btn-hover-primary" name="them_vao_gio_hang" value="Thêm vào giỏ hàng">
-                                                        </form>
+                                                </td>
+                                                <td>2020-04-27</td>
+                                                <td>$1,052.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00063</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-primary">Pending</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/FR.png"
+                                                        class="sa-language-icon d-block" alt="" title="France" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">MC</div>
+                                                        </a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Marie
+                                                                Curie</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2020-02-09</td>
+                                                <td>$441.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="app-order.html" class="text-reset">#00012</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex fs-6">
+                                                        <div class="badge badge-sa-success">
+                                                            Completed
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <img src="vendor/flag-icons/24/RU.png"
+                                                        class="sa-language-icon d-block" alt="" title="Russia" />
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <a href="app-customer.html"
+                                                            class="sa-symbol sa-symbol--shape--circle sa-symbol--size--md me-3">
+                                                            <div class="sa-symbol__text">KT</div>
+                                                        </a>
+                                                        <div>
+                                                            <a href="app-customer.html" class="text-reset">Konstantin
+                                                                Tsiolkovsky</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>2020-01-01</td>
+                                                <td>$12,961.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xxl-3 d-flex">
+                            <div class="card flex-grow-1 saw-chart-circle"
+                                data-sa-data='[{"label":"Yandex","value":2742,"color":"#ffd333","orders":12},{"label":"YouTube","value":3272,"color":"#e62e2e","orders":51},{"label":"Google","value":2303,"color":"#3377ff","orders":4},{"label":"Facebook","value":1434,"color":"#29cccc","orders":10},{"label":"Instagram","value":799,"color":"#5dc728","orders":1}]'
+                                data-sa-container-query='{"600":"saw-chart-circle--size--lg"}'>
+                                <div class="sa-widget-header saw-chart-circle__header">
+                                    <h2 class="sa-widget-header__title">
+                                        Sales by traffic source
+                                    </h2>
+                                    <div class="sa-widget-header__actions">
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                id="widget-context-menu-7" data-bs-toggle="dropdown"
+                                                aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end"
+                                                aria-labelledby="widget-context-menu-7">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Settings</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Move</a></li>
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saw-chart-circle__body">
+                                    <div class="saw-chart-circle__container">
+                                        <canvas></canvas>
+                                    </div>
+                                </div>
+                                <div class="sa-widget-table saw-chart-circle__table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Source</th>
+                                                <th class="text-center">Orders</th>
+                                                <th class="text-end">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="saw-chart-circle__symbol" style="
+                                  --saw-chart-circle__symbol--color: #ffd333;
+                                "></div>
+                                                        <div class="ps-2">Yandex</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">12</td>
+                                                <td class="text-end">
+                                                    <div class="sa-price">
+                                                        <span class="sa-price__symbol">$</span><span
+                                                            class="sa-price__integer">2,742</span><span
+                                                            class="sa-price__decimal">.00</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="saw-chart-circle__symbol" style="
+                                  --saw-chart-circle__symbol--color: #e62e2e;
+                                "></div>
+                                                        <div class="ps-2">YouTube</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">51</td>
+                                                <td class="text-end">
+                                                    <div class="sa-price">
+                                                        <span class="sa-price__symbol">$</span><span
+                                                            class="sa-price__integer">3,272</span><span
+                                                            class="sa-price__decimal">.00</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="saw-chart-circle__symbol" style="
+                                  --saw-chart-circle__symbol--color: #3377ff;
+                                "></div>
+                                                        <div class="ps-2">Google</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">4</td>
+                                                <td class="text-end">
+                                                    <div class="sa-price">
+                                                        <span class="sa-price__symbol">$</span><span
+                                                            class="sa-price__integer">2,303</span><span
+                                                            class="sa-price__decimal">.00</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="saw-chart-circle__symbol" style="
+                                  --saw-chart-circle__symbol--color: #29cccc;
+                                "></div>
+                                                        <div class="ps-2">Facebook</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-end">
+                                                    <div class="sa-price">
+                                                        <span class="sa-price__symbol">$</span><span
+                                                            class="sa-price__integer">1,434</span><span
+                                                            class="sa-price__decimal">.00</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="saw-chart-circle__symbol" style="
+                                  --saw-chart-circle__symbol--color: #5dc728;
+                                "></div>
+                                                        <div class="ps-2">Instagram</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-end">
+                                                    <div class="sa-price">
+                                                        <span class="sa-price__symbol">$</span><span
+                                                            class="sa-price__integer">799</span><span
+                                                            class="sa-price__decimal">.00</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex">
+                            <div class="card flex-grow-1">
+                                <div class="card-body">
+                                    <div class="sa-widget-header mb-4">
+                                        <h2 class="sa-widget-header__title">Recent activity</h2>
+                                        <div class="sa-widget-header__actions">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                    id="widget-context-menu-8" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" aria-label="More">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                        fill="currentColor">
+                                                        <path
+                                                            d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end"
+                                                    aria-labelledby="widget-context-menu-8">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">Settings</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Move</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider" />
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sa-timeline mb-n2 pt-2">
+                                        <ul class="sa-timeline__list">
+                                            <li class="sa-timeline__item">
+                                                <div class="sa-timeline__item-title">Yesterday</div>
+                                                <div class="sa-timeline__item-content">
+                                                    Phasellus id mattis nulla. Mauris velit nisi,
+                                                    imperdiet vitae sodales in, maximus ut lectus.
+                                                    Vivamus commodo scelerisque lacus, at porttitor dui
+                                                    iaculis id.
+                                                    <a href="#">Curabitur imperdiet ultrices fermentum.</a>
+                                                </div>
+                                            </li>
+                                            <li class="sa-timeline__item">
+                                                <div class="sa-timeline__item-title">5 days ago</div>
+                                                <div class="sa-timeline__item-content">
+                                                    Nulla ut ex mollis, volutpat tellus vitae, accumsan
+                                                    ligula.
+                                                    <a href="#">Curabitur imperdiet ultrices fermentum.</a>
+                                                </div>
+                                            </li>
+                                            <li class="sa-timeline__item">
+                                                <div class="sa-timeline__item-title">March 27</div>
+                                                <div class="sa-timeline__item-content">
+                                                    Donec tempor sapien et fringilla facilisis. Nam
+                                                    maximus consectetur diam.
+                                                </div>
+                                            </li>
+                                            <li class="sa-timeline__item">
+                                                <div class="sa-timeline__item-title">November 30</div>
+                                                <div class="sa-timeline__item-content">
+                                                    Many philosophical debates that began in ancient
+                                                    times are still debated today. In one general sense,
+                                                    philosophy is associated with wisdom, intellectual
+                                                    culture and a search for knowledge.
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex">
+                            <div class="card flex-grow-1">
+                                <div class="card-body">
+                                    <div class="sa-widget-header">
+                                        <h2 class="sa-widget-header__title">Recent reviews</h2>
+                                        <div class="sa-widget-header__actions">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-sm btn-sa-muted d-block"
+                                                    id="widget-context-menu-9" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" aria-label="More">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13"
+                                                        fill="currentColor">
+                                                        <path
+                                                            d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end"
+                                                    aria-labelledby="widget-context-menu-9">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">Settings</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Move</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider" />
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item text-danger" href="#">Remove</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-1-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Wiper
+                                                        Blades Brandix WL2</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Ryan Ford</a>
                                                     </div>
                                                 </div>
-                                                <!-- Single Product Deal End -->
-
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 0.6">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        <?php endif; ?>
-                                        <!-- Product End -->
-                                    <?php endforeach; ?>
-
-
-                                </div>
-                                <!-- Swiper Pagination Start -->
-                                <div class="swiper-pagination d-md-none"></div>
-                                <!-- Swiper Pagination End -->
-
-                                <!-- Next Previous Button Start -->
-                                <div class="swiper-product-deal-next swiper-button-next swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-right"></i></div>
-                                <div class="swiper-product-deal-prev swiper-button-prev swiper-button-white d-md-flex d-none"><i class="pe-7s-angle-left"></i></div>
-                                <!-- Next Previous Button End -->
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-7-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Electric
+                                                        Planer Brandix KL370090G 300 Watts</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Adam Taylor</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 0.8">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-10-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Water
+                                                        Tap</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Jessica Moore</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 0.4">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-5-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Brandix
+                                                        Router Power Tool 2017ERXPK</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Helena Garcia</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 0.6">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-2-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Undefined
+                                                        Tool IRadix DPS3000SY 2700 Watts</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Ryan Ford</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 1">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item py-2">
+                                        <div class="d-flex align-items-center py-3">
+                                            <a href="app-product.html" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="view/images/products/product-16-40x40.jpg" width="40"
+                                                        height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div class="d-flex align-items-center flex-grow-1 flex-wrap">
+                                                <div class="col">
+                                                    <a href="app-product.html" class="text-reset fs-exact-14">Brandix
+                                                        Screwdriver SCREW150</a>
+                                                    <div class="text-muted fs-exact-13">
+                                                        Reviewed by
+                                                        <a href="app-customer.html" class="text-reset">Charlotte
+                                                            Jones</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-auto">
+                                                    <div class="sa-rating ms-sm-3 my-2 my-sm-0"
+                                                        style="--sa-rating--value: 0.8">
+                                                        <div class="sa-rating__body"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Products Tab End -->
-    </div>
-</div>
-<!-- Product Deal Section End -->
-
-<!-- Banner Section Start -->
-<div class="section">
-    <div class="container">
-
-        <!-- Banners Start -->
-        <div class="row mb-n6 overflow-hidden">
-            <!-- Banner Start -->
-            <div class="col-md-6 col-12 mb-6" data-aos="fade-right" data-aos-delay="300">
-                <div class="banner">
-                    <div class="banner-image">
-                        <a href="index.php?act=shop-left-sidebar"><img src="view/images/banner/banner-4.jpg" alt="Banner Image"></a>
-                    </div>
-                    <div class="info">
-                        <div class="small-banner-content">
-                            <h4 class="sub-title">Up to <span>50%</span> Off</h4>
-                            <h3 class="title">Office Dress</h3>
-                            <a href="index.php?act=shop-left-sidebar" class="btn btn-primary btn-hover-dark btn-sm">Mua ngay</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Banner End -->
-
-            <!-- Banner Start -->
-            <div class="col-md-6 col-12 mb-6" data-aos="fade-left" data-aos-delay="300">
-                <div class="banner">
-                    <div class="banner-image">
-                        <a href="index.php?act=shop-left-sidebar"><img src="view/images/banner/banner-5.jpg" alt="Banner Image"></a>
-                    </div>
-                    <div class="info">
-                        <div class="small-banner-content">
-                            <h4 class="sub-title">Up to <span>40%</span> Off</h4>
-                            <h3 class="title">All Products</h3>
-                            <a href="index.php?act=shop-left-sidebar" class="btn btn-primary btn-hover-dark btn-sm">Mua ngay</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Banner End -->
-
-        </div>
-        <!-- Banners End -->
-    </div>
-</div>
-<!-- Banner Section End -->
-
-<!-- Product List Start -->
-<div class="section section-padding">
-    <div class="container">
-        <div class="row mb-n8">
-
-            <div class="col-md-6 col-lg-4 col-12 mb-8" data-aos="fade-up" data-aos-delay="300">
-                <!-- Product List Title Start -->
-                <div class="product-list-title">
-                    <h2 class="title pb-3 mb-0">Bán chạy</h2>
-                    <span></span>
-                </div>
-                <!-- Product List Title End -->
-
-                <!-- Product List Start -->
-                <div class="product-list-carousel-2">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <?php $sp_10_ban_chay = array();
-                            for ($i = 0; $i < (count($ds_10_san_pham_ban_chay)); $i++) {
-                                if (($i % 3 == 0) && ($i < 9)) {
-                                    $mot_cap_sp = [];
-                                    array_push($mot_cap_sp, $ds_10_san_pham_ban_chay[$i]);
-                                    array_push($mot_cap_sp, $ds_10_san_pham_ban_chay[$i + 1]);
-                                    array_push($mot_cap_sp, $ds_10_san_pham_ban_chay[$i + 2]);
-                                    array_push($sp_10_ban_chay, $mot_cap_sp);
-                                }
-                            }
-                            for ($i = 0; $i < count($sp_10_ban_chay); $i++) :
-
-                            ?>
-                                <!-- Product List Wrapper Start -->
-                                <div class="swiper-slide product-list-wrapper mb-n6">
-                                    <?php
-                                    for ($l = 0; $l < 3; $l++) :
-                                    ?>
-                                        <!-- Single Product List Start -->
-                                        <div class="single-product-list product-hover mb-6">
-                                            <div class="thumb">
-                                                <a href="index.php?act=single-product&id=<?= $sp_10_ban_chay[$i][$l]['id'] ?>" class="image">
-                                                    <?php $anh_sp = get_san_pham_anh($sp_10_ban_chay[$i][$l]['id']) ?>
-                                                    <img class="first-image" src="<?= $img_path . $anh_sp[0]['anh_sp'] ?>" height="100" width="100" alt="Product" />
-                                                    <img class="second-image" src="<?= $img_path . $anh_sp[1]['anh_sp'] ?>" height="100" width="100" alt="Product" />
-                                                </a>
-                                            </div>
-                                            <div class="content">
-                                                <h5 class="title"><a href="index.php?act=single-product&id=<?= $sp_10_ban_chay[$i][$l]['id'] ?>"><?= $sp_10_ban_chay[$i][$l]['ten_sp'] ?></a></h5>
-                                                <span class="price">
-                                                    <span class="new"><?= $sp_10_ban_chay[$i][$l]['gia_sp'] ?> VNĐ</span>
-                                                    <?php
-                                                    if ($sp_10_ban_chay[$i][$l]['gia_cu_sp'] != "") {
-                                                        echo ' <span class="old">' . $sp_10_ban_chay[$i][$l]['gia_cu_sp'] . ' VNĐ</span>';
-                                                    }
-                                                    ?>
-                                                </span>
-                                                <!-- <span class="ratings">
-                                                    <span class="rating-wrap">
-                                                        <span class="star" style="width: 100%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(4)</span>
-                                                </span> -->
-                                            </div>
-                                        </div>
-                                        <!-- Single Product List End -->
-                                    <?php endfor; ?>
-
-                                </div>
-                                <!-- Product List Wrapper End -->
-                            <?php endfor; ?>
-                        </div>
-
-                        <!-- Swiper Pagination Start -->
-                        <!-- <div class="swiper-pagination d-md-none"></div> -->
-                        <!-- Swiper Pagination End -->
-
-                        <!-- Next Previous Button Start -->
-                        <div class="swiper-product-list-next swiper-button-next"><i class="pe-7s-angle-right"></i></div>
-                        <div class="swiper-product-list-prev swiper-button-prev"><i class="pe-7s-angle-left"></i></div>
-                        <!-- Next Previous Button End -->
-                    </div>
-                </div>
-                <!-- Product List End -->
-            </div>
-            <div class="col-md-6 col-lg-4 col-12 mb-8" data-aos="fade-up" data-aos-delay="500">
-                <!-- Product List Title Start -->
-                <div class="product-list-title">
-                    <h2 class="title pb-3 mb-0">Sản phẩm mới</h2>
-                    <span></span>
-                </div>
-                <!-- Product List Title End -->
-
-                <!-- Product List Start -->
-                <div class="product-list-carousel-2">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <?php $sp_10_moi = array();
-                            for ($i = 0; $i < (count($ds_10_san_pham_moi)); $i++) {
-                                if (($i % 3 == 0) && ($i < 9)) {
-                                    $mot_cap_sp = [];
-                                    array_push($mot_cap_sp, $ds_10_san_pham_moi[$i]);
-                                    array_push($mot_cap_sp, $ds_10_san_pham_moi[$i + 1]);
-                                    array_push($mot_cap_sp, $ds_10_san_pham_moi[$i + 2]);
-                                    array_push($sp_10_moi, $mot_cap_sp);
-                                }
-                            }
-                            for ($i = 0; $i < count($sp_10_moi); $i++) :
-
-                            ?>
-                                <!-- Product List Wrapper Start -->
-                                <div class="swiper-slide product-list-wrapper mb-n6">
-                                    <?php
-                                    for ($l = 0; $l < 3; $l++) :
-                                    ?>
-                                        <!-- Single Product List Start -->
-                                        <div class="single-product-list product-hover mb-6">
-                                            <div class="thumb">
-                                                <a href="index.php?act=single-product&id=<?= $sp_10_moi[$i][$l]['id'] ?>" class="image">
-                                                    <?php $anh_sp = get_san_pham_anh($sp_10_moi[$i][$l]['id']) ?>
-                                                    <img class="first-image" src="<?= $img_path . $anh_sp[0]['anh_sp'] ?>" height="100" width="100" alt="Product" />
-                                                    <img class="second-image" src="<?= $img_path . $anh_sp[1]['anh_sp'] ?>" height="100" width="100" alt="Product" />
-                                                </a>
-                                            </div>
-                                            <div class="content">
-                                                <h5 class="title"><a href="index.php?act=single-product&id=<?= $sp_10_moi[$i][$l]['id'] ?>"><?= $sp_10_moi[$i][$l]['ten_sp'] ?></a></h5>
-                                                <span class="price">
-                                                    <span class="new"><?= $sp_10_moi[$i][$l]['gia_sp'] ?> VNĐ</span>
-                                                    <?php
-                                                    if ($sp_10_moi[$i][$l]['gia_cu_sp'] != "") {
-                                                        echo ' <span class="old">' . $sp_10_moi[$i][$l]['gia_cu_sp'] . ' VNĐ</span>';
-                                                    }
-                                                    ?>
-                                                </span>
-                                                <!-- <span class="ratings">
-                                                    <span class="rating-wrap">
-                                                        <span class="star" style="width: 100%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(4)</span>
-                                                </span> -->
-                                            </div>
-                                        </div>
-                                        <!-- Single Product List End -->
-                                    <?php endfor; ?>
-
-                                </div>
-                                <!-- Product List Wrapper End -->
-                            <?php endfor; ?>
-                        </div>
-
-                        <!-- Swiper Pagination Start -->
-                        <!-- <div class="swiper-pagination d-md-none"></div> -->
-                        <!-- Swiper Pagination End -->
-
-                        <!-- Next Previous Button Start -->
-                        <div class="swiper-product-list-next swiper-button-next"><i class="pe-7s-angle-right"></i></div>
-                        <div class="swiper-product-list-prev swiper-button-prev"><i class="pe-7s-angle-left"></i></div>
-                        <!-- Next Previous Button End -->
-                    </div>
-                </div>
-                <!-- Product List End -->
-            </div>
-            <div class="col-md-6 col-lg-4 col-12 mb-8" data-aos="fade-up" data-aos-delay="700">
-                <!-- Product List Title Start -->
-                <div class="product-list-title">
-                    <h2 class="title pb-3 mb-0">Yêu thích</h2>
-                    <span></span>
-                </div>
-                <!-- Product List Title End -->
-
-                <!-- Product List Start -->
-                <div class="product-list-carousel-2">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <?php $sp_10_yeu_thich = array();
-                            for ($i = 0; $i < (count($ds_10_san_pham_yeu_thich)); $i++) {
-                                if (($i % 3 == 0) && ($i < 9)) {
-                                    $mot_cap_sp = [];
-                                    array_push($mot_cap_sp, $ds_10_san_pham_yeu_thich[$i]);
-                                    array_push($mot_cap_sp, $ds_10_san_pham_yeu_thich[$i + 1]);
-                                    array_push($mot_cap_sp, $ds_10_san_pham_yeu_thich[$i + 2]);
-                                    array_push($sp_10_yeu_thich, $mot_cap_sp);
-                                }
-                            }
-                            for ($i = 0; $i < count($sp_10_yeu_thich); $i++) :
-
-                            ?>
-                                <!-- Product List Wrapper Start -->
-                                <div class="swiper-slide product-list-wrapper mb-n6">
-                                    <?php
-                                    for ($l = 0; $l < 3; $l++) :
-                                    ?>
-                                        <!-- Single Product List Start -->
-                                        <div class="single-product-list product-hover mb-6">
-                                            <div class="thumb">
-                                                <a href="index.php?act=single-product&id=<?= $sp_10_yeu_thich[$i][$l]['id'] ?>" class="image">
-                                                    <?php $anh_sp = get_san_pham_anh($sp_10_yeu_thich[$i][$l]['id']) ?>
-                                                    <img class="first-image" src="<?= $img_path . $anh_sp[0]['anh_sp'] ?>" height="100" width="100" alt="Product" />
-                                                    <img class="second-image" src="<?= $img_path . $anh_sp[1]['anh_sp'] ?>" height="100" width="100" alt="Product" />
-                                                </a>
-                                            </div>
-                                            <div class="content">
-                                                <h5 class="title"><a href="index.php?act=single-product&id=<?= $sp_10_yeu_thich[$i][$l]['id'] ?>"><?= $sp_10_yeu_thich[$i][$l]['ten_sp'] ?></a></h5>
-                                                <span class="price">
-                                                    <span class="new"><?= $sp_10_yeu_thich[$i][$l]['gia_sp'] ?> VNĐ</span>
-                                                    <?php
-                                                    if ($sp_10_yeu_thich[$i][$l]['gia_cu_sp'] != "") {
-                                                        echo ' <span class="old">' . $sp_10_yeu_thich[$i][$l]['gia_cu_sp'] . ' VNĐ</span>';
-                                                    }
-                                                    ?>
-                                                </span>
-                                                <!-- <span class="ratings">
-                                                    <span class="rating-wrap">
-                                                        <span class="star" style="width: 100%"></span>
-                                                    </span>
-                                                    <span class="rating-num">(4)</span>
-                                                </span> -->
-                                            </div>
-                                        </div>
-                                        <!-- Single Product List End -->
-                                    <?php endfor; ?>
-
-                                </div>
-                                <!-- Product List Wrapper End -->
-                            <?php endfor; ?>
-                        </div>
-
-                        <!-- Swiper Pagination Start -->
-                        <!-- <div class="swiper-pagination d-md-none"></div> -->
-                        <!-- Swiper Pagination End -->
-
-                        <!-- Next Previous Button Start -->
-                        <div class="swiper-product-list-next swiper-button-next"><i class="pe-7s-angle-right"></i></div>
-                        <div class="swiper-product-list-prev swiper-button-prev"><i class="pe-7s-angle-left"></i></div>
-                        <!-- Next Previous Button End -->
-                    </div>
-                </div>
-                <!-- Product List End -->
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- Product List End -->
-
-<!-- Brand Logo Start -->
-<div class="section">
-    <div class="container">
-        <div class="border-top">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Brand Logo Wrapper Start -->
-                    <div class="brand-logo-carousel">
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-
-                                <!-- Single Brand Logo Start -->
-                                <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="300">
-                                    <a href="#"><img src="view/images/brand-logo/1.png" alt="Brand Logo"></a>
-                                </div>
-                                <!-- Single Brand Logo End -->
-
-                                <!-- Single Brand Logo Start -->
-                                <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="400">
-                                    <a href="#"><img src="view/images/brand-logo/2.png" alt="Brand Logo"></a>
-                                </div>
-                                <!-- Single Brand Logo End -->
-
-                                <!-- Single Brand Logo Start -->
-                                <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="500">
-                                    <a href="#"><img src="view/images/brand-logo/3.png" alt="Brand Logo"></a>
-                                </div>
-                                <!-- Single Brand Logo End -->
-
-                                <!-- Single Brand Logo Start -->
-                                <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="600">
-                                    <a href="#"><img src="view/images/brand-logo/4.png" alt="Brand Logo"></a>
-                                </div>
-                                <!-- Single Brand Logo End -->
-
-                                <!-- Single Brand Logo Start -->
-                                <div class="swiper-slide single-brand-logo" data-aos="fade-up" data-aos-delay="700">
-                                    <a href="#"><img src="view/images/brand-logo/5.png" alt="Brand Logo"></a>
-                                </div>
-                                <!-- Single Brand Logo End -->
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Brand Logo Wrapper End -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Brand Logo End -->
+            <!-- sa-app__body / end -->
