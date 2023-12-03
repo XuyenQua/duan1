@@ -5,12 +5,12 @@
 <div class="breadcrumb-area bg-light">
     <div class="container-fluid">
         <div class="breadcrumb-content text-center">
-            <h1 class="title">Contact Us</h1>
+            <h1 class="title">Liên hệ</h1>
             <ul>
                 <li>
-                    <a href="index.html">Home </a>
+                    <a href="index.php">Trang chủ </a>
                 </li>
-                <li class="active"> Contact Us</li>
+                <li class="active"> Liên hệ</li>
             </ul>
         </div>
     </div>
@@ -27,7 +27,7 @@
         <div class="col-12 col-lg-8 mb-10">
             <!-- Section Title Start -->
             <div class="section-title" data-aos="fade-up" data-aos-delay="300">
-                <h2 class="title pb-3">Get In Touch</h2>
+                <h2 class="title pb-3">Liên hệ</h2>
                 <span></span>
                 <div class="title-border-bottom"></div>
             </div>
@@ -73,7 +73,7 @@
         <div class="col-12 col-lg-4 mb-10">
             <!-- Section Title Start -->
             <div class="section-title" data-aos="fade-up" data-aos-delay="300">
-                <h2 class="title pb-3">Contact Info</h2>
+                <h2 class="title pb-3">Thông tin liên hệ</h2>
                 <span></span>
                 <div class="title-border-bottom"></div>
             </div>

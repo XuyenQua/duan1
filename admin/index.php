@@ -1,13 +1,13 @@
 <?php
 session_start();
-include 'model/pdo.php';
-include 'model/danhmuc.php';
-include 'model/sanpham.php';
-include 'model/taikhoan.php';
-include 'model/donhang.php';
-include 'global.php';
-
-if ($_SESSION['user']['vai_tro'] == 3) {
+include '../model/pdo.php';
+include '../model/danhmuc.php';
+include '../model/sanpham.php';
+include '../model/taikhoan.php';
+include '../model/binhluan.php';
+include '../model/hoadon.php';
+include '../global.php';
+if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
     include 'view/header.php';
     if (isset($_GET['act'])) {
         switch ($_GET['act']) {
@@ -22,6 +22,11 @@ if ($_SESSION['user']['vai_tro'] == 3) {
                 include 'view/category/app-categories-list.php';
                 break;
             case 'app-category':
+                if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
+                    $id_dm = $_GET['iddm'];
+                    $dm = get_dm_one($id_dm);
+                    $ds_san_pham_dm = get_san_pham_all_dm($id_dm);
+                }
 
                 include 'view/category/app-category.php';
                 break;
@@ -35,10 +40,38 @@ if ($_SESSION['user']['vai_tro'] == 3) {
                 include 'view/app-coupons-list.php';
                 break;
             case 'app-customer':
-                include 'view/app-customer.php';
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+
+                    $chi_tiet_tk = get_chi_tiet_tai_khoan($id);
+                    $hoa_don_tk = get_hoa_don_tai_khoan($id);
+                }
+
+
+                include 'view/account/app-customer.php';
+                break;
+            case 'app-employee-list':
+                $ds_tai_khoan = get_tai_khoan_all(2);
+                include 'view/account/app-employee-list.php';
                 break;
             case 'app-customers-list':
-                include 'view/app-customers-list.php';
+                $ds_tai_khoan = get_tai_khoan_all(1);
+
+                include 'view/account/app-customers-list.php';
+                break;
+            case 'app-admin-list':
+                $ds_tai_khoan = get_tai_khoan_all(3);
+
+                include 'view/account/app-admin-list.php';
+                break;
+            case 'app-delete-customers-list':
+                if (isset($_GET['iddel']) && ($_GET['iddel'] > 0)) {
+                    $id_del = $_GET['iddel'];
+                    delete_tai_khoan($id_del);
+                }
+                $ds_tai_khoan = get_tai_khoan_all(1);
+
+                include 'view/account/app-customers-list.php';
                 break;
             case 'app-file-manager':
                 include 'view/app-file-manager.php';
@@ -50,18 +83,154 @@ if ($_SESSION['user']['vai_tro'] == 3) {
                 include 'view/app-inbox-list.php';
                 break;
             case 'app-order':
-                include 'view/app-order.php';
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+                    $hoa_don = get_hoa_don_one($id);
+                    $ds_sp_hoa_don = get_san_pham_hoa_don($id);
+                }
+
+                include 'view/order/app-order.php';
                 break;
+            case 'app-edit-order':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+                    $hoa_don = get_hoa_don_one($id);
+                    $ds_sp_hoa_don = get_san_pham_hoa_don($id);
+                }
+                if (isset($_GET['id_sp_del']) && ($_GET['id_sp_del'] > 0)) {
+                    
+                }
+                $ds_trang_thai = get_trang_thai_all();
+                include 'view/order/app-edit-order.php';
+                break;
+            case 'app-update-order':
+                if (isset($_POST['capnhat']) && ($_POST['capnhat'] > 0)) {
+                    $id_hoa_don = $_POST['id_hoa_don'];
+                    $ten_khach_hang = $_POST['ten_khach_hang'];
+                    $so_dien_thoai = $_POST['so_dien_thoai'];
+                    $email = $_POST['email'];
+                    $dia_chi = $_POST['dia_chi'];
+                    $ghi_chu = $_POST['ghi_chu'];
+                    $id_san_pham_hoa_don = $_POST['id_san_pham_hoa_don'];
+                    $so_luong = $_POST['so_luong'];
+                    $gia_sp = $_POST['gia_sp'];
+                    $tong_gio_hang = 0;
+
+                    for ($i=0; $i < count($id_san_pham_hoa_don); $i++) { 
+                        update_so_luong_san_pham_hoa_don($id_san_pham_hoa_don[$i],$id_hoa_don,$so_luong[$i]);
+                        $tong_gio_hang += $gia_sp[$i]*$so_luong[$i];
+                    }
+                    $tong_tien = $tong_gio_hang + phi_van_chuyen($tong_gio_hang);
+                    $trang_thai = $_POST['trang_thai'];
+                    update_hoa_don($id_hoa_don,$ten_khach_hang,$so_dien_thoai,$dia_chi,$email,$trang_thai,$tong_tien,$ghi_chu);
+
+                }
+                
+                $ds_hoa_don = get_hoa_don_all(0);
+                include 'view/order/app-orders-list.php';
+                break;
+            case 'app-delete-order':
+                if (isset($_GET['iddel']) && ($_GET['iddel'] > 0)) {
+                    $iddel = $_GET['iddel'];
+                    delete_hoa_don($iddel);
+                }
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+                } else {
+                    $id = 0;
+                }
+                $ds_hoa_don = get_hoa_don_all($id);
+                include 'view/order/app-orders-list.php';
+                break;
+
             case 'app-orders-list':
-                $ds_dh = get_hoadon_all();
-                include 'view/order/app-order-list.php';
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+                } else {
+                    $id = 0;
+                }
+                $ds_hoa_don = get_hoa_don_all($id);
+                include 'view/order/app-orders-list.php';
                 break;
             case 'app-product':
+                if (isset($_GET['idbl']) && ($_GET['idbl'] > 0)) {
+                    $idbl = $_GET['idbl'];
+                    delele_binh_luan($idbl);
+                }
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+
+                    $san_pham = get_san_pham_one($id);
+                    $ds_anh_sp = get_san_pham_anh($id);
+                    $ds_binh_luan = get_binh_luan_san_pham($id);
+                }
+
+                $ds_dm = get_ds_dm_all();
                 include 'view/product/app-product.php';
                 break;
             case 'app-products-list':
+
+                $ds_san_pham =  get_san_pham_all();
+
                 include 'view/product/app-products-list.php';
                 break;
+            case 'app-delete-product':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+                    delete_san_pham($id);
+                }
+                $ds_san_pham =  get_san_pham_all();
+                include 'view/product/app-products-list.php';
+                break;
+
+            case 'app-edit-product':
+                if (isset($_GET['id_del_anh']) && ($_GET['id_del_anh'] > 0)) {
+                    $id_del_anh = $_GET['id_del_anh'];
+                    detele_san_pham_anh($id_del_anh);
+                }
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+
+                    $san_pham = get_san_pham_one($id);
+                    $ds_anh_sp = get_san_pham_anh($id);
+                }
+
+                $ds_dm = get_ds_dm_all();
+                include 'view/product/app-edit-product.php';
+                break;
+
+            case 'app-update-product':
+                if (isset($_POST['capnhat']) && $_POST['capnhat']) {
+                    $id = $_POST['id_sp'];
+                    $ma_sp = $_POST['ma_sp'];
+                    $ten_sp = $_POST['ten_sp'];
+                    $gia_sp = $_POST['gia_sp'];
+                    $gia_cu_sp = $_POST['gia_cu_sp'];
+                    $so_luong = $_POST['so_luong'];
+                    $thuong_hieu_sp = $_POST['thuong_hieu_sp'];
+                    $mo_ta_sp = $_POST['mo_ta_sp'];
+                    $mo_ta_ngan_sp = $_POST['mo_ta_ngan_sp'];
+                    $id_dm = $_POST['id_dm'];
+                    for ($i = 0; $i < count($_FILES["images"]["name"]); $i++) {
+                        $basename = basename($_FILES["images"]["name"][$i]);
+                        $targetFilePath = "../upload/" . $basename;
+                        if (!empty($_FILES)   && ($_FILES['images'] != "")) {
+                            // Kiểm tra xem file đã tồn tại chưa
+                            if (!file_exists($targetFilePath)) {
+                                // Di chuyển file từ thư mục tạm thời đến thư mục upload
+                                move_uploaded_file($_FILES["images"]["tmp_name"][$i], $targetFilePath);
+                            }
+                        }
+                        insert_san_pham_anh($id, $basename);
+                    }
+
+
+                    update_san_pham($id, $ma_sp, $ten_sp, $gia_sp, $gia_cu_sp, $so_luong, $thuong_hieu_sp, $mo_ta_sp, $mo_ta_ngan_sp, $id_dm);
+                }
+                $ds_san_pham =  get_san_pham_all();
+                include 'view/product/app-products-list.php';
+                break;
+
             case 'app-settings-form':
                 include 'view/app-settings-form.php';
                 break;
@@ -227,14 +396,18 @@ if ($_SESSION['user']['vai_tro'] == 3) {
             case 'tables-datatables':
                 include 'view/tables-datatables.php';
                 break;
+            case 'tables-datatables':
+                include 'view/tables-datatables.php';
+                break;
             case 'app-add-category':
                 if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
                     $tenfile = $_FILES["image"]["name"];
                     $basename = basename($tenfile);
-                    $dest = "upload/" . $basename;
+                    $dest = "../upload/" . $basename;
                     $filetem = $_FILES["image"]["tmp_name"];
                     move_uploaded_file($filetem, $dest);
                     insert_dm($_POST['ten_dm'], $basename, $_POST['mo_ta_dm']);
+                    $tb = "thêm thành công ";
                 }
                 include 'view/category/app-add-category.php';
                 break;
@@ -249,7 +422,7 @@ if ($_SESSION['user']['vai_tro'] == 3) {
                 if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                     $tenfile = $_FILES["image"]["name"];
                     $basename = basename($tenfile);
-                    $dest = "upload/" . $basename;
+                    $dest = "../upload/" . $basename;
                     $filetem = $_FILES["image"]["tmp_name"];
                     move_uploaded_file($filetem, $dest);
                     update_dm($_POST['ten_dm'], $basename, $_POST['mo_ta_dm'], $_POST['id']);
@@ -267,9 +440,28 @@ if ($_SESSION['user']['vai_tro'] == 3) {
                 break;
             case 'app-add-product':
                 if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+                    $ma_sp = $_POST['ma_sp'];
+                    $ten_sp = $_POST['ten_sp'];
+                    $gia_sp = $_POST['gia_sp'];
+                    $gia_cu_sp = $_POST['gia_cu_sp'];
+                    $so_luong = $_POST['so_luong'];
+                    $thuong_hieu_sp = $_POST['thuong_hieu_sp'];
+                    $mo_ta_sp = $_POST['mo_ta_sp'];
+                    $mo_ta_ngan_sp = $_POST['mo_ta_ngan_sp'];
+                    $id_dm = $_POST['id_dm'];
+                    $id_san_pham = insert_sanpham($ma_sp, $ten_sp, $gia_sp, $gia_cu_sp, $so_luong, $thuong_hieu_sp, $mo_ta_sp, $mo_ta_ngan_sp, $id_dm);
 
-                } else {
-
+                    for ($i = 0; $i < count($_FILES["images"]["name"]); $i++) {
+                        $basename = basename($_FILES["images"]["name"][$i]);
+                        $targetFilePath = "../upload/" . $basename;
+                        // Kiểm tra xem file đã tồn tại chưa
+                        if (!file_exists($targetFilePath)) {
+                            // Di chuyển file từ thư mục tạm thời đến thư mục upload
+                            move_uploaded_file($_FILES["images"]["tmp_name"][$i], $targetFilePath);
+                        }
+                        insert_san_pham_anh($id_san_pham, $basename);
+                    }
+                    $tb = "thêm thành công";
                 }
                 $ds_dm = get_ds_dm_all();
                 include 'view/product/app-add-product.php';
@@ -280,32 +472,8 @@ if ($_SESSION['user']['vai_tro'] == 3) {
                     echo '<script> location.replace("index.php"); </script>';
                 }
                 break;
-                case 'app-edit-order':
-                    if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                        $id = $_GET['id'];
-                        $dh = get_dh_one($id);
-                    }
-                    include 'view/order/app-edit-order.php';
-                    break;
-                case 'app-update-order':
-                    if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
-                        $id = $_POST['id'];
-                        $so_don_hang = $_POST['so_don_hang'];
-                        $address = $_POST["address"];
-                        $mat_hang = $_POST["mat_hang"];
-                        $tong_tien = $_POST["tong_tien"];
-                        update_dh($id,$_POST['so_don_hang'] ,$_POST['address'], $_POST['mat_hang'], $_POST['tong_tien']);
-                    }
-                    $ds_dh = get_hoadon_all();
-                    include 'view/order/app-order-list.php';
-                    break;
-            case 'app-delete-bill':
-                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                    $id = $_GET['id'];
-                    delete_dh($id);
-                }
-                $ds_dh = get_hoadon_all();
-                include 'view/order/app-order-list.php';
+            case '':
+                include 'view/';
                 break;
 
             default:

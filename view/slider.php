@@ -20,7 +20,7 @@
 										Collection
                                 </h2>
                                 <p>Up to 70% off selected Product</p>
-                                <a href="index.php?act=shop-grid" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
+                                <a href="index.php?act=shop-left-sidebar" class="btn btn-lg btn-primary btn-hover-dark">Mua ngay</a>
                             </div>
                         </div>
                         <!-- Hero Slider Content End -->
@@ -44,7 +44,7 @@
 										Collection
                                 </h2>
                                 <p>Up to 40% off selected Product</p>
-                                <a href="index.php?act=shop-grid" class="btn btn-lg btn-primary btn-hover-dark">Shop Now</a>
+                                <a href="index.php?act=shop-left-sidebar" class="btn btn-lg btn-primary btn-hover-dark">Mua ngay</a>
                             </div>
                         </div>
                         <!-- Hero Slider Content End -->

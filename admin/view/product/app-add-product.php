@@ -10,12 +10,12 @@
                             <ol class="breadcrumb breadcrumb-sa-simple">
                                 <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                                 <li class="breadcrumb-item"><a href="app-products-list.html">Products</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Edit Product</li>
+                                <li class="breadcrumb-item active" aria-current="page">Thêm mới sản phẩm</li>
                             </ol>
                         </nav>
                         <h1 class="h3 m-0">Thêm mới sản phẩm</h1>
                     </div>
-                    <div class="col-auto d-flex"><a href="#" class="btn btn-secondary me-3">Duplicate</a><input type="submit" class="btn btn-primary" value="Lưu"></div>
+                    <div class="col-auto d-flex"><a href="index.php?act=app-products-list" class="btn btn-secondary me-3">Danh sách sản phẩm</a><input type="submit" class="btn btn-primary" name="themmoi" value="Lưu"></div>
                 </div>
             </div>
             <div class="sa-entity-layout" data-sa-container-query="{&quot;920&quot;:&quot;sa-entity-layout--size--md&quot;,&quot;1100&quot;:&quot;sa-entity-layout--size--lg&quot;}">
@@ -25,6 +25,9 @@
                             <div class="card-body p-5">
                                 <div class="mb-5">
                                     <h2 class="mb-0 fs-exact-18">Thông tin cơ bản</h2>
+                                    <?php if(isset($tb)&&($tb!='')){
+                                            echo $tb;
+                                        }?>
                                 </div>
                                 <div class="mb-4">
                                     <label for="form-product/name" class="form-label">Tên sản phẩm</label>
@@ -64,7 +67,7 @@
                         <div class="card mt-5">
                             <div class="card-body p-5">
                                 <div class="mb-5">
-                                    <h2 class="mb-0 fs-exact-18">Inventory</h2>
+                                    <h2 class="mb-0 fs-exact-18">Kho</h2>
                                 </div>
                                 <div class="mb-4">
                                     <label for="form-product/sku" class="form-label">Mã sản phẩm</label>
@@ -121,7 +124,7 @@
                                     </table>
                                 </div>
                                 <div class="sa-divider"></div>
-                                <div class="px-5 py-4 my-2"><a href="#">Upload new image</a></div>
+                                <!-- <div class="px-5 py-4 my-2"><a href="#">Upload new image</a></div> -->
                             </div>
                         </div>
                         <!-- <div class="card mt-5">
@@ -153,8 +156,8 @@
                                 <div class="mb-5">
                                     <h2 class="mb-0 fs-exact-18">Danh mục</h2>
                                 </div>
-                                <select class="sa-select2 form-select"><!-- multiple="" -->
-
+                                <select class="sa-select2 form-select" required name="id_dm"><!-- multiple="" -->
+                                <option value="" selected></option>
                                     <?php
                                     foreach ($ds_dm as $dm) {
                                         extract($dm);

@@ -1,7 +1,7 @@
 <?php
  session_start();
- include 'model/pdo.php';
- include 'model/taikhoan.php';
+ include '../model/pdo.php';
+ include '../model/taikhoan.php';
 
  if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
     $user = $_POST['tai_khoan'];
@@ -9,18 +9,19 @@
     $checkuser = kiem_tra_tk($user,$pass);
     if (is_array($checkuser)) {
         $_SESSION['user'] = $checkuser;
-        if ($_SESSION['user']['vai_tro']==3) {
+        if ($_SESSION['user']['vai_tro']==3||$_SESSION['user']['vai_tro']==2) {
             $thongbao = 'đăng nhập  thành công';
             header('Location: index.php');
         }else{
             $thongbao = 'Thông tin sai';
         }
         
-        //header('Loacation: index.php');
     } else {
         $thongbao = 'Thông tin sai';
     }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-scompiler-id="0">
@@ -62,8 +63,8 @@
                         <input id="password" name="mat_khau" type="password" class="form-control form-control-lg" required/>
                     </div>
                     <div class="mb-4 row py-2 flex-wrap">
-                        <div class="col-auto me-auto"><label class="form-check mb-0"><input type="checkbox" class="form-check-input" /><span class="form-check-label">Remember me</span></label></div>
-                        <div class="col-auto d-flex align-items-center"><a href="#">Forgot password?</a></div>
+                        <div class="col-auto me-auto"><label class="form-check mb-0"><input type="checkbox" class="form-check-input" /><span class="form-check-label">Giữ đăng nhập</span></label></div>
+                        <div class="col-auto d-flex align-items-center"><a href="#">Quên mật khẩu?</a></div>
                     </div>
                     <div class="mb-4 py-2">
                         <?php if (isset($thongbao)&&($thongbao!='')) {

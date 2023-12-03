@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="view/vendor/fullcalendar/main.min.css" />
     <link rel="stylesheet" href="view/css/style.css" />
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-97489509-8"></script>
-    <script>
+    <!-- <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
             dataLayer.push(arguments);
@@ -32,7 +32,7 @@
         gtag("js", new Date());
 
         gtag("config", "UA-97489509-8");
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -117,13 +117,13 @@
                         <button class="sa-toolbar__button" type="button" id="dropdownMenuButton3"
                             data-bs-toggle="dropdown" data-bs-reference="parent" data-bs-offset="0,1"
                             aria-expanded="false">
-                            <img src="view/vendor/flag-icons/24/DE.png" class="sa-language-icon" alt="" />
+                            <img src="view/vendor/flag-icons/24/VN.png" class="sa-language-icon" alt="" />
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton3">
+                        <!-- <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton3">
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="#"><img
-                                        src="view/vendor/flag-icons/24/DE.png" class="sa-language-icon me-3" alt="" /><span
-                                        class="ps-2">German</span></a>
+                                        src="view/vendor/flag-icons/24/VN.png" class="sa-language-icon me-3" alt="" /><span
+                                        class="ps-2">VietNam</span></a>
                             </li>
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="#"><img
@@ -145,9 +145,10 @@
                                         src="view/vendor/flag-icons/24/IT.png" class="sa-language-icon me-3" alt="" /><span
                                         class="ps-2">Italian</span></a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
-                    <div class="sa-toolbar__item dropdown">
+                    
+                    <!-- <div class="sa-toolbar__item dropdown">
                         <button class="sa-toolbar__button" type="button" id="dropdownMenuButton2"
                             data-bs-toggle="dropdown" data-bs-reference="parent" data-bs-offset="0,1"
                             aria-expanded="false">
@@ -281,7 +282,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="dropdown sa-toolbar__item">
                         <button class="sa-toolbar-user" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                             data-bs-offset="0,1" aria-expanded="false">
@@ -292,18 +293,18 @@
                                     class="sa-toolbar-user__subtitle"><?=$_SESSION['user']['email']?></span></span>
                         </button>
                         <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Trang cá nhân</a></li>
                             <li>
-                                <a class="dropdown-item" href="app-inbox-list.html">Inbox</a>
+                                <a class="dropdown-item" href="app-inbox-list.html">Tin nhắn</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="app-settings-toc.html">Settings</a>
+                                <a class="dropdown-item" href="app-settings-toc.html">Cài đặt</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider" />
                             </li>
                             <li>
-                                <a class="dropdown-item" href="index.php?act=logout">Sign Out</a>
+                                <a class="dropdown-item" href="index.php?act=logout">Đăng xuất</a>
                             </li>
                         </ul>
                     </div>

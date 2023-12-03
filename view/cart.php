@@ -1,3 +1,7 @@
+<?php
+$tong = 0;
+?>
+<form action="index.php?act=update-cart" method="post">
     <!-- Breadcrumb Section Start -->
     <div class="section">
 
@@ -5,12 +9,12 @@
         <div class="breadcrumb-area bg-light">
             <div class="container-fluid">
                 <div class="breadcrumb-content text-center">
-                    <h1 class="title">Shopping Cart</h1>
+                    <h1 class="title">Giỏ hàng</h1>
                     <ul>
                         <li>
-                            <a href="index.html">Home </a>
+                            <a href="index.php">Trang chủ</a>
                         </li>
-                        <li class="active"> Shopping Cart</li>
+                        <li class="active"> Giỏ hàng</li>
                     </ul>
                 </div>
             </div>
@@ -19,8 +23,8 @@
 
     </div>
     <!-- Breadcrumb Section End -->
-<!-- Shopping Cart Section Start -->
-<div class="section section-margin">
+    <!-- Shopping Cart Section Start -->
+    <div class="section section-margin">
         <div class="container">
 
             <div class="row">
@@ -33,90 +37,44 @@
                             <!-- Table Head Start -->
                             <thead>
                                 <tr>
-                                    <th class="pro-thumbnail">Image</th>
-                                    <th class="pro-title">Product</th>
-                                    <th class="pro-price">Price</th>
-                                    <th class="pro-quantity">Quantity</th>
-                                    <th class="pro-subtotal">Total</th>
-                                    <th class="pro-remove">Remove</th>
+                                    <th class="pro-thumbnail">Ảnh</th>
+                                    <th class="pro-title">Tên</th>
+                                    <th class="pro-price">Giá</th>
+                                    <th class="pro-quantity">Số lượng</th>
+                                    <th class="pro-subtotal">Thành tiền</th>
+                                    <th class="pro-remove">Xóa</th>
                                 </tr>
                             </thead>
                             <!-- Table Head End -->
 
                             <!-- Table Body Start -->
                             <tbody>
-                                <tr>
-                                    <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="view/images/products/small-product/1.jpg" alt="Product" /></a></td>
-                                    <td class="pro-title"><a href="#">Brother Hoddies in Grey <br> s / green</a></td>
-                                    <td class="pro-price"><span>$95.00</span></td>
-                                    <td class="pro-quantity">
-                                        <div class="quantity">
-                                            <div class="cart-plus-minus">
-                                                <input class="cart-plus-minus-box" value="0" type="text">
-                                                <div class="dec qtybutton">-</div>
-                                                <div class="inc qtybutton">+</div>
-                                                <div class="dec qtybutton"><i class="fa fa-minus"></i></div>
-                                                <div class="inc qtybutton"><i class="fa fa-plus"></i></div>
+                                <?php
+                                foreach ($_SESSION['mycart'] as $san_pham) :
+                                    $tong += $san_pham[3] * $san_pham[4];
+                                    $id = 0;
+                                ?>
+                                    <tr>
+                                        <td class="pro-thumbnail"><a href="index.php?act=single-product&id=<?= $san_pham[0] ?>"><img class="img-fluid" src="<?= $san_pham[1] ?>" alt="Product" /></a></td>
+                                        <td class="pro-title"><a href="index.php?act=single-product&id=<?= $san_pham[0] ?>"><?= $san_pham[2] ?></a></td>
+                                        <td class="pro-price"><span><?= $san_pham[3] ?> VNĐ</span></td>
+                                        <td class="pro-quantity">
+                                            <div class="quantity">
+                                                <div class="cart-plus-minus">
+                                                    <input class="cart-plus-minus-box" name="so_luong[]" value="<?= $san_pham[4] ?>" type="text" readonly>
+                                                    <div class="dec qtybutton">-</div>
+                                                    <div class="inc qtybutton">+</div>
+                                                    <div class="dec qtybutton"><i class="fa fa-minus"></i></div>
+                                                    <div class="inc qtybutton"><i class="fa fa-plus"></i></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro-subtotal"><span>$95.00</span></td>
-                                    <td class="pro-remove"><a href="#"><i class="pe-7s-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="view/images/products/small-product/2.jpg" alt="Product" /></a></td>
-                                    <td class="pro-title"><a href="#">Basic Jogging Shorts <br> Blue</a></td>
-                                    <td class="pro-price"><span>$75.00</span></td>
-                                    <td class="pro-quantity">
-                                        <div class="quantity">
-                                            <div class="cart-plus-minus">
-                                                <input class="cart-plus-minus-box" value="0" type="text">
-                                                <div class="dec qtybutton">-</div>
-                                                <div class="inc qtybutton">+</div>
-                                                <div class="dec qtybutton"><i class="fa fa-minus"></i></div>
-                                                <div class="inc qtybutton"><i class="fa fa-plus"></i></div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro-subtotal"><span>$75.00</span></td>
-                                    <td class="pro-remove"><a href="#"><i class="pe-7s-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="view/images/products/small-product/10.jpg" alt="Product" /></a></td>
-                                    <td class="pro-title"><a href="#">Lust For Life <br> Bulk/S</a></td>
-                                    <td class="pro-price"><span>$295.00</span></td>
-                                    <td class="pro-quantity">
-                                        <div class="quantity">
-                                            <div class="cart-plus-minus">
-                                                <input class="cart-plus-minus-box" value="0" type="text">
-                                                <div class="dec qtybutton">-</div>
-                                                <div class="inc qtybutton">+</div>
-                                                <div class="dec qtybutton"><i class="fa fa-minus"></i></div>
-                                                <div class="inc qtybutton"><i class="fa fa-plus"></i></div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro-subtotal"><span>$295.00</span></td>
-                                    <td class="pro-remove"><a href="#"><i class="pe-7s-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="view/images/products/small-product/4.jpg" alt="Product" /></a></td>
-                                    <td class="pro-title"><a href="#">Simple Woven Fabrics</a></td>
-                                    <td class="pro-price"><span>$60.00</span></td>
-                                    <td class="pro-quantity">
-                                        <div class="quantity">
-                                            <div class="cart-plus-minus">
-                                                <input class="cart-plus-minus-box" value="2" type="text">
-                                                <div class="dec qtybutton">-</div>
-                                                <div class="inc qtybutton">+</div>
-                                                <div class="dec qtybutton"><i class="fa fa-minus"></i></div>
-                                                <div class="inc qtybutton"><i class="fa fa-plus"></i></div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro-subtotal"><span>$110.00</span></td>
-                                    <td class="pro-remove"><a href="#"><i class="pe-7s-trash"></i></a></td>
-                                </tr>
+                                        </td>
+                                        <td class="pro-subtotal"><span><?= $san_pham[3] * $san_pham[4] ?> VNĐ</span></td>
+                                        <td class="pro-remove"><a href="index.php?act=del-cart&idcart=<?= $id ?>"><i class="pe-7s-trash"></i></a></td>
+                                    </tr>
+                                <?php
+                                    $id++;
+                                endforeach; ?>
                             </tbody>
                             <!-- Table Body End -->
 
@@ -130,15 +88,15 @@
                         <!-- Apply Coupon Wrapper Start -->
                         <div class="apply-coupon-wrapper">
                             <form action="#" method="post" class=" d-block d-md-flex">
-                                <input type="text" placeholder="Enter Your Coupon Code" required />
-                                <button class="btn btn-dark btn-hover-primary rounded-0">Apply Coupon</button>
+                                <input type="text" placeholder="Nhập mã giảm giá"/>
+                                <button class="btn btn-dark btn-hover-primary rounded-0">Áp dụng</button>
                             </form>
                         </div>
                         <!-- Apply Coupon Wrapper End -->
 
                         <!-- Cart Update Start -->
                         <div class="cart-update mt-sm-16">
-                            <a href="#" class="btn btn-dark btn-hover-primary rounded-0">Update Cart</a>
+                            <input type="submit"  class="btn btn-dark btn-hover-primary rounded-0" value="Cập nhật giỏ hàng">
                         </div>
                         <!-- Cart Update End -->
 
@@ -158,23 +116,25 @@
                         <div class="cart-calculate-items">
 
                             <!-- Cart Calculate Items Title Start -->
-                            <h3 class="title">Cart Totals</h3>
+                            <h3 class="title">Tổng giỏ hàng</h3>
                             <!-- Cart Calculate Items Title End -->
 
                             <!-- Responsive Table Start -->
                             <div class="table-responsive">
                                 <table class="table">
                                     <tr>
-                                        <td>Sub Total</td>
-                                        <td>$230</td>
+                                        <td>Tổng sản phẩm</td>
+                                        <td><?= $tong ?> VNĐ</td>
                                     </tr>
                                     <tr>
-                                        <td>Shipping</td>
-                                        <td>$70</td>
+                                        <td>Phí vận chuyển</td>
+                                        <td><?= phi_van_chuyen($tong);
+                                            $tong += phi_van_chuyen($tong);
+                                            ?> VNĐ</td>
                                     </tr>
                                     <tr class="total">
-                                        <td>Total</td>
-                                        <td class="total-amount">$300</td>
+                                        <td>Tổng</td>
+                                        <td class="total-amount"><?= $tong ?> VNĐ</td>
                                     </tr>
                                 </table>
                             </div>
@@ -184,7 +144,7 @@
                         <!-- Cart Calculate Items End -->
 
                         <!-- Cart Checktout Button Start -->
-                        <a href="index.php?act=checkout" class="btn btn-dark btn-hover-primary rounded-0 w-100">Proceed To Checkout</a>
+                        <a href="index.php?act=checkout" class="btn btn-dark btn-hover-primary rounded-0 w-100">Thanh toán</a>
                         <!-- Cart Checktout Button End -->
 
                     </div>
@@ -196,3 +156,4 @@
         </div>
     </div>
     <!-- Shopping Cart Section End -->
+</form>

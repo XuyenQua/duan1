@@ -434,6 +434,7 @@ body {
   color: #fff;
 }
 .breadcrumb-sa-simple {
+  display: none;
   background: #0000;
   font-size: 0.8125rem;
   margin: 0;

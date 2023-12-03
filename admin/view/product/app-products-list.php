@@ -10,14 +10,14 @@
                                 <a href="index.html">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Products
+                                Sản phẩm
                             </li>
                         </ol>
                     </nav>
-                    <h1 class="h3 m-0">Products</h1>
+                    <h1 class="h3 m-0">Sản phẩm </h1>
                 </div>
                 <div class="col-auto d-flex">
-                    <a href="#" class="btn btn-secondary me-3">Import</a><a href="index.php?act=app-add-product" class="btn btn-primary">New product</a>
+                    <a href="#" class="btn btn-secondary me-3">Import</a><a href="index.php?act=app-add-product" class="btn btn-primary">Thêm mới</a>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
     <div class="mx-xxl-3 px-4 px-sm-5 pb-6">
         <div class="sa-layout">
             <div class="sa-layout__backdrop" data-sa-layout-sidebar-close=""></div>
-            <div class="sa-layout__sidebar">
+            <!-- <div class="sa-layout__sidebar">
                 <div class="sa-layout__sidebar-header">
                     <div class="sa-layout__sidebar-title">Filters</div>
                     <button type="button" class="sa-close sa-layout__sidebar-close" aria-label="Close" data-sa-layout-sidebar-close=""></button>
@@ -108,7 +108,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <div class="sa-layout__content">
                 <div class="card">
                     <div class="p-4">
@@ -133,85 +133,98 @@
                                 <th class="w-min" data-orderable="false">
                                     <input type="checkbox" class="form-check-input m-0 fs-exact-16 d-block" aria-label="..." />
                                 </th>
-                                <th class="min-w-20x">Product</th>
-                                <th>Category</th>
-                                <th>Stock</th>
-                                <th>Price</th>
+                                <th class="min-w-20x">Sản phẩm</th>
+                                <th>Danh mục</th>
+                                <th>Số lượng</th>
+                                <th>Đã bán</th>
+                                <th>Giá</th>
                                 <th class="w-min" data-orderable="false"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" class="form-check-input m-0 fs-exact-16 d-block" aria-label="..." />
-                                </td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <a href="app-product.html" class="me-4">
-                                            <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
-                                                <img src="view/images/products/product-1-40x40.jpg" width="40" height="40" alt="" />
-                                            </div>
-                                        </a>
-                                        <div>
-                                            <a href="app-product.html" class="text-reset">Electric Planer
-                                                Brandix KL370090 300 Watts</a>
-                                            <div class="sa-meta mt-0">
-                                                <ul class="sa-meta__list">
-                                                    <li class="sa-meta__item">
-                                                        ID:
-                                                        <span title="Click to copy product ID" class="st-copy">2043</span>
-                                                    </li>
-                                                    <li class="sa-meta__item">
-                                                        SKU:
-                                                        <span title="Click to copy product SKU" class="st-copy">KL370090</span>
-                                                    </li>
-                                                </ul>
+                            <?php 
+                                foreach ($ds_san_pham as $san_pham) :
+                                    extract($san_pham);
+                                    $anh = get_san_pham_anh_one($id);
+                                    extract($anh);
+                                    //var_dump($anh);
+                                    $hinh = $img_path_admin .$anh_sp;
+                                    ?>
+                                    <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input m-0 fs-exact-16 d-block" aria-label="..." />
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="index.php?act=app-product&id='.$id.'" class="me-4">
+                                                <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                    <img src="<?=$hinh?>" width="40" height="40" alt="" />
+                                                </div>
+                                            </a>
+                                            <div>
+                                                <a href="index.php?act=app-product&id=<?=$id?>" class="text-reset"><?=$ten_sp?></a>
+                                                <div class="sa-meta mt-0">
+                                                    <ul class="sa-meta__list">
+                                                        <li class="sa-meta__item">
+                                                            ID:
+                                                            <span title="Click to copy product ID" class="st-copy"><?=$id?></span>
+                                                        </li>
+                                                        <li class="sa-meta__item">
+                                                            SKU:
+                                                            <span title="Click to copy product SKU" class="st-copy"><?=$ma_sp?></span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <a href="app-category.html" class="text-reset">Planers</a>
-                                </td>
-                                <td>
-                                    <div class="badge badge-sa-success">25 In Stock</div>
-                                </td>
-                                <td>
-                                    <div class="sa-price">
-                                        <span class="sa-price__symbol">$</span><span class="sa-price__integer">749</span><span class="sa-price__decimal">.00</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="btn btn-sa-muted btn-sm" type="button" id="product-context-menu-0" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" fill="currentColor">
-                                                <path d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="product-context-menu-0">
-                                            <li>
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">Duplicate</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">Add tag</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" href="#">Remove tag</a>
-                                            </li>
-                                            <li>
-                                                <hr class="dropdown-divider" />
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item text-danger" href="#">Delete</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td>
+                                        <a href="index.php?act=app-category&iddm=<?=$id_dm?>" class="text-reset"><?=$ten_dm?></a>
+                                    </td>
+                                    <td>
+                                        <div><?=$so_luong?></div>
+                                    </td>
+                                    <td>
+                                        <div><?=$da_ban?></div>
+                                    </td>
+                                    <td>
+                                        <div class="sa-price">
+                                            <span class="sa-price__integer"><?=$gia_sp?></span><span class="sa-price__symbol"> VND</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sa-muted btn-sm" type="button" id="product-context-menu-0" data-bs-toggle="dropdown" aria-expanded="false" aria-label="More">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="13" fill="currentColor">
+                                                    <path d="M1.5,8C0.7,8,0,7.3,0,6.5S0.7,5,1.5,5S3,5.7,3,6.5S2.3,8,1.5,8z M1.5,3C0.7,3,0,2.3,0,1.5S0.7,0,1.5,0 S3,0.7,3,1.5S2.3,3,1.5,3z M1.5,10C2.3,10,3,10.7,3,11.5S2.3,13,1.5,13S0,12.3,0,11.5S0.7,10,1.5,10z">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="product-context-menu-0">
+                                                <li>
+                                                    <a class="dropdown-item" href="index.php?act=app-edit-product&id='.$id.'">Sửa</a>
+                                                </li>
+                                                <!-- <li>
+                                                    <a class="dropdown-item" href="#">Duplicate</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Add tag</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Remove tag</a>
+                                                </li> -->
+                                                <li>
+                                                    <hr class="dropdown-divider" />
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-danger" onclick="return confirm('bạn có muốn xóa hay không')" href="index.php?act=app-delete-product&id=<?=$id?>">Xóa</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <?php endforeach;?>
+                            
                             
                             
                         </tbody>

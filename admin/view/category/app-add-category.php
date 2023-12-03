@@ -38,6 +38,11 @@
                                             <input type="file" id="form-category/image" name="image" class="file-upload" required />
                                         </div>
                                     </div>
+                                    <div>
+                                        <?php if(isset($tb)&&($tb!='')){
+                                            echo $tb;
+                                        }?>
+                                    </div>
                                 </div>
                             </div>
                             <!-- <div class="card mt-5">

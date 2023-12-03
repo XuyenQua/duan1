@@ -19,7 +19,7 @@
                             </nav>
                             <h1 class="h3 m-0">Sửa danh mục</h1>
                         </div>
-                        <div class="col-auto d-flex"><a href="index.php?act=app-categories-list" class="btn btn-secondary me-3">Danh sách danh mục</a><input type="submit" class="btn btn-primary" name="capnhat" value="Lưu"></div>
+                        <div class="col-auto d-flex"><a href="index.php?act=app-categories-list" class="btn btn-secondary me-3">Danh sách danh mục</a><input  type="submit" class="btn btn-primary" name="capnhat"  value="Lưu"></div>
                     </div>
                 </div>
 

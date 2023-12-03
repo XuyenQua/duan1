@@ -143,7 +143,7 @@
                             fontColor: '#828f99',
                             // Include a dollar sign in the ticks
                             callback: function (value) {
-                                return '$' + value;
+                                return 'VNĐ' + value;
                             },
                         },
                         gridLines: {
@@ -209,7 +209,7 @@
                                 fontSize: 13,
                                 fontColor: '#828f99',
                                 callback: function (value) {
-                                    return '$' + value;
+                                    return 'VNĐ' + value;
                                 },
                             },
                             gridLines: {
