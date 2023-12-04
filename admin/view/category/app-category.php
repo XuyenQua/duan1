@@ -114,36 +114,36 @@
                         </thead>
                         <tbody>
                             <?php 
-                                foreach ($ds_san_pham_dm as $san_pham) {
+                                foreach ($ds_san_pham_dm as $san_pham) :
                                     extract($san_pham);
                                     $anh = get_san_pham_anh_one($id);
                                     extract($anh);
 
                                     //var_dump($anh);
                                     $hinh = $img_path_admin .$anh_sp;
-                                    echo '
+                                    ?>
                                     <tr>
                                     <td>
                                         <input type="checkbox" class="form-check-input m-0 fs-exact-16 d-block" aria-label="..." />
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <a href="index.php?act=app-product&id='.$id.'" class="me-4">
+                                            <a href="index.php?act=app-product&id=<?=$id?>" class="me-4">
                                                 <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
-                                                    <img src="'.$hinh.'" width="40" height="40" alt="" />
+                                                    <img src="<?=$hinh?>" width="40" height="40" alt="" />
                                                 </div>
                                             </a>
                                             <div>
-                                                <a href="index.php?act=app-product&id='.$id.'" class="text-reset">'.$ten_sp.'</a>
+                                                <a href="index.php?act=app-product&id='.$id.'" class="text-reset"><?=$ten_sp?></a>
                                                 <div class="sa-meta mt-0">
                                                     <ul class="sa-meta__list">
                                                         <li class="sa-meta__item">
                                                             ID:
-                                                            <span title="Click to copy product ID" class="st-copy">'.$id.'</span>
+                                                            <span title="Click to copy product ID" class="st-copy"><?=$id?></span>
                                                         </li>
                                                         <li class="sa-meta__item">
                                                             SKU:
-                                                            <span title="Click to copy product SKU" class="st-copy">'.$ma_sp.'</span>
+                                                            <span title="Click to copy product SKU" class="st-copy"><?=$ma_sp?></span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -151,14 +151,14 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="index.php?act=app-category&iddm='.$id_dm.'" class="text-reset">'.$ten_dm.'</a>
+                                        <a href="index.php?act=app-category&iddm='.$id_dm.'" class="text-reset"><?=$ten_dm?></a>
                                     </td>
                                     <td>
-                                        <div>'.$so_luong.'</div>
+                                        <div><?=$so_luong?></div>
                                     </td>
                                     <td>
                                         <div class="sa-price">
-                                            <span class="sa-price__integer">'.$gia_sp.'</span><span class="sa-price__symbol"> VND</span>
+                                            <span class="sa-price__integer"><?=$gia_sp?></span><span class="sa-price__symbol"> VND</span>
                                         </div>
                                     </td>
                                     <td>
@@ -171,31 +171,17 @@
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="product-context-menu-0">
                                                 <li>
-                                                    <a class="dropdown-item" href="index.php?act=app-edit-product&id='.$id.'">Sửa</a>
+                                                    <a class="dropdown-item" href="index.php?act=app-edit-product&id=<?=$id?>">Sửa</a>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="#">Duplicate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="#">Add tag</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="#">Remove tag</a>
-                                                </li>
-                                                <li>
-                                                    <hr class="dropdown-divider" />
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item text-danger" href="index.php?act=app-delete-product&id='.$id.'">Xóa</a>
+                                                    <a class="dropdown-item text-danger" onclick ="xoaKhong('index.php?act=app-delete-product&id=<?=$id?>');" href="#">Xóa</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </td>
                                 </tr>
-                                    ';
-                                }
                             
-                            ?>
+                            <?php endforeach?>
                             
                             
                             

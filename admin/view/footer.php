@@ -15,6 +15,50 @@
         <div class="sa-app__toasts toast-container bottom-0 end-0"></div>
         <!-- sa-app__toasts / end -->
     </div>
+    <script>
+      document.getElementById('myForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the form from submitting immediately
+
+        // Reference to the form
+        var form = this;
+
+        // Use SweetAlert2 to confirm the submission
+        Swal.fire({
+            title: 'Bạn có chắc chắn  không?',
+            text: 'Bạn sẽ không thể hoàn tác điều này!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText: "Hủy",
+            confirmButtonText: 'Đồng ý , Lưu!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // If the user confirms, manually trigger the form submission
+                form.submit();
+            }
+        });
+    });
+</script>
+<script>
+    function xoaKhong(link) {
+        Swal.fire({
+            title: "Bạn có chắc chắn không ?",
+            text: "Bạn sẽ không thể hoàn tác điều này!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            cancelButtonText: "Hủy",
+            confirmButtonText: "Đồng ý ,xóa!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = link;
+            }
+        });
+    }
+
+</script>
     <!-- sa-app / end --><!-- scripts -->
     <script src="view/vendor/jquery/jquery.min.js"></script>
     <script src="view/vendor/feather-icons/feather.min.js"></script>

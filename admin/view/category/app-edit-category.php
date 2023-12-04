@@ -1,7 +1,7 @@
 <?php 
     extract($dm);
 ?>
-<form action="index.php?act=app-update-category" method="post" enctype="multipart/form-data">
+<form id="myForm" action="index.php?act=app-update-category"  method="post" enctype="multipart/form-data"  >
     <input type="hidden" name="id" value="<?=$id?>">
 <!-- sa-app__body -->
     <div id="top" class="sa-app__body">
@@ -19,7 +19,10 @@
                             </nav>
                             <h1 class="h3 m-0">Sửa danh mục</h1>
                         </div>
-                        <div class="col-auto d-flex"><a href="index.php?act=app-categories-list" class="btn btn-secondary me-3">Danh sách danh mục</a><input  type="submit" class="btn btn-primary" name="capnhat"  value="Lưu"></div>
+                        <div class="col-auto d-flex"><a href="index.php?act=app-categories-list" class="btn btn-secondary me-3">Danh sách danh mục</a>
+                        <input  type="submit"  class="btn btn-primary" name="capnhat" value="Lưu">
+                        <!-- <button  type="submit"  class="btn btn-primary" name="capnhat" >Lưu</button> -->
+                    </div>
                     </div>
                 </div>
 

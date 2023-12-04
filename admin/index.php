@@ -104,7 +104,7 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                 include 'view/order/app-edit-order.php';
                 break;
             case 'app-update-order':
-                if (isset($_POST['capnhat']) && ($_POST['capnhat'] > 0)) {
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $id_hoa_don = $_POST['id_hoa_don'];
                     $ten_khach_hang = $_POST['ten_khach_hang'];
                     $so_dien_thoai = $_POST['so_dien_thoai'];
@@ -116,19 +116,24 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                     $gia_sp = $_POST['gia_sp'];
                     $tong_gio_hang = 0;
 
-                    for ($i=0; $i < count($id_san_pham_hoa_don); $i++) { 
-                        update_so_luong_san_pham_hoa_don($id_san_pham_hoa_don[$i],$id_hoa_don,$so_luong[$i]);
-                        $tong_gio_hang += $gia_sp[$i]*$so_luong[$i];
+                    for ($i = 0; $i < count($id_san_pham_hoa_don); $i++) {
+                        update_so_luong_san_pham_hoa_don($id_san_pham_hoa_don[$i], $id_hoa_don, $so_luong[$i]);
+                        $tong_gio_hang += $gia_sp[$i] * $so_luong[$i];
                     }
                     $tong_tien = $tong_gio_hang + phi_van_chuyen($tong_gio_hang);
                     $trang_thai = $_POST['trang_thai'];
-                    update_hoa_don($id_hoa_don,$ten_khach_hang,$so_dien_thoai,$dia_chi,$email,$trang_thai,$tong_tien,$ghi_chu);
-
+                    update_hoa_don($id_hoa_don, $ten_khach_hang, $so_dien_thoai, $dia_chi, $email, $trang_thai, $tong_tien, $ghi_chu);
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã sửa thành công đơn hàng",
+                        icon: "success"
+                      });
+                    </script>';
                 }
-                
+
                 $ds_hoa_don = get_hoa_don_all(0);
                 include 'view/order/app-orders-list.php';
-                break;
             case 'app-delete-order':
                 if (isset($_GET['iddel']) && ($_GET['iddel'] > 0)) {
                     $iddel = $_GET['iddel'];
@@ -156,6 +161,13 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                 if (isset($_GET['idbl']) && ($_GET['idbl'] > 0)) {
                     $idbl = $_GET['idbl'];
                     delele_binh_luan($idbl);
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã xóa thành công bình luận",
+                        icon: "success"
+                      });
+                    </script>';
                 }
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     $id = $_GET['id'];
@@ -166,6 +178,8 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                 }
 
                 $ds_dm = get_ds_dm_all();
+                include 'view/product/app-product.php';
+                break;
                 include 'view/product/app-product.php';
                 break;
             case 'app-products-list':

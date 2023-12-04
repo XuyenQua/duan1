@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="view/vendor/fullcalendar/main.min.css" />
     <link rel="stylesheet" href="view/css/style.css" />
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-97489509-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
