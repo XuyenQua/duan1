@@ -50,18 +50,25 @@ $tong = 0;
                             <!-- Table Body Start -->
                             <tbody>
                                 <?php
-                                foreach ($_SESSION['mycart'] as $san_pham) :
+                                foreach ($_SESSION['mycart'] as $san_pham):
                                     $tong += $san_pham[3] * $san_pham[4];
                                     $id = 0;
-                                ?>
+                                    ?>
                                     <tr>
-                                        <td class="pro-thumbnail"><a href="index.php?act=single-product&id=<?= $san_pham[0] ?>"><img class="img-fluid" src="<?= $san_pham[1] ?>" alt="Product" /></a></td>
-                                        <td class="pro-title"><a href="index.php?act=single-product&id=<?= $san_pham[0] ?>"><?= $san_pham[2] ?></a></td>
-                                        <td class="pro-price"><span><?= $san_pham[3] ?> VNĐ</span></td>
+                                        <td class="pro-thumbnail"><a
+                                                href="index.php?act=single-product&id=<?= $san_pham[0] ?>"><img
+                                                    class="img-fluid" src="<?= $san_pham[1] ?>" alt="Product" /></a></td>
+                                        <td class="pro-title"><a href="index.php?act=single-product&id=<?= $san_pham[0] ?>">
+                                                <?= $san_pham[2] ?>
+                                            </a></td>
+                                        <td class="pro-price"><span>
+                                                <?= $san_pham[3] ?> VNĐ
+                                            </span></td>
                                         <td class="pro-quantity">
                                             <div class="quantity">
                                                 <div class="cart-plus-minus">
-                                                    <input class="cart-plus-minus-box" name="so_luong[]" value="<?= $san_pham[4] ?>" type="text" readonly>
+                                                    <input class="cart-plus-minus-box" name="so_luong[]"
+                                                        value="<?= $san_pham[4] ?>" type="text" readonly>
                                                     <div class="dec qtybutton">-</div>
                                                     <div class="inc qtybutton">+</div>
                                                     <div class="dec qtybutton"><i class="fa fa-minus"></i></div>
@@ -69,10 +76,13 @@ $tong = 0;
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="pro-subtotal"><span><?= $san_pham[3] * $san_pham[4] ?> VNĐ</span></td>
-                                        <td class="pro-remove"><a href="index.php?act=del-cart&idcart=<?= $id ?>"><i class="pe-7s-trash"></i></a></td>
+                                        <td class="pro-subtotal"><span>
+                                                <?= $san_pham[3] * $san_pham[4] ?> VNĐ
+                                            </span></td>
+                                        <td class="pro-remove"><a href="index.php?act=del-cart&idcart=<?= $id ?>"><i
+                                                    class="pe-7s-trash"></i></a></td>
                                     </tr>
-                                <?php
+                                    <?php
                                     $id++;
                                 endforeach; ?>
                             </tbody>
@@ -88,7 +98,7 @@ $tong = 0;
                         <!-- Apply Coupon Wrapper Start -->
                         <div class="apply-coupon-wrapper">
                             <form action="#" method="post" class=" d-block d-md-flex">
-                                <input type="text" placeholder="Nhập mã giảm giá"/>
+                                <input type="text" placeholder="Nhập mã giảm giá" />
                                 <button class="btn btn-dark btn-hover-primary rounded-0">Áp dụng</button>
                             </form>
                         </div>
@@ -96,7 +106,8 @@ $tong = 0;
 
                         <!-- Cart Update Start -->
                         <div class="cart-update mt-sm-16">
-                            <input type="submit"  class="btn btn-dark btn-hover-primary rounded-0" value="Cập nhật giỏ hàng">
+                            <input type="submit" class="btn btn-dark btn-hover-primary rounded-0"
+                                value="Cập nhật giỏ hàng">
                         </div>
                         <!-- Cart Update End -->
 
@@ -124,17 +135,23 @@ $tong = 0;
                                 <table class="table">
                                     <tr>
                                         <td>Tổng sản phẩm</td>
-                                        <td><?= $tong ?> VNĐ</td>
+                                        <td>
+                                            <?= $tong ?> VNĐ
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Phí vận chuyển</td>
-                                        <td><?= phi_van_chuyen($tong);
+                                        <td>
+                                            <?= phi_van_chuyen($tong);
                                             $tong += phi_van_chuyen($tong);
-                                            ?> VNĐ</td>
+                                            ?> VNĐ
+                                        </td>
                                     </tr>
                                     <tr class="total">
                                         <td>Tổng</td>
-                                        <td class="total-amount"><?= $tong ?> VNĐ</td>
+                                        <td class="total-amount">
+                                            <?= $tong ?> VNĐ
+                                        </td>
                                     </tr>
                                 </table>
                             </div>
@@ -144,7 +161,8 @@ $tong = 0;
                         <!-- Cart Calculate Items End -->
 
                         <!-- Cart Checktout Button Start -->
-                        <a href="index.php?act=checkout" class="btn btn-dark btn-hover-primary rounded-0 w-100">Thanh toán</a>
+                        <a href="index.php?act=checkout" class="btn btn-dark btn-hover-primary rounded-0 w-100">Thanh
+                            toán</a>
                         <!-- Cart Checktout Button End -->
 
                     </div>
