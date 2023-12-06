@@ -66,43 +66,6 @@ extract($hoa_don);
 
                                 </div>
                             </div>
-                            <!-- <div class="card mt-5">
-                                <div class="card-body p-5">
-                                    <div class="mb-5">
-                                        <h2 class="mb-0 fs-exact-18">Giá</h2>
-                                    </div>
-                                    <div class="row g-4">
-                                        <div class="col">
-                                            <label for="form-product/price" class="form-label">Giá</label>
-                                            <input type="number" class="form-control" name="gia_sp" value="" id="form-product/price" required />
-                                        </div>
-                                        <div class="col"><label for="form-product/old-price" class="form-label">Giá cũ</label>
-                                            <input type="number" class="form-control" name="gia_cu_sp" value="" id="form-product/old-price" />
-                                        </div>
-                                    </div>
-                                    <div class="mt-4 mb-n2"><a href="#">Schedule discount</a></div>
-                                </div>
-                            </div>
-                            <div class="card mt-5">
-                                <div class="card-body p-5">
-                                    <div class="mb-5">
-                                        <h2 class="mb-0 fs-exact-18">Kho</h2>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="form-product/sku" class="form-label">Mã sản phẩm</label>
-                                        <input type="text" class="form-control" name="ma_sp" value="" id="form-product/sku" />
-                                    </div>
-                                    <div class="mb-4 pt-2"><label class="form-check">
-                                    <input type="checkbox" class="form-check-input" />
-                                    <span class="form-check-label">Enable stockmanagement</span>
-                                        </label>
-                                </div>
-                                    <div>
-                                        <label for="form-product/quantity" class="form-label">Số lượng</label>
-                                        <input type="number" name="so_luong" value="" class="form-control" id="form-product/quantity" />
-                                    </div>
-                                </div>
-                            </div> -->
                             <div class="card mt-5">
                                 <div class="card-body p-5">
                                     <div class="mb-5">
