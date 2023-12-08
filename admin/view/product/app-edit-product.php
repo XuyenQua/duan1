@@ -2,7 +2,7 @@
 extract($san_pham);
 
 ?>
-<form action="index.php?act=app-update-product" method="post" enctype="multipart/form-data">
+<form id="myForm" action="index.php?act=app-update-product" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id_sp" value=<?=$id?>>
     <!-- sa-app__body -->
     <div id="top" class="sa-app__body">
@@ -110,14 +110,14 @@ extract($san_pham);
                                                     <input type="file" class="form-control" name="images[]" id="formFile-1" multiple />
                                                 </div>
                                                 <?php
-                                                foreach ($ds_anh_sp as $anh) {
+                                                foreach ($ds_anh_sp as $anh) :
                                                     extract($anh);
                                                     $hinh = $img_path_admin.$anh_sp;
-                                                    echo '
+                                                    ?>
                                                     <tr>
                                                         <td>
                                                             <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
-                                                                <img src="'.$hinh.'" width="40" height="40" alt="" />
+                                                                <img src="<?=$hinh?>" width="40" height="40" alt="" />
                                                             </div>
                                                         </td>
                                                         <td>
@@ -125,7 +125,7 @@ extract($san_pham);
                                                         </td>
                                                         
                                                         <td>
-                                                            <a href="index.php?act=app-edit-product&id='.$id.'&id_del_anh='.$id_anh.'">
+                                                            <a onclick="xoaKhong('index.php?act=app-edit-product&id=<?=$id?>&id_del_anh=<?=$id_anh?>')" href="#" >
                                                             <button class="btn btn-sa-muted btn-sm mx-n3" type="button" aria-label="Delete image" data-bs-toggle="tooltip" data-bs-placement="right" title="Delete image">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                                                             <path d="M10.8,10.8L10.8,10.8c-0.4,0.4-1,0.4-1.4,0L6,7.4l-3.4,3.4c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4L4.6,6L1.2,2.6 c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0L6,4.6l3.4-3.4c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L7.4,6l3.4,3.4 C11.2,9.8,11.2,10.4,10.8,10.8z"></path>
@@ -134,9 +134,7 @@ extract($san_pham);
                                                             </a>
                                                         </td>
                                                     </tr>
-                                                    ';
-                                                }
-                                                ?>
+                                              <?php endforeach;  ?>
                                                 
                                             </tbody>
                                         </table>

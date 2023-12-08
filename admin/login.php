@@ -1,21 +1,21 @@
 <?php
-session_start();
-include '../model/pdo.php';
-include '../model/taikhoan.php';
+ session_start();
+ include '../model/pdo.php';
+ include '../model/taikhoan.php';
 
-if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
+ if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
     $user = $_POST['tai_khoan'];
     $pass = $_POST['mat_khau'];
-    $checkuser = kiem_tra_tk($user, $pass);
+    $checkuser = kiem_tra_tk($user,$pass);
     if (is_array($checkuser)) {
         $_SESSION['user'] = $checkuser;
-        if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
+        if ($_SESSION['user']['vai_tro']==3||$_SESSION['user']['vai_tro']==2) {
             $thongbao = 'đăng nhập  thành công';
             header('Location: index.php');
-        } else {
+        }else{
             $thongbao = 'Thông tin sai';
         }
-
+        
     } else {
         $thongbao = 'Thông tin sai';
     }
@@ -31,11 +31,9 @@ if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <title>Stroyka Admin - eCommerce Dashboard Template</title><!-- icon -->
+    <title>ADMIN XDQ-SHOP</title><!-- icon -->
     <link rel="icon" type="image/png" href="images/favicon.png" /><!-- fonts -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" />
-    <!-- css -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" /><!-- css -->
     <link rel="stylesheet" href="view/vendor/bootstrap/css/bootstrap.ltr.css" />
     <link rel="stylesheet" href="view/vendor/highlight.js/styles/github.css" />
     <link rel="stylesheet" href="view/vendor/simplebar/simplebar.min.css" />
@@ -46,6 +44,7 @@ if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
     <link rel="stylesheet" href="view/vendor/nouislider/nouislider.min.css" />
     <link rel="stylesheet" href="view/vendor/fullcalendar/main.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -55,39 +54,40 @@ if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
             <div class="card w-25x flex-grow-1 flex-sm-grow-0 m-sm-auto">
                 <div class="card-body p-sm-5 m-sm-3 flex-grow-0">
                     <h1 class="mb-0 fs-3">Đăng nhập ADMIN</h1>
-                    <div class="fs-exact-14 text-muted mt-2 pt-1 mb-5 pb-2">Đăng nhập vào tài khoản của bạn để tiếp tục.
-                    </div>
+                    <div class="fs-exact-14 text-muted mt-2 pt-1 mb-5 pb-2">Đăng nhập vào tài khoản của bạn để tiếp tục.</div>
                     <div class="mb-4">
-                        <label for="username" class="form-label">Tên đăng nhập</label>
-                        <input type="text" name="tai_khoan" id="username" class="form-control form-control-lg"
-                            required />
+                        <label for="username"  class="form-label">Tên đăng nhập</label>
+                        <input type="text" name="tai_khoan" id="username" class="form-control form-control-lg" required />
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label">Mật khẩu</label>
-                        <input id="password" name="mat_khau" type="password" class="form-control form-control-lg"
-                            required />
+                        <input id="password" name="mat_khau" type="password" class="form-control form-control-lg" required/>
                     </div>
                     <div class="mb-4 row py-2 flex-wrap">
-                        <div class="col-auto me-auto"><label class="form-check mb-0"><input type="checkbox"
-                                    class="form-check-input" /><span class="form-check-label">Giữ đăng
-                                    nhập</span></label></div>
+                        <div class="col-auto me-auto"><label class="form-check mb-0"><input type="checkbox" class="form-check-input" /><span class="form-check-label">Giữ đăng nhập</span></label></div>
                         <div class="col-auto d-flex align-items-center"><a href="#">Quên mật khẩu?</a></div>
                     </div>
                     <div class="mb-4 py-2">
-                        <?php if (isset($thongbao) && ($thongbao != '')) {
-                            echo $thongbao;
+                        <?php if (isset($thongbao)&&($thongbao!='')) {
+                           echo '<script>
+                           Swal.fire({
+                               title: "Không Thành Công",
+                               text: "Thông tin sai",
+                               icon: "error",  
+                             });
+                           </script>';
                         } ?>
                     </div>
-
+                    
                     <div>
-                        <input type="submit" class="btn btn-primary btn-lg w-100" name="dangnhap" value="Đăng Nhập">
+                        <input type="submit" class="btn btn-primary btn-lg w-100" name="dangnhap" value="Đăng Nhập" >
                     </div>
                 </div>
             </div>
         </div>
 
     </form>
-
+    
 
 
     <!-- scripts -->

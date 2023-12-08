@@ -405,16 +405,16 @@
                              <tbody>
                                  <?php
                                     $tong_gio_hang = 0;
-                                    
+
                                     foreach ($ds_sp_hoa_don as $san_pham) :
                                         extract($san_pham);
                                         // var_dump($san_pham);
                                     ?>
                                      <tr class="cart_item">
-                                         <td class="cart-product-name text-start ps-0"><?= $ten_sp ?><strong class="product-quantity"> × <?= $so_luong?></strong></td>
+                                         <td class="cart-product-name text-start ps-0"><?= $ten_sp ?><strong class="product-quantity"> × <?= $so_luong ?></strong></td>
                                          <td class="cart-product-total text-end pe-0"><span class="amount"><?= $thanh_tien = $gia_sp * $so_luong ?> VNĐ</span></td>
                                      </tr>
-                                    <?php
+                                 <?php
                                         $tong_gio_hang += $thanh_tien;
 
                                     endforeach;
@@ -433,6 +433,19 @@
                                      <th class="text-start ps-0">Phí vận chuyển</th>
                                      <td class="text-end pe-0"><span class="amount"><?= phi_van_chuyen($tong_gio_hang) ?> VNĐ</span></td>
                                  </tr>
+                                 <?php
+                                    if ($_SESSION['ma_giam_gia'] != []) {
+                                    ?>
+                                     <tr class="cart-subtotal">
+                                         <th class="text-start ps-0">Mã giảm : <?= $ma_giam_gia ?></th>
+                                         <td class="text-end pe-0"><span class="amount">-<?= $giam_gia ?> VNĐ</span></td>
+                                         <?php if ($giam_gia != "") {
+                                                $tong -= $giam_gia;
+                                            } ?>
+                                     </tr>
+                                 <?php } ?>
+
+
                                  <tr class="order-total">
                                      <th class="text-start ps-0">Tổng đơn hàng</th>
                                      <td class="text-end pe-0"><strong><span class="amount"><?= $tong_tien ?> VNĐ</span></strong></td>

@@ -12,5 +12,33 @@
         }
         return $phi_van_chuyen;
     }
+    function mau_trang_thai($trang_thai){
+        $kq = "";
+        switch ($trang_thai) {
+            case '1':
+                $kq = "badge-sa-info";
+                break;
+            case '2':
+                $kq = " badge-sa-warning";
+                break;
+            case '3':
+               $kq = "badge-sa-theme";
+                break;
+            case '4':
+                $kq = "badge-sa-primary";
+                break;
+            case '5':
+                $kq = "badge-sa-danger";
+                break;
+            case '6':
+                $kq = "badge-sa-success";
+                break;    
+            default:
+                # code...
+                break;
+        }
+        return $kq;
+    }
 
+   
 ?>

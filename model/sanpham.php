@@ -97,4 +97,19 @@
         $kq = pdo_query($sql);
         return $kq;
     }
+
+
+    function loc_san_pham($kyw="",$gia_min=0,$gia_max=1){
+        $sql = "SELECT * FROM `sanpham` WHERE 1";
+        if($kyw!=''){
+            $sql.= " AND ten_sp LIKE '%$kyw%'"; 
+        }
+        if (($gia_min>=0)&&($gia_min<$gia_max)) {
+            $sql.= " AND gia_sp BETWEEN '$gia_min' AND '$gia_max'";
+        }
+       // echo $sql;
+        $kq = pdo_query($sql);
+        return $kq;
+    }
+
 ?>

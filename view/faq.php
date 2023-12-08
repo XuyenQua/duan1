@@ -31,11 +31,8 @@
                     <div class="faq_content_wrapper" data-aos="fade-up" data-aos-delay="300">
                         <h4 class="title">Dưới đây là những câu hỏi thường gặp, bạn có thể tìm được câu trả lời cho mình
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id erat sagittis, faucibus
-                            metus malesuada, eleifend turpis. Mauris semper augue id nisl aliquet, a porta lectus
-                            mattis. Nulla at tortor augue. In eget enim diam. Donec gravida tortor sem, ac fermentum
-                            nibh rutrum sit amet. Nulla convallis mauris vitae congue consequat. Donec interdum nunc
-                            purus, vitae vulputate arcu fringilla quis. Vivamus iaculis euismod dui.</p>
+                        <p>
+Chào mừng bạn đến với trang web mua sắm trực tuyến của chúng tôi, nơi bạn không chỉ có cơ hội tìm kiếm những sản phẩm chất lượng mà còn được hỗ trợ thông qua một kho tàng kiến thức đầy đủ về những câu hỏi thường gặp. Chúng tôi hiểu rằng quá trình mua sắm không chỉ là về việc chọn lựa sản phẩm mà còn liên quan đến việc hiểu rõ về chúng. Vì vậy, trang web của chúng tôi không chỉ là nơi để mua sắm, mà còn là một nguồn thông tin đáng tin cậy.</p>
                     </div>
                 </div>
             </div>

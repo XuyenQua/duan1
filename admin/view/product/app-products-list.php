@@ -146,9 +146,14 @@
                                 foreach ($ds_san_pham as $san_pham) :
                                     extract($san_pham);
                                     $anh = get_san_pham_anh_one($id);
-                                    extract($anh);
-                                    //var_dump($anh);
-                                    $hinh = $img_path_admin .$anh_sp;
+                                    
+                                    if ($anh=="") {
+                                        $hinh ="không có ảnh";
+                                    }else{
+                                        extract($anh);
+                                        //var_dump($anh);
+                                        $hinh = $img_path_admin .$anh_sp;
+                                    }
                                     ?>
                                     <tr>
                                     <td>
@@ -202,7 +207,7 @@
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="product-context-menu-0">
                                                 <li>
-                                                    <a class="dropdown-item" href="index.php?act=app-edit-product&id='.$id.'">Sửa</a>
+                                                    <a class="dropdown-item" href="index.php?act=app-edit-product&id=<?=$id?>">Sửa</a>
                                                 </li>
                                                 <!-- <li>
                                                     <a class="dropdown-item" href="#">Duplicate</a>
@@ -217,7 +222,7 @@
                                                     <hr class="dropdown-divider" />
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item text-danger" onclick="return confirm('bạn có muốn xóa hay không')" href="index.php?act=app-delete-product&id=<?=$id?>">Xóa</a>
+                                                    <a class="dropdown-item text-danger" onclick="xoaKhong('index.php?act=app-delete-product&id=<?=$id?>');" href="#">Xóa</a>
                                                 </li>
                                             </ul>
                                         </div>

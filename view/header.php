@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="view/css/plugins/nice-select.min.css" />
     <link rel="stylesheet" href="view/css/plugins/jquery-ui.min.css" />
     <link rel="stylesheet" href="view/css/plugins/lightgallery.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     <!-- Main Style CSS -->
@@ -89,7 +90,7 @@
                         <!-- Header Logo Start -->
                         <div class="col-xl-2 col-6">
                             <div class="header-logo">
-                                <a href="index.php"><img src="view/images/logo/logo.png" alt="Site Logo" /></a>
+                                <a href="index.php"><img src="view/images/logo/logo.png" width="100" height="100" alt="Site Logo" /></a>
                             </div>
                         </div>
                         <!-- Header Logo End -->
@@ -237,9 +238,9 @@
                                 </ul> -->
                             </li>
                             <li class="has-children">
-                                <a href="#">Shop <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <a href="#">Danh mục <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown">
-                                    <li><a href="index.php?act=shop-grid">Shop Grid</a></li>
+                                    <!-- <li><a href="index.php?act=shop-grid">Shop Grid</a></li>
                                     <li><a href="index.php?act=shop-left-sidebar">Shop Left Sidebar</a></li>
                                     <li><a href="index.php?act=shop-right-sidebar">Shop Right Sidebar</a></li>
                                     <li><a href="index.php?act=shop-list-fullwidth">Shop List Fullwidth</a></li>
@@ -248,36 +249,26 @@
                                     <li><a href="index.php?act=wishlist">Wishlist</a></li>
                                     <li><a href="index.php?act=cart">Shopping Cart</a></li>
                                     <li><a href="index.php?act=checkout">Checkout</a></li>
-                                    <li><a href="index.php?act=compare">Compare</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-children">
-                                <a href="#">Product <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="dropdown">
-                                    <li><a href="index.php?act=single-product">Single Product</a></li>
-                                    <li><a href="index.php?act=single-product-sale">Single Product Sale</a></li>
-                                    <li><a href="index.php?act=single-product-group">Single Product Group</a></li>
-                                    <li><a href="index.php?act=single-product-normal">Single Product Normal</a></li>
-                                    <li><a href="index.php?act=single-product-affiliate">Single Product Affiliate</a></li>
-                                    <li><a href="index.php?act=single-product-slider">Single Product Slider</a></li>
-                                    <li><a href="index.php?act=single-product-gallery-left">Gallery Left</a></li>
-                                    <li><a href="index.php?act=single-product-gallery-right">Gallery Right</a></li>
-                                    <li><a href="index.php?act=single-product-tab-style-left">Tab Style Left</a></li>
-                                    <li><a href="index.php?act=single-product-tab-style-right">Tab Style Right</a></li>
-                                    <li><a href="index.php?act=single-product-sticky-left">Sticky Left</a></li>
-                                    <li><a href="index.php?act=single-product-sticky-right">Sticky Right</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-children">
-                                <a href="#">Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                <ul class="dropdown">
-                                    <li><a href="index.php?act=about">Về chúng tôi</a></li>
-                                    <li><a href="index.php?act=contact">Liên Hệ</a></li>
-                                    <li><a href="index.php?act=faq">Câu hỏi thường gặp</a></li>
+                                    <li><a href="index.php?act=compare">Compare</a></li> -->
+                                    <?php
+                                    $ds_dm_nu = get_danh_muc_theo_dm_lon(' ');
+                                    // var_dump($ds_dm_nu);
+                                    if (count($ds_dm_nu) > 0) {
+                                        foreach ($ds_dm_nu as $dm_nu) {
+                                            extract($dm_nu);
+                                            echo '<li><a href="index.php?act=shop-left-sidebar&iddm=' . $id . '">' . $ten_dm . '</a></li>';
+                                        }
+                                    }
+                                    ?>
 
                                 </ul>
                             </li>
-                            <li><a href="index.php?act=about">Giới thiệu</a></li>
+                            <li class="has-children">
+                                <a href="index.php?act=shop-left-sidebar">Sản phẩm </a>
+                            </li>
+                            <li class="has-children">
+                                <a href="index.php?act=about">Giới thiệu</a>
+                            </li>
                             <li><a href="index.php?act=contact">Liên hệ</a></li>
                         </ul>
                     </nav>
@@ -405,7 +396,7 @@
 
                                 <!-- Product Remove Start -->
                                 <div class="cart-product-remove">
-                                    <a href="index.php?act=del-cart&idcart=<?= $id ?>"><i class="fa fa-trash"></i></a>
+                                    <a onclick="xoaKhong('index.php?act=del-cart&idcart=<?= $id ?>')" href="#"><i class="fa fa-trash"></i></a>
                                 </div>
                                 <!-- Product Remove End -->
 
@@ -418,6 +409,10 @@
                         echo "chưa có sản phẩm ";
                     }
                     ?>
+                    <div class="cart-product-total">
+                        <span class="value">Tổng giỏ hàng :</span>
+                        <span class="price"><?= $tong ?> VNĐ</span>
+                    </div>
                     <!-- Cart Product Total Start -->
                     <div class="cart-product-total">
                         <span class="value">Phí vận chuyển</span>
@@ -425,6 +420,19 @@
                         <span class="price"><?= phi_van_chuyen($tong);
                                             $tong += phi_van_chuyen($tong) ?> VNĐ</span>
                     </div>
+                    <?php
+                    if ($_SESSION['ma_giam_gia'] != []) {
+                    ?>
+                        <div class="cart-product-total">
+                            <span class="value">Mã giảm giá : <?= $_SESSION['ma_giam_gia']['ma_giam_gia'] ?></span>
+
+                            <span class="price"> -<?= $_SESSION['ma_giam_gia']['giam_gia'] ?> VNĐ</span>
+                            <?php if ($_SESSION['ma_giam_gia']['giam_gia'] != "") {
+                                $tong -= $_SESSION['ma_giam_gia']['giam_gia'];
+                            } ?>
+                        </div>
+                    <?php } ?>
+
                     <div class="cart-product-total">
                         <span class="value">Tổng</span>
                         <span class="price"><?= $tong ?> VNĐ</span>

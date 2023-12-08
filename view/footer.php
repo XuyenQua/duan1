@@ -41,7 +41,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-lg-2 col-xl-2 mb-10" data-aos="fade-up" data-aos-delay="400">
+                    <!-- <div class="col-12 col-sm-6 col-lg-2 col-xl-2 mb-10" data-aos="fade-up" data-aos-delay="400">
                         <div class="single-footer-widget aos-init aos-animate">
                             <h2 class="widget-title">Chưa để</h2>
                             <ul class="widget-list">
@@ -51,7 +51,7 @@
                                 <li><a href="index.php?act=contact">Điều khoản sử dụng</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-4 mb-10" data-aos="fade-up" data-aos-delay="500">
                         <div class="single-footer-widget">
                             <h2 class="widget-title">Bản tin</h2>
@@ -276,6 +276,69 @@
         </div>
     </div>
     <!-- Modal End  -->
+    <script>
+      document.getElementById('myForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the form from submitting immediately
+
+        // Reference to the form
+        var form = this;
+
+        // Use SweetAlert2 to confirm the submission
+        Swal.fire({
+            title: 'Bạn có chắc chắn  không?',
+            text: 'Bạn sẽ không thể hoàn tác điều này!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText: "Hủy",
+            confirmButtonText: 'Đồng ý , Lưu!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // If the user confirms, manually trigger the form submission
+                form.submit();
+            }
+        });
+    });
+</script>
+
+<script>
+    function xoaKhong(link) {
+        Swal.fire({
+            title: "Bạn có chắc chắn không ?",
+            text: "Bạn sẽ không thể hoàn tác điều này!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            cancelButtonText: "Hủy",
+            confirmButtonText: "Đồng ý ,xóa!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = link;
+            }
+        });
+    }
+
+    function dongYKhong(link) {
+        Swal.fire({
+            title: "Bạn có chắc chắn không ?",
+            text: "Bạn sẽ không thể hoàn tác điều này!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            cancelButtonText: "Hủy",
+            confirmButtonText: "Đồng ý!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = link;
+            }
+        });
+    }
+
+</script>
+
 
     <!-- Scripts -->
     <!-- Scripts -->
