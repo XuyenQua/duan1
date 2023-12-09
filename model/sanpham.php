@@ -88,7 +88,8 @@
         pdo_execute($sql);
     }
     function san_pham_da_ban($id,$so_luong){
-        $sql = "UPDATE `sanpham` SET `da_ban`= da_ban + ".$so_luong." WHERE id = ".$id;
+        $sql = "UPDATE `sanpham` SET `da_ban`= da_ban + ".$so_luong." , `so_luong`= so_luong - ".$so_luong." WHERE id = ".$id;
+       // echo $sql;
         pdo_execute($sql);
     }
 
@@ -97,4 +98,19 @@
         $kq = pdo_query($sql);
         return $kq;
     }
+
+
+    function loc_san_pham($kyw="",$gia_min=0,$gia_max=1){
+        $sql = "SELECT * FROM `sanpham` WHERE 1";
+        if($kyw!=''){
+            $sql.= " AND ten_sp LIKE '%$kyw%'"; 
+        }
+        if (($gia_min>=0)&&($gia_min<$gia_max)) {
+            $sql.= " AND gia_sp BETWEEN '$gia_min' AND '$gia_max'";
+        }
+       // echo $sql;
+        $kq = pdo_query($sql);
+        return $kq;
+    }
+
 ?>

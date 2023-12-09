@@ -113,7 +113,7 @@
                                                         <th>Ngày</th>
                                                         <th>Trạng thái</th>
                                                         <th>Tổng</th>
-                                                        <th></th>
+                                                        <th colspan="2"></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -130,6 +130,16 @@
                                                                 </td>
                                                                 <td><?= $tong_tien ?> VNĐ</td>
                                                                 <td><a href="index.php?act=chi_tiet_hoa_don&id=<?= $id_hoa_don ?>" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Xem</a></td>
+                                                                <?php if(($trang_thai==1)||($trang_thai==2)): ?>
+                                                                    <td>
+                                                                        <a onclick="dongYKhong('index.php?act=my-account&huy=<?= $id_hoa_don ?>')" href="#" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Hủy</a>
+                                                                    </td>
+                                                                <?php endif; ?>
+                                                                <?php if($trang_thai==4): ?>
+                                                                    <td>
+                                                                        <a  onclick="dongYKhong('index.php?act=my-account&xacnhan=<?= $id_hoa_don ?>')" href="#" class="btn btn btn-dark btn-hover-primary btn-sm rounded-0">Xác nhận</a>
+                                                                    </td>
+                                                                <?php endif; ?>
                                                             </tr>
                                                     <?php
                                                         endforeach;
@@ -191,7 +201,7 @@
                                 <div class="tab-pane fade" id="address-edit" role="tabpanel">
                                     <div class="myaccount-content">
                                         <h3 class="title">thay đổi thông tin tài khoản</h3>
-                                        <form action="index.php?act=my-account" method="post">
+                                        <form action="index.php?act=my-account"  method="post">
                                             <div class="single-input-item mb-3">
                                                 <label for="display-name" class="required mb-1">Họ và Tên</label>
                                                 <input type="text" id="display-name" value="<?=$_SESSION['e_user']['ho_ten']?>" name="ho_ten"  />
@@ -228,7 +238,7 @@
                                     <div class="myaccount-content">
                                         <h3 class="title">Mật khẩu</h3>
                                         <div class="account-details-form">
-                                            <form action="index.php?act=my-account" method="post">
+                                            <form action="index.php?act=my-account"  method="post">
                                                 <fieldset>
                                                     <legend>Đổi mật khẩu</legend>
                                                     <div class="single-input-item mb-3">

@@ -105,7 +105,7 @@
                                         <tbody>
                                             <div class="p-4">
                                                 <label for="formFile-1" class="form-label">Tải tệp lên</label>
-                                                <input type="file" class="form-control" name="images[]" id="formFile-1" multiple />
+                                                <input type="file" class="form-control" name="images[]" id="formFile-1" multiple required />
                                             </div>
                                             <!-- <tr>
                                                 <td>

@@ -1,8 +1,8 @@
 <?php
-extract($hoa_don);
+    extract($hoa_don);
 ?>
-<form action="index.php?act=app-update-order" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="id_hoa_don" value=<?= $id ?>>
+<form id="myForm" action="index.php?act=app-update-order"  method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_hoa_don" value=<?=$id?>>
     <!-- sa-app__body -->
     <div id="top" class="sa-app__body">
         <div class="mx-sm-2 px-2 px-sm-3 px-xxl-4 pb-6">
@@ -19,13 +19,10 @@ extract($hoa_don);
                             </nav>
                             <h1 class="h3 m-0">Sửa sản phẩm</h1>
                         </div>
-                        <div class="col-auto d-flex"><a href="index.php?act=app-orders-list"
-                                class="btn btn-secondary me-3">Danh sách hóa đơn</a><input type="submit"
-                                class="btn btn-primary" name="capnhat" value="Lưu"></div>
+                        <div class="col-auto d-flex"><a href="index.php?act=app-orders-list" class="btn btn-secondary me-3">Danh sách hóa đơn</a><input type="submit" class="btn btn-primary" name="capnhat" value="Lưu"></div>
                     </div>
                 </div>
-                <div class="sa-entity-layout"
-                    data-sa-container-query="{&quot;920&quot;:&quot;sa-entity-layout--size--md&quot;,&quot;1100&quot;:&quot;sa-entity-layout--size--lg&quot;}">
+                <div class="sa-entity-layout" data-sa-container-query="{&quot;920&quot;:&quot;sa-entity-layout--size--md&quot;,&quot;1100&quot;:&quot;sa-entity-layout--size--lg&quot;}">
                     <div class="sa-entity-layout__body">
                         <div class="sa-entity-layout__main">
                             <div class="card">
@@ -35,35 +32,37 @@ extract($hoa_don);
                                     </div>
                                     <div class="mb-4">
                                         <label for="form-product/name" class="form-label">Tên khách hàng</label>
-                                        <input type="text" name="ten_khach_hang" class="form-control"
-                                            value="<?= $ten_khach_hang ?>" id="form-product/name" required />
+                                        <input type="text" name="ten_khach_hang" class="form-control" value="<?=$ten_khach_hang?>" id="form-product/name" required />
                                     </div>
                                     <div class="mb-4">
                                         <label for="form-product/so_dien_thoai" class="form-label">Số điện thoại</label>
-                                        <input type="text" name="so_dien_thoai" class="form-control"
-                                            value="<?= $so_dien_thoai ?>" id="form-product/so_dien_thoai" required />
+                                        <input type="text" name="so_dien_thoai" class="form-control" value="<?= $so_dien_thoai ?>" id="form-product/so_dien_thoai" required />
                                     </div>
                                     <div class="mb-4">
                                         <label for="form-product/email" class="form-label">email</label>
-                                        <input type="email" name="email" class="form-control" value="<?= $email ?>"
-                                            id="form-product/email" required />
+                                        <input type="email" name="email" class="form-control" value="<?= $email ?>" id="form-product/email" required />
                                     </div>
                                     <div class="mb-4">
                                         <label for="form-product/dia_chi" class="form-label">Địa chỉ</label>
-                                        <input type="text" name="dia_chi" class="form-control" value="<?= $dia_chi ?>"
-                                            id="form-product/dia_chi" required />
+                                        <input type="text" name="dia_chi" class="form-control" value="<?= $dia_chi ?>" id="form-product/dia_chi" required />
                                     </div>
                                     <div class="mb-4">
                                         <label for="form-product/pttt" class="form-label">Phương thức thanh toán</label>
-                                        <input type="text" class="form-control" value="<?= get_ten_pttt($pttt) ?>"
-                                            id="form-product/pttt" readonly />
+                                        <input type="text"  class="form-control" value="<?=get_ten_pttt($pttt)?>" id="form-product/pttt" readonly />
                                     </div>
                                     <div class="mb-4">
                                         <label for="form-product/description" class="form-label">Ghi chú</label>
-                                        <textarea id="form-product/description" name="ghi_chu" class="form-control"
-                                            rows="8"><?= $ghi_chu ?></textarea>
+                                        <textarea id="form-product/description" name="ghi_chu" class="form-control" rows="8"><?=$ghi_chu?></textarea>
                                     </div>
-
+                                    <div class="mb-4">
+                                        <label for="form-product/ma_giam_gia" class="form-label">Mã giảm giá </label>
+                                        <input type="text"  class="form-control" value="<?=$ma_giam_gia?>" id="form-product/ma_giam_gia" readonly />
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="form-product/giam_gia" class="form-label">Giảm giá </label>
+                                        <input type="text"  class="form-control" value="<?=$giam_gia?> VNĐ" id="form-product/giam_gia" readonly />
+                                    </div>
+                                    
                                 </div>
                             </div>
                             <!-- <div class="card mt-5">
@@ -117,40 +116,35 @@ extract($hoa_don);
                                                 <tr>
                                                     <th class="w-min ">Ảnh sản phẩm</th>
                                                     <th class="w-min">tên sản phẩm</th>
-                                                    <th class="w-min">Giá sẩn phẩm</th>
+                                                    <th class="w-min">Giá  sẩn phẩm</th>
                                                     <th class="w-min">Số Lượng</th>
                                                     <th class="w-min"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-
+                                                
                                                 <?php
-                                                foreach ($ds_sp_hoa_don as $san_pham):
-                                                    extract($san_pham);
-                                                    ?>
+                                                    foreach ($ds_sp_hoa_don as $san_pham) :
+                                                        extract($san_pham);
+                                                ?>
                                                     <tr>
                                                         <td>
-                                                            <div
-                                                                class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
-                                                                <img src="<?= '../' . $anh_sp ?>" width="40" height="40"
-                                                                    alt="" />
+                                                            <div class="sa-symbol sa-symbol--shape--rounded sa-symbol--size--lg">
+                                                                <img src="<?='../'.$anh_sp?>" width="40" height="40" alt="" />
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <?= $ten_sp ?>
+                                                            <?=$ten_sp?>
                                                         </td>
                                                         <td>
-                                                            <?= $gia_sp ?> VNĐ
+                                                            <?=$gia_sp?> VNĐ
                                                         </td>
                                                         <td>
-                                                            <input type="hidden" name="id_san_pham_hoa_don[]"
-                                                                value="<?= $id ?>">
-                                                            <input type="hidden" name="gia_sp[]" value="<?= $gia_sp ?>">
-                                                            <input type="number" name="so_luong[]" min="1"
-                                                                value="<?= $so_luong ?>"
-                                                                class="form-control form-control-sm" />
+                                                            <input type="hidden" name="id_san_pham_hoa_don[]" value="<?=$id?>">
+                                                            <input type="hidden" name="gia_sp[]" value="<?=$gia_sp?>">
+                                                            <input type="number" name="so_luong[]" min="1" value="<?=$so_luong?>" class="form-control form-control-sm" />
                                                         </td>
-
+                                                        
                                                         <!-- <td>
                                                             <a onclick="return confirm('bạn có muốn xóa hay không')" href="&id_sp_del">
                                                             <button class="btn btn-sa-muted btn-sm mx-n3" type="button" aria-label="Delete image" data-bs-toggle="tooltip" data-bs-placement="right" title="xóa sản phẩm">
@@ -161,10 +155,10 @@ extract($hoa_don);
                                                             </a>
                                                         </td> -->
                                                     </tr>
-                                                    <?php
-                                                endforeach;
+                                                <?php
+                                                    endforeach;
                                                 ?>
-
+                                                
                                             </tbody>
                                         </table>
                                     </div>

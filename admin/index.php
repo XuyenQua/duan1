@@ -6,6 +6,7 @@ include '../model/sanpham.php';
 include '../model/taikhoan.php';
 include '../model/binhluan.php';
 include '../model/hoadon.php';
+include '../model/magiamgia.php';
 include '../global.php';
 if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
     include 'view/header.php';
@@ -33,11 +34,75 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
             case 'app-chat':
                 include 'view/app-chat.php';
                 break;
-            case 'app-coupon':
-                include 'view/app-coupon.php';
+            case 'app-add-coupon':
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $ma_giam_gia = $_POST['ma_giam_gia'];
+                    $gia_tri = $_POST['gia_tri'];
+                    $so_luong = $_POST['so_luong'];
+                    insert_ma_giam_gia($ma_giam_gia, $gia_tri, $so_luong);
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã thêm thành công mã giảm giá",
+                        icon: "success"
+                      });
+                    </script>';
+                }
+                include 'view/coupon/app-add-coupon.php';
                 break;
+            case 'app-del-coupon':
+                if (isset($_GET['iddel']) && ($_GET['iddel'] > 0)) {
+                    $iddel = $_GET['iddel'];
+                    delete_ma_giam_gia($iddel);
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã xóa thành công mã giảm giá",
+                        icon: "success"
+                      });
+                    </script>';
+                }
+                $ds_ma_giam_gia = get_ma_giam_gia_all();
+                include 'view/coupon/app-coupons-list.php';
+                break;
+            case 'app-edit-coupon':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+                    $ma_giam_gia = get_ma_giam_gia_one($id);
+                }
+                include 'view/coupon/app-edit-coupon.php';
+                break;
+
+            case 'app-update-coupon':
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $id = $_POST['id'];
+                    $ma_giam_gia = $_POST['ma_giam_gia'];
+                    $gia_tri = $_POST['gia_tri'];
+                    $so_luong = $_POST['so_luong'];
+                    update_ma_giam_gia($ma_giam_gia,$gia_tri,$so_luong,$id);
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã sửa thành công mã giảm giá",
+                        icon: "success"
+                      });
+                    </script>';
+                }
+
+                $ds_ma_giam_gia = get_ma_giam_gia_all();
+                include 'view/coupon/app-coupons-list.php';
+                break;
+            case 'app-coupon':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+                    $ma_giam_gia = get_ma_giam_gia_one($id);
+                }
+                include 'view/coupon/app-coupon.php';
+                break;
+
             case 'app-coupons-list':
-                include 'view/app-coupons-list.php';
+                $ds_ma_giam_gia = get_ma_giam_gia_all();
+                include 'view/coupon/app-coupons-list.php';
                 break;
             case 'app-customer':
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
@@ -98,7 +163,6 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                     $ds_sp_hoa_don = get_san_pham_hoa_don($id);
                 }
                 if (isset($_GET['id_sp_del']) && ($_GET['id_sp_del'] > 0)) {
-                    
                 }
                 $ds_trang_thai = get_trang_thai_all();
                 include 'view/order/app-edit-order.php';
@@ -120,6 +184,7 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                         update_so_luong_san_pham_hoa_don($id_san_pham_hoa_don[$i], $id_hoa_don, $so_luong[$i]);
                         $tong_gio_hang += $gia_sp[$i] * $so_luong[$i];
                     }
+                    
                     $tong_tien = $tong_gio_hang + phi_van_chuyen($tong_gio_hang);
                     $trang_thai = $_POST['trang_thai'];
                     update_hoa_don($id_hoa_don, $ten_khach_hang, $so_dien_thoai, $dia_chi, $email, $trang_thai, $tong_tien, $ghi_chu);
@@ -134,6 +199,7 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
 
                 $ds_hoa_don = get_hoa_don_all(0);
                 include 'view/order/app-orders-list.php';
+                break;
             case 'app-delete-order':
                 if (isset($_GET['iddel']) && ($_GET['iddel'] > 0)) {
                     $iddel = $_GET['iddel'];
@@ -180,8 +246,6 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                 $ds_dm = get_ds_dm_all();
                 include 'view/product/app-product.php';
                 break;
-                include 'view/product/app-product.php';
-                break;
             case 'app-products-list':
 
                 $ds_san_pham =  get_san_pham_all();
@@ -192,6 +256,13 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     $id = $_GET['id'];
                     delete_san_pham($id);
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã xóa thành công sản phẩm",
+                        icon: "success"
+                      });
+                    </script>';
                 }
                 $ds_san_pham =  get_san_pham_all();
                 include 'view/product/app-products-list.php';
@@ -201,6 +272,13 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                 if (isset($_GET['id_del_anh']) && ($_GET['id_del_anh'] > 0)) {
                     $id_del_anh = $_GET['id_del_anh'];
                     detele_san_pham_anh($id_del_anh);
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã xóa thành công ảnh",
+                        icon: "success"
+                      });
+                    </script>';
                 }
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     $id = $_GET['id'];
@@ -214,7 +292,7 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                 break;
 
             case 'app-update-product':
-                if (isset($_POST['capnhat']) && $_POST['capnhat']) {
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $id = $_POST['id_sp'];
                     $ma_sp = $_POST['ma_sp'];
                     $ten_sp = $_POST['ten_sp'];
@@ -240,6 +318,13 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
 
 
                     update_san_pham($id, $ma_sp, $ten_sp, $gia_sp, $gia_cu_sp, $so_luong, $thuong_hieu_sp, $mo_ta_sp, $mo_ta_ngan_sp, $id_dm);
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã sửa thành công sản phẩm",
+                        icon: "success"
+                      });
+                    </script>';
                 }
                 $ds_san_pham =  get_san_pham_all();
                 include 'view/product/app-products-list.php';
@@ -421,7 +506,13 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                     $filetem = $_FILES["image"]["tmp_name"];
                     move_uploaded_file($filetem, $dest);
                     insert_dm($_POST['ten_dm'], $basename, $_POST['mo_ta_dm']);
-                    $tb = "thêm thành công ";
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã thêm thành công danh mục",
+                        icon: "success"
+                      });
+                    </script>';
                 }
                 include 'view/category/app-add-category.php';
                 break;
@@ -433,14 +524,24 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                 include 'view/category/app-edit-category.php';
                 break;
             case 'app-update-category':
-                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                // var_dump($_POST);
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $tenfile = $_FILES["image"]["name"];
                     $basename = basename($tenfile);
                     $dest = "../upload/" . $basename;
                     $filetem = $_FILES["image"]["tmp_name"];
                     move_uploaded_file($filetem, $dest);
                     update_dm($_POST['ten_dm'], $basename, $_POST['mo_ta_dm'], $_POST['id']);
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã sửa thành công danh mục",
+                        icon: "success"
+                      });
+                    </script>';
                 }
+                // echo $_POST['ten_dm'], $_POST['mo_ta_dm'], $_POST['id'];
+
                 $ds_dm = get_ds_dm_all();
                 include 'view/category/app-categories-list.php';
                 break;
@@ -448,6 +549,13 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     $id = $_GET['id'];
                     delete_dm($id);
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã xóa thành công danh mục",
+                        icon: "success"
+                      });
+                    </script>';
                 }
                 $ds_dm = get_ds_dm_all();
                 include 'view/category/app-categories-list.php';
@@ -475,7 +583,14 @@ if ($_SESSION['user']['vai_tro'] == 3 || $_SESSION['user']['vai_tro'] == 2) {
                         }
                         insert_san_pham_anh($id_san_pham, $basename);
                     }
-                    $tb = "thêm thành công";
+                    //$tb = "thêm thành công";
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã thêm thành công sản phẩm",
+                        icon: "success"
+                      });
+                    </script>';
                 }
                 $ds_dm = get_ds_dm_all();
                 include 'view/product/app-add-product.php';

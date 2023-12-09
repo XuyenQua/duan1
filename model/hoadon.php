@@ -1,7 +1,8 @@
 <?php
-    function insert_hoa_don($id_tai_khoan,$ten_khach_hang,$so_dien_thoai,$dia_chi,$email,$pttt,$tong_tien,$ngay_dat_hang,$ghi_chu){
-        $sql ="INSERT INTO `hoadon`(`id_tai_khoan`, `ten_khach_hang`, `so_dien_thoai`, `dia_chi`, `email`, `pttt`, `tong_tien`, `ngay_dat_hang`, `ghi_chu`) VALUES ('$id_tai_khoan','$ten_khach_hang','$so_dien_thoai','$dia_chi','$email','$pttt','$tong_tien','$ngay_dat_hang','$ghi_chu')";
-        
+    function insert_hoa_don($id_tai_khoan,$ten_khach_hang,$so_dien_thoai,$dia_chi,$email,$pttt,$ma_giam_gia,$giam_gia,$tong_tien,$ngay_dat_hang,$ghi_chu){
+       
+        $sql ="INSERT INTO `hoadon`(`id_tai_khoan`, `ten_khach_hang`, `so_dien_thoai`, `dia_chi`, `email`, `pttt`, `ma_giam_gia`, `giam_gia`, `tong_tien`, `ngay_dat_hang`, `ghi_chu`)  VALUES ('$id_tai_khoan','$ten_khach_hang','$so_dien_thoai','$dia_chi','$email','$pttt','$ma_giam_gia','$giam_gia','$tong_tien','$ngay_dat_hang','$ghi_chu')";
+       // echo $sql;
         return pdo_execute_return_lastInsertID($sql);
     }
     function insert_san_pham_hoa_don($id_hoa_don,$id_san_pham,$anh_sp,$ten_sp,$gia_sp,$so_luong,$thanh_tien){
@@ -138,4 +139,14 @@
             return 0;
         }
     }
+
+    function huy_don_hang($id){
+        $sql = "UPDATE `hoadon` SET `trang_thai`='5' WHERE id = ".$id;
+        pdo_execute($sql);
+    }
+    function xac_nhan_don_hang($id){
+        $sql = "UPDATE `hoadon` SET `trang_thai`='6' WHERE id = ".$id;
+        pdo_execute($sql);
+    }
+
 ?>

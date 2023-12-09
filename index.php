@@ -6,11 +6,15 @@ include 'model/hoadon.php';
 include 'model/sanpham.php';
 include 'model/danhmuc.php';
 include 'model/binhluan.php';
+include 'model/magiamgia.php';
 include 'global.php';
 
 
 if (!isset($_SESSION['mycart'])) {
     $_SESSION['mycart'] = [];
+}
+if (!isset($_SESSION['ma_giam_gia'])) {
+    $_SESSION['ma_giam_gia'] = [];
 }
 
 include 'view/header.php';
@@ -39,20 +43,19 @@ if (isset($_GET['act'])) {
                 $ten_sp = $_POST['ten_sp'];
                 $gia_sp = $_POST['gia_sp'];
                 $anh_sp = $_POST['anh_sp'];
-                if(isset($_POST['so_luong'])&&($_POST['so_luong'])) {
+                if (isset($_POST['so_luong']) && ($_POST['so_luong'])) {
                     $sl = $_POST['so_luong'];
-                }else{
-                    $sl=1;
+                } else {
+                    $sl = 1;
                 }
-                $index  = array_search($id,array_column($_SESSION['mycart'],0));
+                $index  = array_search($id, array_column($_SESSION['mycart'], 0));
                 if ($index !== false) {
-                     $_SESSION['mycart'][$index][4]+=$sl;
+                    $_SESSION['mycart'][$index][4] += $sl;
                 } else {
                     $so_luong = $sl;
                     $spadd = [$id, $anh_sp, $ten_sp, $gia_sp, $so_luong];
                     array_push($_SESSION['mycart'], $spadd);
                 }
-                
             }
             echo '<script> location.replace("index.php?act=cart"); </script>';
             include 'view/cart.php';
@@ -72,16 +75,51 @@ if (isset($_GET['act'])) {
             include 'view/cart.php';
             break;
         case 'update-cart':
-            $so_luong = $_POST['so_luong'];
-            // var_dump($so_luong);
-            for ($i = 0; $i < count($_SESSION['mycart']); $i++) {
-                $_SESSION['mycart'][$i][4] = $so_luong[$i];
+            if (isset($_POST['cap_nhat']) && ($_POST['cap_nhat'])) {
+                $so_luong = $_POST['so_luong'];
+                // var_dump($so_luong);
+                for ($i = 0; $i < count($_SESSION['mycart']); $i++) {
+                    $_SESSION['mycart'][$i][4] = $so_luong[$i];
+                }
             }
+
+            if (isset($_POST['ap_dung']) && ($_POST['ap_dung'])) {
+                $ma_giam_gia = $_POST['ma_giam_gia'];
+                $ktra = kt_ma_giam_gia($ma_giam_gia);
+                if (is_array($ktra)) {
+                    if ( $_SESSION['mycart']!=[]) {
+                        $_SESSION['ma_giam_gia'] = $ktra;
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã áp dụng mã giảm giá thành công",
+                        icon: "success"
+                      });
+                    </script>';
+                    }else{
+                        echo '<script>
+                        Swal.fire({
+                            title: "Không Thành Công",
+                            text: "Bạn  chưa thêm sản phẩm vào  giỏ hàng",
+                            icon: "error",
+                          });
+                        </script>';
+                    }
+                } else {
+                    echo '<script>
+                    Swal.fire({
+                        title: "Không Thành Công",
+                        text: "Mã giảm giá không tồn tại",
+                        icon: "error",
+                      });
+                    </script>';
+                }
+            }
+            // var_dump($_SESSION['ma_giam_gia']);
             // var_dump($_SESSION['mycart']);
             include 'view/cart.php';
             break;
         case 'cart':
-
             // var_dump($_SESSION['mycart']);
             include 'view/cart.php';
             break;
@@ -105,7 +143,19 @@ if (isset($_GET['act'])) {
                 $ngay_dat_hang = date('Y-m-d');
                 $ghi_chu = $_POST['ghi_chu'];
                 $tong_tien = $_POST['tong_tien'];
-                $id_hoa_don = insert_hoa_don($id_tai_khoan, $ten_khach_hang, $so_dien_thoai, $dia_chi, $email, $pttt, $tong_tien, $ngay_dat_hang, $ghi_chu);
+                if ($_SESSION['ma_giam_gia']!=[]) {
+                    $ma_giam_gia = $_SESSION['ma_giam_gia']['ma_giam_gia'];
+                    $giam_gia = $_SESSION['ma_giam_gia']['giam_gia'];
+                }else{
+                    $ma_giam_gia = "";
+                    $giam_gia = 0;
+                }
+                if(isset($_SESSION['ma_giam_gia'])&& ($_SESSION['ma_giam_gia']!=[])){
+                    su_dung_ma($_SESSION['ma_giam_gia']['id_giamgia']);
+                }
+                
+
+                $id_hoa_don = insert_hoa_don($id_tai_khoan,$ten_khach_hang,$so_dien_thoai,$dia_chi,$email,$pttt,$ma_giam_gia,$giam_gia,$tong_tien,$ngay_dat_hang,$ghi_chu);
 
                 foreach ($_SESSION['mycart'] as $cart) {
                     extract($cart);
@@ -120,7 +170,15 @@ if (isset($_GET['act'])) {
                 }
 
                 $_SESSION['mycart'] = [];
+                $_SESSION['ma_giam_gia'] = [];
                 $ds_sp_hoa_don = get_san_pham_hoa_don($id_hoa_don);
+                echo '<script>
+                    Swal.fire({
+                        title: "Thành Công",
+                        text: "Đã đặt hàng thành công",
+                        icon: "success"
+                      });
+                    </script>';
             }
 
             $ds_pttt = get_pttt();
@@ -143,12 +201,22 @@ if (isset($_GET['act'])) {
                 $email = $_POST['email'];
                 $mat_khau = $_POST['mat_khau'];
                 $ngay_dang_ky = date("Y-m-d");
-                $taikhoan = kiem_tra_tk($ten_dang_nhap, $mat_khau);
+                $taikhoan = kiem_tra_tk_dk($ten_dang_nhap);
                 if (is_array($taikhoan)) {
-                    $tb = "Tên đăng nhập tồn tại";
+                    echo '<script>
+                    Swal.fire({
+                        title: "Không thành công",
+                        text: "Tài khoản tồn tại",
+                        icon: "error",  
+                      });</script>';
                 } else {
                     dang_ky_tai_khoan($ten_dang_nhap, $mat_khau, $email, $ho_ten, $ngay_dang_ky);
-                    $tb = "Đăng ký thành công";
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành công",
+                        text: "đăng ký tài khoản thành công",
+                        icon: "success"
+                      });</script>';
                 }
             }
             include 'view/login-register/register.php';
@@ -160,8 +228,19 @@ if (isset($_GET['act'])) {
                 $tai_khoan = kiem_tra_tk($user, $pass);
                 if (is_array($tai_khoan)) {
                     $_SESSION['e_user'] = $tai_khoan;
+                    echo '<script>
+                    Swal.fire({
+                        title: "Thành công",
+                        text: "đăng nhập tài khoản thành công",
+                        icon: "success"
+                      });</script>';
                 } else {
-                    $tb = "tài khoản hoặc mật khẩu sai";
+                    echo '<script>
+                    Swal.fire({
+                        title: "Không thành công",
+                        text: "Tài khoản hoặc mật khẩu sai",
+                        icon: "error",  
+                      });</script>';
                 }
                 if (isset($_SESSION['e_user'])) {
                     echo '<script> location.replace("index.php"); </script>';
@@ -172,6 +251,13 @@ if (isset($_GET['act'])) {
         case 'quen-mat-khau':
             if (isset($_POST['quen_mat_khau']) && ($_POST['quen_mat_khau'])) {
                 $tb = guiMail($_POST['email']);
+                echo '<script>
+                    Swal.fire({
+                        title: "Đã gửi mail ",
+                        text: "Vui lòng kiểm tra Mail",
+                        icon: "success"
+                      });
+                    </script>';
             }
             include 'view/login-register/quen-mat-khau.php';
             break;
@@ -193,11 +279,11 @@ if (isset($_GET['act'])) {
                 san_pham_luot_xem($id);
             }
             if (isset($_POST['binh_luan']) && ($_POST['binh_luan'])) {
-               $noi_dung = $_POST['noi_dung'];
-               $id_san_pham = $_GET['id'];
-               $id_tai_khoan = $_SESSION['e_user']['id'];
-               $ngay_binh_luan = date('Y-m-d');
-               insert_binh_luan($id_tai_khoan,$id_san_pham,$noi_dung,$ngay_binh_luan);
+                $noi_dung = $_POST['noi_dung'];
+                $id_san_pham = $_GET['id'];
+                $id_tai_khoan = $_SESSION['e_user']['id'];
+                $ngay_binh_luan = date('Y-m-d');
+                insert_binh_luan($id_tai_khoan, $id_san_pham, $noi_dung, $ngay_binh_luan);
             }
 
             $ds_binh_luan = get_binh_luan_san_pham($_GET['id']);
@@ -222,30 +308,49 @@ if (isset($_GET['act'])) {
                 $mat_khau_cu = $_POST['mat_khau_cu'];
                 $mat_khau_moi = $_POST['mat_khau_moi'];
                 $tai_khoan =  get_chi_tiet_tai_khoan($_SESSION['e_user']['id']);
-                if ($tai_khoan['mat_khau']==$mat_khau_cu) {
+                if ($tai_khoan['mat_khau'] == $mat_khau_cu) {
                     doi_mat_khau($_SESSION['e_user']['id'], $mat_khau_moi);
-                    echo '<script>  alert("Đổi mật khẩu thành công"); </script>';
+                    echo '<script>   Swal.fire({
+                        title: "Thành công ",
+                        text: "Đổi mật khẩu thành công",
+                        icon: "success"
+                      }); </script>';
                 } else {
-                    echo '<script>  alert("mật khẩu cũ sai"); </script>';
-                    echo '<script>  alert("Đổi mật khẩu không thành công"); </script>';
+                    echo '<script>   Swal.fire({
+                        title: "Không thành công",
+                        text: "mật khẩu sai",
+                        icon: "error",  
+                      }); </script>';
                 }
             }
             if (isset($_POST['doi_thong_tin']) && ($_POST['doi_thong_tin'])) {
-                    $ho_ten = $_POST['ho_ten'];
-                    $email = $_POST['email'];
-                    $so_dien_thoai = $_POST['so_dien_thoai'];
-                    $dia_chi = $_POST['dia_chi'];
-                    $nam_sinh = $_POST['nam_sinh'];
-                    doi_thong_tin($ho_ten,$email,$so_dien_thoai,$dia_chi,$nam_sinh,$_SESSION['e_user']['id']);
+                $ho_ten = $_POST['ho_ten'];
+                $email = $_POST['email'];
+                $so_dien_thoai = $_POST['so_dien_thoai'];
+                $dia_chi = $_POST['dia_chi'];
+                $nam_sinh = $_POST['nam_sinh'];
+                doi_thong_tin($ho_ten, $email, $so_dien_thoai, $dia_chi, $nam_sinh, $_SESSION['e_user']['id']);
 
-                    $_SESSION['e_user']['ho_ten'] = $ho_ten;
-                    $_SESSION['e_user']['email'] = $email;
-                    $_SESSION['e_user']['so_dien_thoai'] = $so_dien_thoai;
-                    $_SESSION['e_user']['dia_chi'] = $dia_chi;
-                    $_SESSION['e_user']['nam_sinh'] = $nam_sinh;
-                echo '<script>  alert("Đổi thông tin thành công"); </script>';
+                $_SESSION['e_user']['ho_ten'] = $ho_ten;
+                $_SESSION['e_user']['email'] = $email;
+                $_SESSION['e_user']['so_dien_thoai'] = $so_dien_thoai;
+                $_SESSION['e_user']['dia_chi'] = $dia_chi;
+                $_SESSION['e_user']['nam_sinh'] = $nam_sinh;
+                echo '<script>   Swal.fire({
+                    title: "Thành công ",
+                    text: "Đổi thông tin thành công",
+                    icon: "success"
+                  }); </script>';
             }
-
+            if(isset($_GET['huy']) && (($_GET['huy'])>0)){
+                $id = $_GET['huy'];
+                huy_don_hang($id);
+            }
+            if(isset($_GET['xacnhan']) && (($_GET['xacnhan'])>0)){
+                $id = $_GET['xacnhan'];
+                xac_nhan_don_hang($id);
+            }
+            
             $ds_hoa_don_tai_khoan = get_hoa_don_tai_khoan($_SESSION['e_user']['id']);
             include 'view/my-account.php';
             break;
@@ -290,15 +395,42 @@ if (isset($_GET['act'])) {
             include 'view/blog-details-sidebar.php';
             break;
         case 'shop-left-sidebar':
-            
+
             if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
                 $id_dm = $_GET['iddm'];
                 $ds_san_pham = get_san_pham_all_dm($id_dm);
                 $dm = get_dm_one($id_dm);
-            } else {
+            }else if(isset($_GET['web']) && ($_GET['web'] !="")){
+                switch ($_GET['web']) {
+                    case 'banchay':
+                        $ds_san_pham = $ds_10_san_pham_ban_chay;
+                        break;
+                    case 'yeuthich':
+                        $ds_san_pham = $ds_10_san_pham_yeu_thich;
+                        break;  
+                    default:
+                        # code...
+                        break;
+                }
+            }else if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                if (isset($_POST['tim_kiem']) && ($_POST['tim_kiem'])) {
+                    $kyw = $_POST['tu_khoa'];
+                    $ds_san_pham = loc_san_pham($kyw,$gia_min=0,$gia_max=0);
+                   
+                }
+                if (isset($_POST['loc']) && ($_POST['loc'])) {
+                    $min = $_POST['min'];
+                    $max = $_POST['max'];
+                    $ds_san_pham = loc_san_pham($kyw="",$min,$max);
+                }
+            }else {
 
                 $ds_san_pham = get_san_pham_all();
             }
+          //  var_dump($ds_san_pham);
+            // echo $kyw;
+            // echo $min;
+            // echo $max;
 
             include 'view/shop-left-sidebar.php';
             break;

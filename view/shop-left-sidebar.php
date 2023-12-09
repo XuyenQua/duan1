@@ -187,18 +187,20 @@
 
                </div>
                <div class="col-lg-3 col-12 col-custom">
-                   <form action="index.php?act=shop-left-sidebar" method="get">
+                   
                        <!-- Sidebar Widget Start -->
                        <aside class="sidebar_widget mt-10 mt-lg-0">
                            <div class="widget_inner" data-aos="fade-up" data-aos-delay="200">
                                <div class="widget-list mb-10">
-                                   <h3 class="widget-title mb-4">Search</h3>
+                               <form action="index.php?act=shop-left-sidebar" method="post"> 
+                                   <h3 class="widget-title mb-4">Tìm kiêm</h3>
                                    <div class="search-box">
-                                       <input type="text" class="form-control" name="tu_khoa" placeholder="Search Our Store" aria-label="Search Our Store">
-                                       <button class="btn btn-dark btn-hover-primary" name="tim_kiem" type="submit">
+                                       <input type="text" class="form-control" name="tu_khoa" aria-label="Search Our Store">
+                                       <button class="btn btn-dark btn-hover-primary" name="tim_kiem" value="true" type="submit">
                                            <i class="fa fa-search"></i>
                                        </button>
                                    </div>
+                               </form>
                                </div>
                                <div class="widget-list mb-10">
                                    <h3 class="widget-title mb-4">Danh mục</h3>
@@ -241,12 +243,13 @@
                                    <!-- Widget Menu End -->
                                </div>
                                <div class="widget-list mb-10">
-                                   <h3 class="widget-title mb-5">Price Filter</h3>
+                                   <h3 class="widget-title mb-5">Theo giá</h3>
                                    <!-- Widget Menu Start -->
-                                   <form action="#">
-                                       <div id="slider-range"></div>
-                                       <button class="slider-range-submit" type="submit">Filter</button>
-                                       <input class="slider-range-amount" type="text" name="text" id="amount" />
+                                   <form action="index.php?act=shop-left-sidebar" method="post">
+                                    <div class="d-flex mb-4">
+                                         <input type="number" class="form-control" name="min" min="0" id=""> - <input type="number" class="form-control" name="max" min="0" id="">
+                                    </div>
+                                       <button class="slider-range-submit" name="loc" value="true" type="submit">Lọc</button>
                                    </form>
                                    <!-- Widget Menu End -->
                                </div>
@@ -255,8 +258,8 @@
                                    <div class="sidebar-body">
                                        <ul class="sidebar-list">
                                            <li><a href="index.php?act=shop-left-sidebar">Tất cả sản phẩm</a></li>
-                                           <li><a href="#">Bán chạy</a></li>
-                                           <li><a href="#">Sản phẩm mới</a></li>
+                                           <li><a href="index.php?act=shop-left-sidebar&web=banchay">Bán chạy</a></li>
+                                           <li><a href="index.php?act=shop-left-sidebar&web=yeuthich">Sản phẩm mới</a></li>
                                        </ul>
                                    </div>
                                </div>
@@ -343,8 +346,7 @@
                            </div>
                        </aside>
                        <!-- Sidebar Widget End -->
-                   </form>
-
+                  
                </div>
            </div>
        </div>

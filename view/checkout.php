@@ -19,98 +19,98 @@
 
  </div>
  <!-- Breadcrumb Section End -->
-<?php 
+ <?php
     // var_dump($_SESSION['e_user']);
-    if(isset($_SESSION['e_user']) && ($_SESSION['e_user']!='')){
+    if (isset($_SESSION['e_user']) && ($_SESSION['e_user'] != '')) {
         $ho_ten = $_SESSION['e_user']['ho_ten'];
         $so_dien_thoai = $_SESSION['e_user']['so_dien_thoai'];
         $dia_chi = $_SESSION['e_user']['dia_chi'];
         $email = $_SESSION['e_user']['email'];
-    }else{
+    } else {
         $ho_ten = "";
         $so_dien_thoai = "";
         $dia_chi = "";
         $email = "";
     }
-?>
-<form action="index.php?act=thankyou" method="post">
+    ?>
+ <form action="index.php?act=thankyou" method="post">
      <!-- Checkout Section Start -->
- <div class="section section-margin">
-     <div class="container">
-         <div class="row">
-             <div class="col-12">
-                 <!-- Coupon Accordion Start -->
-                 <div class="coupon-accordion">
+     <div class="section section-margin">
+         <div class="container">
+             <div class="row">
+                 <div class="col-12">
+                     <!-- Coupon Accordion Start -->
+                     <div class="coupon-accordion">
 
-                     <!-- Title Start -->
-                     <!-- <h3 class="title">Returning customer? <span id="showlogin">Click here to login</span></h3> -->
-                     <!-- Title End -->
+                         <!-- Title Start -->
+                         <!-- <h3 class="title">Returning customer? <span id="showlogin">Click here to login</span></h3> -->
+                         <!-- Title End -->
 
-                     <!-- Checkout Login Start -->
-                     <div id="checkout-login" class="coupon-content">
-                         <div class="coupon-info">
-                             <p class="coupon-text mb-2">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</p>
+                         <!-- Checkout Login Start -->
+                         <div id="checkout-login" class="coupon-content">
+                             <div class="coupon-info">
+                                 <p class="coupon-text mb-2">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</p>
 
-                             <!-- Form Start -->
-                             <form action="#">
-                                 <!-- Input Email Start -->
-                                 <p class="form-row-first">
-                                     <label>Username or email <span class="required">*</span></label>
-                                     <input type="text">
-                                 </p>
-                                 <!-- Input Email End -->
+                                 <!-- Form Start -->
+                                 <form action="#">
+                                     <!-- Input Email Start -->
+                                     <p class="form-row-first">
+                                         <label>Username or email <span class="required">*</span></label>
+                                         <input type="text">
+                                     </p>
+                                     <!-- Input Email End -->
 
-                                 <!-- Input Password Start -->
-                                 <p class="form-row-last">
-                                     <label>Password <span class="required">*</span></label>
-                                     <input type="password">
-                                 </p>
-                                 <!-- Input Password End -->
+                                     <!-- Input Password Start -->
+                                     <p class="form-row-last">
+                                         <label>Password <span class="required">*</span></label>
+                                         <input type="password">
+                                     </p>
+                                     <!-- Input Password End -->
 
-                                 <!-- Remember Password Start -->
-                                 <p class="form-row mb-2">
-                                     <input type="checkbox" id="remember_me">
-                                     <label for="remember_me" class="checkbox-label">Remember me</label>
-                                 </p>
-                                 <!-- Remember Password End -->
+                                     <!-- Remember Password Start -->
+                                     <p class="form-row mb-2">
+                                         <input type="checkbox" id="remember_me">
+                                         <label for="remember_me" class="checkbox-label">Remember me</label>
+                                     </p>
+                                     <!-- Remember Password End -->
 
-                                 <!-- Lost Password Start -->
-                                 <p class="lost-password"><a href="#">Lost your password?</a></p>
-                                 <!-- Lost Password End -->
+                                     <!-- Lost Password Start -->
+                                     <p class="lost-password"><a href="#">Lost your password?</a></p>
+                                     <!-- Lost Password End -->
 
-                             </form>
-                             <!-- Form End -->
+                                 </form>
+                                 <!-- Form End -->
 
+                             </div>
                          </div>
-                     </div>
-                     <!-- Checkout Login End -->
+                         <!-- Checkout Login End -->
 
-                     <!-- Title Start -->
-                     <h3 class="title">Có phiếu giảm giá? <span id="showcoupon">Bấm vào đây để nhập mã của bạn</span></h3>
-                     <!-- Title End -->
+                         <!-- Title Start -->
+                         <h3 class="title">Có phiếu giảm giá? <span id="showcoupon">Bấm vào đây để nhập mã của bạn</span></h3>
+                         <!-- Title End -->
 
-                     <!-- Checkout Coupon Start -->
-                     <div id="checkout_coupon" class="coupon-checkout-content">
-                         <div class="coupon-info">
-                             <form action="#">
-                                 <p class="checkout-coupon d-flex">
-                                     <input placeholder="Coupon code" type="text">
-                                     <input class="btn btn-dark btn-hover-primary rounded-0" value="Apply Coupon" type="submit">
-                                 </p>
-                             </form>
+                         <!-- Checkout Coupon Start -->
+                         <div id="checkout_coupon" class="coupon-checkout-content">
+                             <div class="coupon-info">
+                                 <form action="#">
+                                     <p class="checkout-coupon d-flex">
+                                         <input placeholder="Coupon code" type="text">
+                                         <input class="btn btn-dark btn-hover-primary rounded-0" value="Apply Coupon" type="submit">
+                                     </p>
+                                 </form>
+                             </div>
                          </div>
-                     </div>
-                     <!-- Checkout Coupon End -->
+                         <!-- Checkout Coupon End -->
 
+                     </div>
+                     <!-- Coupon Accordion End -->
                  </div>
-                 <!-- Coupon Accordion End -->
              </div>
-         </div>
-         <div class="row mb-n4">
-             <div class="col-lg-6 col-12 mb-4">
+             <div class="row mb-n4">
+                 <div class="col-lg-6 col-12 mb-4">
 
-                 <!-- Checkbox Form Start -->
-                 
+                     <!-- Checkbox Form Start -->
+
                      <div class="checkbox-form">
 
                          <!-- Checkbox Form Title Start -->
@@ -139,7 +139,7 @@
                              <div class="col-md-12">
                                  <div class="checkout-form-list">
                                      <label>Họ và Tên <span class="required">*</span></label>
-                                     <input name="ten_khach_hang" value="<?=$ho_ten?>" required placeholder="Nhập họ và tên" type="text">
+                                     <input name="ten_khach_hang" value="<?= $ho_ten ?>" required placeholder="Nhập họ và tên" type="text">
                                  </div>
                              </div>
                              <!-- First Name Input End -->
@@ -157,7 +157,7 @@
                              <div class="col-md-12">
                                  <div class="checkout-form-list">
                                      <label>Số điện thoại<span class="required">*</span></label>
-                                     <input name="so_dien_thoai" value="<?=$so_dien_thoai?>" required placeholder="Nhập số điện thoại" type="text">
+                                     <input name="so_dien_thoai" value="<?= $so_dien_thoai ?>" required placeholder="Nhập số điện thoại" type="text">
                                  </div>
                              </div>
                              <!-- Company Name Input End -->
@@ -166,7 +166,7 @@
                              <div class="col-md-12">
                                  <div class="checkout-form-list">
                                      <label>Địa chỉ <span class="required">*</span></label>
-                                     <input name="dia_chi" value="<?=$dia_chi?>"  required placeholder="Nhập địa chỉ" type="text">
+                                     <input name="dia_chi" value="<?= $dia_chi ?>" required placeholder="Nhập địa chỉ" type="text">
                                  </div>
                              </div>
                              <!-- Address Input End -->
@@ -210,24 +210,24 @@
                              <div class="col-md-12">
                                  <div class="checkout-form-list">
                                      <label>Email <span class="required">*</span></label>
-                                     <input name="email" value="<?=$email?>" placeholder="Nhập email của bạn" required type="email">
+                                     <input name="email" value="<?= $email ?>" placeholder="Nhập email của bạn" required type="email">
                                  </div>
                              </div>
                              <div class="col-md-12">
                                  <div class="checkout-form-list">
                                      <label>Phương thức thanh toán <span class="required">*</span></label></br>
-                                     <?php 
+                                     <?php
                                         foreach ($ds_pttt as $pttt) {
-                                           extract($pttt);
-                                           if ($id==1) {
+                                            extract($pttt);
+                                            if ($id == 1) {
                                                 $checked = "checked";
-                                           }else{
+                                            } else {
                                                 $checked = "";
-                                           }
-                                           echo '<input type="radio" '.$checked.' name="pttt" id="pttt" value="'.$id.'"> '.$ten_pttt.'</br>';
+                                            }
+                                            echo '<input type="radio" ' . $checked . ' name="pttt" id="pttt" value="' . $id . '"> ' . $ten_pttt . '</br>';
                                         }
-                                     ?>
-                                     
+                                        ?>
+
                                  </div>
                              </div>
                              <!-- Email Address Input End -->
@@ -391,80 +391,94 @@
                          </div>
                          <!-- Different Address End -->
                      </div>
-                 
-                 <!-- Checkbox Form End -->
 
-             </div>
+                     <!-- Checkbox Form End -->
 
-             <div class="col-lg-6 col-12 mb-4">
+                 </div>
 
-                 <!-- Your Order Area Start -->
-                 <div class="your-order-area border">
+                 <div class="col-lg-6 col-12 mb-4">
 
-                     <!-- Title Start -->
-                     <h3 class="title">Đơn hàng của bạn</h3>
-                     <!-- Title End -->
+                     <!-- Your Order Area Start -->
+                     <div class="your-order-area border">
 
-                     <!-- Your Order Table Start -->
-                     <div class="your-order-table table-responsive">
-                         <table class="table">
+                         <!-- Title Start -->
+                         <h3 class="title">Đơn hàng của bạn</h3>
+                         <!-- Title End -->
 
-                             <!-- Table Head Start -->
-                             <thead>
-                                 <tr class="cart-product-head">
-                                     <th class="cart-product-name text-start">Sản phẩm</th>
-                                     <th class="cart-product-total text-end">Tổng</th>
-                                 </tr>
-                             </thead>
-                             <!-- Table Head End -->
+                         <!-- Your Order Table Start -->
+                         <div class="your-order-table table-responsive">
+                             <table class="table">
 
-                             <!-- Table Body Start -->
-                             <tbody>
-                                 <?php
-                                    $tong_gio_hang = 0;
-                                    $tong = 0;
-                                    $phi_van_chuyen = 30000;
-                                    foreach ($_SESSION['mycart'] as $san_pham) :
-                                        extract($san_pham);
-                                        // var_dump($san_pham);
-                                    ?>
-                                     <tr class="cart_item">
-                                         <td class="cart-product-name text-start ps-0"><?= $san_pham[2] ?><strong class="product-quantity"> × <?= $san_pham[4] ?></strong></td>
-                                         <td class="cart-product-total text-end pe-0"><span class="amount"><?= $thanh_tien = $san_pham[3] * $san_pham[4] ?> VNĐ</span></td>
+                                 <!-- Table Head Start -->
+                                 <thead>
+                                     <tr class="cart-product-head">
+                                         <th class="cart-product-name text-start">Sản phẩm</th>
+                                         <th class="cart-product-total text-end">Tổng</th>
                                      </tr>
-                                 <?php
-                                        $tong_gio_hang += $thanh_tien;
+                                 </thead>
+                                 <!-- Table Head End -->
 
-                                    endforeach;
-                                    $tong = $tong_gio_hang + phi_van_chuyen($tong_gio_hang);
-                                    ?>
-                             </tbody>
-                             <!-- Table Body End -->
+                                 <!-- Table Body Start -->
+                                 <tbody>
+                                     <?php
+                                        $tong_gio_hang = 0;
+                                        $tong = 0;
+                                        $phi_van_chuyen = 30000;
+                                        foreach ($_SESSION['mycart'] as $san_pham) :
+                                            extract($san_pham);
+                                            // var_dump($san_pham);
+                                        ?>
+                                         <tr class="cart_item">
+                                             <td class="cart-product-name text-start ps-0"><?= $san_pham[2] ?><strong class="product-quantity"> × <?= $san_pham[4] ?></strong></td>
+                                             <td class="cart-product-total text-end pe-0"><span class="amount"><?= $thanh_tien = $san_pham[3] * $san_pham[4] ?> VNĐ</span></td>
+                                         </tr>
+                                     <?php
+                                            $tong_gio_hang += $thanh_tien;
 
-                             <!-- Table Footer Start -->
-                             <tfoot>
-                                 <tr class="cart-subtotal">
-                                     <th class="text-start ps-0">Tổng của giỏ hàng</th>
-                                     <td class="text-end pe-0"><span class="amount"><?= $tong_gio_hang ?> VNĐ</span></td>
-                                 </tr>
-                                 <tr class="cart-subtotal">
-                                     <th class="text-start ps-0">Phí vận chuyển</th>
-                                     <td class="text-end pe-0"><span class="amount"><?= phi_van_chuyen($tong_gio_hang) ?> VNĐ</span></td>
-                                 </tr>
-                                 <tr class="order-total">
-                                     <th class="text-start ps-0">Tổng đơn hàng</th>
-                                     <td class="text-end pe-0"><strong><span class="amount"><?= $tong ?> VNĐ</span></strong></td>
-                                 </tr>
-                             </tfoot>
-                             <!-- Table Footer End -->
-                             <input type="hidden" name="tong_tien" value="<?= $tong ?>">
-                         </table>
-                     </div>
-                     <!-- Your Order Table End -->
+                                        endforeach;
+                                        $tong = $tong_gio_hang + phi_van_chuyen($tong_gio_hang);
+                                        ?>
+                                 </tbody>
+                                 <!-- Table Body End -->
 
-                     <!-- Payment Accordion Order Button Start -->
-                     <div class="payment-accordion-order-button">
-                         <!-- <div class="payment-accordion">
+                                 <!-- Table Footer Start -->
+                                 <tfoot>
+                                     <tr class="cart-subtotal">
+                                         <th class="text-start ps-0">Tổng của giỏ hàng</th>
+                                         <td class="text-end pe-0"><span class="amount"><?= $tong_gio_hang ?> VNĐ</span></td>
+                                     </tr>
+                                     <tr class="cart-subtotal">
+                                         <th class="text-start ps-0">Phí vận chuyển</th>
+                                         <td class="text-end pe-0"><span class="amount"><?= phi_van_chuyen($tong_gio_hang) ?> VNĐ</span></td>
+                                     </tr>
+                                     <?php
+                                        if ($_SESSION['ma_giam_gia'] != []) {
+                                        ?>
+                                         <tr class="cart-subtotal">
+                                             <th class="text-start ps-0">Mã giảm : <?= $_SESSION['ma_giam_gia']['ma_giam_gia'] ?></th>
+                                             <td class="text-end pe-0"><span class="amount">-<?= $_SESSION['ma_giam_gia']['giam_gia'] ?> VNĐ</span></td>
+                                             <?php if ($_SESSION['ma_giam_gia']['giam_gia'] != "") {
+                                                    $tong -= $_SESSION['ma_giam_gia']['giam_gia'];
+                                                } ?>
+                                         </tr>
+                                     <?php } ?>
+
+
+
+                                     <tr class="order-total">
+                                         <th class="text-start ps-0">Tổng đơn hàng</th>
+                                         <td class="text-end pe-0"><strong><span class="amount"><?= $tong ?> VNĐ</span></strong></td>
+                                     </tr>
+                                 </tfoot>
+                                 <!-- Table Footer End -->
+                                 <input type="hidden" name="tong_tien" value="<?= $tong ?>">
+                             </table>
+                         </div>
+                         <!-- Your Order Table End -->
+
+                         <!-- Payment Accordion Order Button Start -->
+                         <div class="payment-accordion-order-button">
+                             <!-- <div class="payment-accordion">
                         <div class="single-payment">
                             <h5 class="panel-title mb-3">
                                 <a class="collapse-off" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -502,24 +516,24 @@
                             </div>
                         </div>
                     </div> -->
-                         <div class="order-button-payment">
-                            <?php
-                                if (count($_SESSION['mycart'])!=0){
-                                    echo '<input class="btn btn-dark btn-hover-primary rounded-0 w-100" name="dat_hang" type="submit" value="Đặt hàng">';
-                                }else{
-                                    echo 'Vui lòng thêm sản phẩm vào giỏ hàng';
-                                }
-                            ?>
-                             <!-- <button class="btn btn-dark btn-hover-primary rounded-0 w-100">Đặt hàng</button> -->
-   
-                        </div>
+                             <div class="order-button-payment">
+                                 <?php
+                                    if (count($_SESSION['mycart']) != 0) {
+                                        echo '<input class="btn btn-dark btn-hover-primary rounded-0 w-100" name="dat_hang" type="submit" value="Đặt hàng">';
+                                    } else {
+                                        echo 'Vui lòng thêm sản phẩm vào giỏ hàng';
+                                    }
+                                    ?>
+                                 <!-- <button class="btn btn-dark btn-hover-primary rounded-0 w-100">Đặt hàng</button> -->
+
+                             </div>
+                         </div>
+                         <!-- Payment Accordion Order Button End -->
                      </div>
-                     <!-- Payment Accordion Order Button End -->
+                     <!-- Your Order Area End -->
                  </div>
-                 <!-- Your Order Area End -->
              </div>
          </div>
      </div>
- </div>
- <!-- Checkout Section End -->
-</form>
+     <!-- Checkout Section End -->
+ </form>
